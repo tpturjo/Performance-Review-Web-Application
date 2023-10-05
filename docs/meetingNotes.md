@@ -51,4 +51,41 @@ Immediate Responsibilities:
         framework must be able to echo inputted info  
     Daniel: Made HTML buttons or text input box on Turjo's framework.  
     Both due by the end of Oct 5  
+## Oct 5, 2023
+
+**Recorded by:** Tanjet
+
+**Notes submiited on:** 5 October 2023
+
+**Venue:** EN2040
+
+**SCRUM Master:** Daniel 
+
+**Time:** (5 Oct 2023)1:00-1:50
+
+**Attendance:** Tanjet Tanjet; Tridib Paul; Daniel; Caleb;
+**Decisions:**
+
+**Responsibilities :**
+
+Caleb: deciding on the easiest dictionary for the project.
+
+Daniel: has been assigned to be the SCRUM master for first cycle of the assignment.
+
+Tridib Paul: Provided a blueprint of the server. 
+
+Tanjet: Working on creating the Class(variables, set,get methods) for the webpage and storing in the database.
+
+**Tasks:**
+
+Caleb: keep learning SQL,decide if it is the right tech(Oct 8)
+
+Daniel: create all the HTML pages necessary(deadline, Oct 10)
+
+Tridib Paul: Working with daniel
+
+Tanjet: finish creating class and methods(deadline, Oct 10)
+
+ 
+
 
