@@ -34,3 +34,21 @@ Developer 3- Caleb(Storing data and mapping object)
 Developer 4-Daniel(HTML construction, templating engine)
 
 Developer 5: Tanjet(user info and session management).
+
+
+## Oct 4, 2023
+**Recorded by:** Daniel     
+**Notes submiited on:** Oct 5 10:42AM   
+**SCRUM master:** Daniel    
+**Venue:**  EN2060   
+**Time:**  1:00pm - 1:50pm Oct 4     
+**Attendance:** 
+Daniel, Turjo, Tanjett
+(**Absent:** Caleb)
+**Decisions:**   
+Immediate Responsibilities:
+    Turjo: Build framework for our project using Bottle or Flask  
+        framework must be able to echo inputted info  
+    Daniel: Made HTML buttons or text input box on Turjo's framework.  
+    Both due by the end of Oct 5  
+
