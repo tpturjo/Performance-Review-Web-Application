@@ -1,7 +1,7 @@
 """
 Import statements for the Bottle web framework.
 """
-from bottle import Bottle, request, run, template, static_file
+from bottle import Bottle, request, run, template, static_file, redirect
 
 
 app = Bottle()
