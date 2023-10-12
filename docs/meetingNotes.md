@@ -87,5 +87,27 @@ Tridib Paul: Working with daniel
 Tanjet: finish creating class and methods(deadline, Oct 10)
 
  
+## Oct 12, 2023
 
+**Recorded by:** Tanjet
+
+**Notes submiited on:** 12 October 2023
+
+**Venue:** Engineering building MUN
+
+**SCRUM Master:** Daniel 
+
+**Time:** (12 Oct 2023) 1:00-2:10
+
+Team meeting 12 October 2023.
+
+Present: Caleb, Daniel, Tanjet, Tridib Paul
+
+Decisions: 
+
+1) Caleb has decided to use SQL and started working on his database.
+2) There will be another webpage for published reviews(i.e.Newsfeed/ Dashboard).(Task-Daniel, Tridib Paul)
+3) User password will be implemented by the first cycle incase of any difficulties in future.(Task- Everyone)
+4) Drafts and topic names will be added to the existing page Daniel created.
+5) A new class called published will be implemented for all of the published reviews of all users(Task- Tanjet).
 
