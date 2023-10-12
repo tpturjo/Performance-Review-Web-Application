@@ -5,6 +5,9 @@ from bottle import Bottle, request, run, template, static_file, redirect
 
 
 app = Bottle()
+"""
+Services: File address reference for each HTML file  
+"""
 @app.route('/')
 def server():
     return static_file('login.html', root='./templates')
