@@ -7,29 +7,46 @@ from bottle import Bottle, request, run, template, static_file, redirect
 app = Bottle()
 @app.route('/')
 def server():
-    return static_file('index.html', root='./templates')
+    return static_file('login.html', root='./templates')
+@app.route('/public')
+def public():
+    return static_file('public.html', root='./templates')
+@app.route('/makeAccount')
+def public():
+    return static_file('makeAccount.html', root='./templates')
+@app.route('/review')
+def review():
+    username = request.query.username
+    return template('templates/review.html', username=username)
+@app.route('/static/<filename>')
+def serve_static(filename):
+    return static_file(filename, root='./templates')
+
 
 @app.route('/submit', method='POST')
 def submit():
-    """
-    When <input type="submit" value="Submit"> is triggered from index.html, "username"
-    is recieved by request.forms.
-
-    "redirect" triggered /review, and passes username data to review() method.
-    """
-    username = request.forms.get('username')
+    # username = request.forms.get('username')
     # Assuming you want to pass the username as a parameter to the second page
-    redirect(f'/review?username={username}')
+    # redirect(f'/review?username={username}')
+    action = request.forms.get('action')
+    if action == 'SAVE':
+        # Logic for saving
+        pass
+    elif action == 'PUBLISH':
+        # Logic for publishing
+        pass
+    elif action == 'LOGIN':
+        # Logic for login
+        username = request.forms.get('username')
+        redirect(f'/review?username={username}')
+    else:
+        # Handle other cases
+        pass
 
 
-@app.route('/review')
-def review():
-    """
-    "username" is reconstructed.
-    return : review.html which is living in template folder
-    """
-    username = request.query.username
-    return template('templates/review.html', username=username)
+
+
+
 
 if __name__ == '__main__':
     HOST_NAME = 'localhost'

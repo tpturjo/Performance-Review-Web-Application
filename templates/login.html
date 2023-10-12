@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>login</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+</head>
+
+<body>
+    <h1>login</h1>
+    <div class="main">
+         <div id = "user">
+                <form action="/submit" method="post">
+                    <div>
+                      <label for="username">Username:</label>
+                      <input type="text" id="username" name="username">
+                    </div>
+                    <div>
+                      <label for="password">Password:</label>
+                      <input type="text" id="password" name="password">
+                    </div>
+                    <div class = "button">
+                      <input type="submit" name="action" value="LOGIN">
+                    </div>
+                </form>
+         </div>
+    </div>
+
+    <div class="button">
+             <form action="/makeAccount">
+                <button>
+                  Create Account
+                </button>
+             </form>
+    </div>
+
+</body>
+</html>

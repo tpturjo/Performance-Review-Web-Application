@@ -1,4 +1,4 @@
-class User:
+class user:
     """
     A class representing a user.
 
