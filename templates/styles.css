@@ -11,3 +11,8 @@ h1 {
     width: 80vw;
     height: 30vh;
 }
+
+.button{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}

@@ -2,27 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Performance Review</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>review</title>
+    <link rel="stylesheet" href="static/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class = "text">
+    <div class = "save">
         <h2>Enter Review</h2>
-        <form action="/submit" method="post">
+        <!-- <form action="/submit" method="post">
             <textarea id="text"></textarea>
             <div class = "button">
                 <input type="submit" value="SAVE">
+                <input type="submit" value="PUBLISH">
+            </div>
+        </form> -->
+        <form action="/submit" method="post">
+            <textarea id="text"></textarea>
+            <div class="button">
+                <input type="submit" name="action" value="SAVE">
+                <input type="submit" name="action" value="PUBLISH">
             </div>
         </form>
     </div>
 
-    <div class = "history">
-        <h2>History</h2>
-        <h3 id = "history">
 
-        </h3>
+    <div class = "public">
+        <a href="/public"><button>Go to Public Page</button></a>
     </div>
 </body>
 </html>
