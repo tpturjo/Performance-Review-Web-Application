@@ -14,9 +14,9 @@ def server():
 @app.route('/public')
 def public():
     return static_file('public.html', root='./templates')
-@app.route('/makeAccount')
+@app.route('/createAccount')
 def public():
-    return static_file('makeAccount.html', root='./templates')
+    return static_file('createAccount.html', root='./templates')
 @app.route('/review')
 def review():
     username = request.query.username
