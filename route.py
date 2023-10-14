@@ -2,6 +2,7 @@
 Import statements for the Bottle web framework.
 """
 from bottle import Bottle, request, run, template, static_file, redirect
+import sqlite3, app
 
 
 app = Bottle()
@@ -34,6 +35,7 @@ def submit():
     action = request.forms.get('action')
     if action == 'SAVE':
         # Logic for saving
+        print("hi")
         pass
     elif action == 'PUBLISH':
         # Logic for publishing
@@ -42,17 +44,39 @@ def submit():
         # Logic for login
         username = request.forms.get('username')
         password = request.forms.get('password')
-        user1 = user(username, '', password)
-        user
-        print(password)
-        print(username)
-        dumpIntoSQL
         redirect(f'/review?username={username}')
+    elif action == 'CREATE':
+        username = request.forms.get('username')
+        password = request.forms.get('password')
+        print("hi I'm in create")
+        # success = app.createUser(username, password)
+
+
+        # Check if the username is already taken
+        conn = sqlite3.connect('userDatabase.db')
+        cursor = conn.cursor()
+        cursor.execute("SELECT UserID FROM Users WHERE Username = ?", (username,))
+        existing_user = cursor.fetchone()
+        success = False
+        if existing_user:
+            conn.close()
+            # return "Username already taken. Please choose a different one."
+            success = False
+        else:
+            # Insert the new user into the 'Users' table
+            cursor.execute("INSERT INTO Users (Username, Password) VALUES (?, ?)", (username, password))
+            conn.commit()
+            conn.close()
+            # return f"Registration successful for {username}"
+            success = True
+        print("Did it succeed?")
+        print(success)
+        if(success):
+            return static_file('login.html', root='./templates')
+
     else:
         # Handle other cases
         pass
-
-
 
 
 
