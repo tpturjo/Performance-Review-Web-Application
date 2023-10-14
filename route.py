@@ -41,6 +41,12 @@ def submit():
     elif action == 'LOGIN':
         # Logic for login
         username = request.forms.get('username')
+        password = request.forms.get('password')
+        user1 = user(username, '', password)
+        user
+        print(password)
+        print(username)
+        dumpIntoSQL
         redirect(f'/review?username={username}')
     else:
         # Handle other cases
