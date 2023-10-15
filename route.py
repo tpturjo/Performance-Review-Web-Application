@@ -34,17 +34,36 @@ def submit():
     # redirect(f'/review?username={username}')
     action = request.forms.get('action')
     if action == 'SAVE':
+
+        # username is a dummy variable pretend username works
+        username = username
         # Logic for saving
-        print("hi")
+        """ To implement
+            - pull out draft belonging to the username  
+            - spit out draft string; save it in a var which is ready for output. 
+        """
+
         pass
     elif action == 'PUBLISH':
         # Logic for publishing
         pass
     elif action == 'LOGIN':
         # Logic for login
+        canLogin = False
         username = request.forms.get('username')
         password = request.forms.get('password')
-        redirect(f'/review?username={username}')
+
+        """ To implement 
+            - use the var username,password 
+            - compare with data in SQL
+            - if there is a match change canLogin to True
+        """
+
+
+
+        if(canLogin):
+            redirect(f'/review?username={username}')
+
     elif action == 'CREATE':
         username = request.forms.get('username')
         password = request.forms.get('password')
