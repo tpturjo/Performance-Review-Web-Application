@@ -42,9 +42,20 @@ def submit():
         pass
     elif action == 'LOGIN':
         # Logic for login
+        canLogin = False
         username = request.forms.get('username')
         password = request.forms.get('password')
-        redirect(f'/review?username={username}')
+
+        """ To implement 
+            - use the var username,password 
+            - compare with data in SQL
+            - if there is a match change canLogin to True
+        """
+
+
+
+        if(canLogin):
+            redirect(f'/review?username={username}')
     elif action == 'CREATE':
         username = request.forms.get('username')
         password = request.forms.get('password')
