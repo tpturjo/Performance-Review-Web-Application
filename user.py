@@ -60,3 +60,4 @@ class Draft:
 
     def close_connection(self):
         self.conn.close()
+
