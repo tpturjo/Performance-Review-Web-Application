@@ -12,13 +12,13 @@ app = Bottle()
 Services: File address reference for each HTML file  
 """
 @app.route('/')
-def server():
+def login():
     return static_file('login.html', root='./templates')
 @app.route('/public')
 def public():
     return static_file('public.html', root='./templates')
 @app.route('/createAccount')
-def public():
+def create_account():
     return static_file('createAccount.html', root='./templates')
 @app.route('/review')
 def review():
@@ -51,23 +51,14 @@ def submit():
         pass
     elif action == 'LOGIN':
         # Logic for login
-        canLogin = False
         username = request.forms.get('username')
         password = request.forms.get('password')
-        database.get_user_data_by_id(username)
+        can_log = database.check_credentials(username, password)
+        if can_log:
+            return redirect('/review')
+        else:
+            return redirect('/')
 
-
-        """ To implement 
-            - use the var username,password 
-            - compare with data in SQL
-            - if there is a match change canLogin to True
-        """
-
-
-
-
-        if(canLogin):
-            redirect(f'/review?username={username}')
 
     elif action == 'CREATE':
         username = request.forms.get('username')
@@ -77,11 +68,16 @@ def submit():
 
         new_user = user.User(username, password)
         success = database.create_user(new_user)
+
         if(success):
-            return static_file('login.html', root='./templates')
+            print("Successfully created user")
+            login()
+            # return static_file('login.html', root='./templates')
+            return redirect('/')
         else:
             print("ERROR: username already taken. Try again")
-            return static_file('createAccount.html', root='./templates')
+            return redirect('/createAccount')
+            # return static_file('createAccount.html', root='./templates')
 
 
 
