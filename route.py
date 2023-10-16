@@ -2,7 +2,9 @@
 Import statements for the Bottle web framework.
 """
 from bottle import Bottle, request, run, template, static_file, redirect
-import sqlite3, app
+import sqlite3, app, user, database
+
+
 
 
 app = Bottle()
@@ -52,12 +54,15 @@ def submit():
         canLogin = False
         username = request.forms.get('username')
         password = request.forms.get('password')
+        database.get_user_data_by_id(username)
+
 
         """ To implement 
             - use the var username,password 
             - compare with data in SQL
             - if there is a match change canLogin to True
         """
+
 
 
 
@@ -68,34 +73,16 @@ def submit():
         username = request.forms.get('username')
         password = request.forms.get('password')
         print("hi I'm in create")
-        # success = app.createUser(username, password)
 
 
-        # Check if the username is already taken
-        conn = sqlite3.connect('userDatabase.db')
-        cursor = conn.cursor()
-        cursor.execute("SELECT UserID FROM Users WHERE Username = ?", (username,))
-        existing_user = cursor.fetchone()
-        success = False
-        if existing_user:
-            conn.close()
-            # return "Username already taken. Please choose a different one."
-            success = False
-        else:
-            # Insert the new user into the 'Users' table
-            cursor.execute("INSERT INTO Users (Username, Password) VALUES (?, ?)", (username, password))
-            conn.commit()
-            conn.close()
-            # return f"Registration successful for {username}"
-            success = True
-        print("Did it succeed?")
-        print(success)
+        new_user = user.User(username, password)
+        success = database.create_user(new_user)
         if(success):
             return static_file('login.html', root='./templates')
+        else:
+            print("ERROR: username already taken. Try again")
+            return static_file('createAccount.html', root='./templates')
 
-    else:
-        # Handle other cases
-        pass
 
 
 
