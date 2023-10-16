@@ -1,82 +1,78 @@
-class user:
-    """
-    A class representing a user.
+import sqlite3
 
-    Attributes:
-    - username (str): the user's username
-    - email (str): the user's email address
-    - password (str): the user's password
-    - group_name (str): the user's group name
-    - piece_work (str): the user's piece of work name
-    - _user_reviews (str): the user's review
+class User:
+    def __init__(self, database):
+        self.conn = sqlite3.connect(database)
+        self.cursor = self.conn.cursor()
+        self.last_user_id = self.get_last_user_id()  # Initialize with the last used UserID
 
-    Methods:
-    - set_username(username): sets the user's username
-    - get_username(): returns the user's username
-    - set_email(email): sets the user's email address
-    - get_email(): returns the user's email address
-    - set_password(password): sets the user's password
-    - get_password(): returns the user's password
-    - set_group_name(group_name): sets the user's group name
-    - get_group_name(): returns the user's group name
-    - set_piece_work(piece_work): sets the user's piece of work name
-    - get_piece_work(): returns the user's piece of work name
-    - add_user_review(review): adds a review to the user's reviews
-    - get_user_reviews(): returns the user's reviews
-    """
+    def get_last_user_id(self):
+        # Retrieve the last used UserID from the "Users" table
+        self.cursor.execute("SELECT MAX(UserID) FROM Users;")
+        result = self.cursor.fetchone()
+        if result[0]:
+            return result[0]
+        else:
+            return 0
 
-    def __init__(self, username='', email='', password='********', group_name='',piece_work='',user_review=''):
-        self.username = username
-        self.email = email
-        self.password = password
-        self.group_name = group_name
-        self.piece_work = piece_work
-        self._user_reviews = user_review
+    def create_account(self, Username, Password):
+        # Increment the UserID for the new user
+        self.last_user_id += 1
+        user_id = self.last_user_id
+        # Implement code to insert a new user into the "Users" table
+        self.cursor.execute("INSERT INTO Users (UserID, Username, Password) VALUES (?, ?, ?);",
+                            (user_id, Username, Password))
+        self.conn.commit()
 
-    def set_username(self, username):
-        """Sets the user's username."""
-        self.username = username
-
-    def get_username(self):
-        """Returns the user's username."""
-        return self.username
-
-    def set_email(self, email):
-        """Sets the user's email address."""
-        self.email = email
+    def authenticate(self, Username, Password):
+        # Implement code to authenticate the user
+        self.cursor.execute("SELECT UserID FROM Users WHERE Username = ? AND Password = ?;",
+                            (Username, Password))
+        result = self.cursor.fetchone()
+        if result:
+            return True
+        else:
+            return False
+class Published:
+    def __init__(self, email, user_name):
+        self.__email = email
+        self.username = user_name
 
     def get_email(self):
-        """Returns the user's email address."""
-        return self.email
+        return self.__email
 
-    def set_password(self, password):
-        """Sets the user's password."""
-        self.password = password
+    def get_user(self):
+        return self.username
 
-    def get_password(self):
-        """Returns the user's password."""
-        return self.password
+    @staticmethod
+    def display_reviews(self,database):
+        self.conn = sqlite3.connect(database)
+        self.cursor = self.conn.cursor()
+        all_reviews=self.cursor.fetchall()
+        return all_reviews
 
-    def set_group_name(self, group_name):
-        """Sets the user's group name."""
-        self.group_name = group_name
+class Draft:
+    def __init__(self, database):
+        self.conn = sqlite3.connect(database)
+        self.cursor = self.conn.cursor()
 
-    def get_group_name(self):
-        """Returns the user's group name."""
-        return self.group_name
+    def create_draft(self, user_id, title, content):
+        # Implement code to create a new draft in the "Drafts" table
+        self.cursor.execute("INSERT INTO Drafts (UserID, Title, Content) VALUES (?, ?, ?);",
+                            (user_id, title, content))
+        self.conn.commit()
 
-    def set_piece_work(self, piece_work):
-        """Sets the user's piece of work name."""
-        self.piece_work = piece_work
+    def save_draft(self, draft_id, content):
+        # Implement code to update the content of a draft
+        self.cursor.execute("UPDATE Drafts SET Content = ? WHERE DraftID = ?;",
+                            (content, draft_id))
+        self.conn.commit()
 
-    def get_piece_work(self):
-        """Returns the user's piece of work name."""
-        return self.piece_work
+    def get_drafts(self, user_id):
+        # Implement code to retrieve a user's drafts
+        self.cursor.execute("SELECT * FROM Drafts WHERE UserID = ?;", (user_id,))
+        drafts = self.cursor.fetchall()
+        return drafts
 
-    def add_user_review(self, review):
-        """Adds a review to the user's reviews."""
-        self._user_reviews = review
-
-    def get_user_reviews(self):
-        """Returns the user's reviews."""
-        return self._user_reviews
+    def close_connection(self):
+        self.conn.close()
