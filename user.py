@@ -20,7 +20,6 @@ class User:
             return True
         else:
             return False
-
 class Published:
     def __init__(self, Username):
         self.username = Username
