@@ -11,6 +11,7 @@
 
 Put any decision or other important discussion details in the body of this section. 
 
+
 # Meeting Notes
 
 **Recorded by:** Tanjet
@@ -37,7 +38,8 @@ Developer 5: Tanjet(user info and session management).
 
 
 ## Oct 4, 2023
-**Recorded by:** Daniel     
+**Recorded by:** Daniel 
+
 **Notes submiited on:** Oct 5 10:42AM   
 **SCRUM master:** Daniel    
 **Venue:**  EN2060   
@@ -51,6 +53,8 @@ Immediate Responsibilities:
         framework must be able to echo inputted info  
     Daniel: Made HTML buttons or text input box on Turjo's framework.  
     Both due by the end of Oct 5  
+
+
 ## Oct 5, 2023
 
 **Recorded by:** Tanjet
@@ -110,4 +114,29 @@ Decisions:
 3) User password will be implemented by the first cycle incase of any difficulties in future.(Task- Everyone)
 4) Drafts and topic names will be added to the existing page Daniel created.
 5) A new class called published will be implemented for all of the published reviews of all users(Task- Tanjet).
+
+
+## Oct 14, 2023
+
+**Recorded by:** Caleb
+
+**Notes submitted on:** 14 October 2023
+
+**Venue:** Engineering building MUN
+
+**SCRUM Master:** Tridib Paul 
+
+**Time:** (12 Oct 2023) 6:30-9:30
+
+Team meeting 14 October 2023.
+
+Present: Caleb, Daniel, Tridib Paul
+
+Decisions: 
+
+1) Caleb will implement the remaining routing code so that the app properly interacts with and updates the database.
+2) Daniel will add remaining web page interfaces as well as functionality.
+3) Some files will be altered to make the code more efficient.
+4) The application will be functional by the end of Tuesday to allow time for proper testing.
+ 
 
