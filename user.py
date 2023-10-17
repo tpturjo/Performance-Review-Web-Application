@@ -1,62 +1,70 @@
-import sqlite3
+from bottle import Bottle, request, run, template, static_file, redirect
+import sqlite3, app, database
+
+"""
+THIS IS THE DATASTRUCTURE MODEL
+"""
+
+
+
+# class User:
+#     def __init__(self, Username, Password, Title = None, Draft = None):
+#         self.username = Username
+#         self.password = Password
+#         self.title = Title
+#         self.draft = Draft
+#
+#     def set_draft(self, title, draft):
+#         self.draft = draft
+#
+#     def get_draft(self):
+#         return self.draft
+#
+#     def get_user_name(self):
+#         return self.username
+#
+#     def get_password(self):
+#         return self.password
 
 class User:
-    def __init__(self, database):
-        self.conn = sqlite3.connect(database)
-        self.cursor = self.conn.cursor()
-
-    def create_account(self, Username, Password):
-        # Implement code to insert a new user into the "Users" table
-        self.cursor.execute("INSERT INTO Users (Username, Password) VALUES (?, ?);",
-                            (Username, Password))
-        self.conn.commit()
-
-    def authenticate(self, Username, Password):
-        # Implement code to authenticate the user
-        self.cursor.execute("SELECT Username FROM Users WHERE Username = ? AND Password = ?;",
-                            (Username, Password))
-        result = self.cursor.fetchone()
-        if result:
-            return True
-        else:
-            return False
-class Published:
-    def __init__(self, Username):
+    def __init__(self, Username, Password):
         self.username = Username
+        self.password = Password
+        self.draft = Draft(None, None)
 
-    def get_user(self):
+    def set_draft(self, title, draft):
+        self.draft.set_title_and_draft(title, draft)
+
+    def get_draft(self):
+        return self.draft.get_title_and_draft()
+
+    def get_user_name(self):
         return self.username
 
-    @staticmethod
-    def display_reviews(self,database):
-        self.conn = sqlite3.connect(database)
-        self.cursor = self.conn.cursor()
-        all_reviews=self.cursor.fetchall()
-        return all_reviews
+    def get_password(self):
+        return self.password
+
 
 class Draft:
-    def __init__(self, database):
-        self.conn = sqlite3.connect(database)
-        self.cursor = self.conn.cursor()
+    def __init__(self, Title, Draft):
+        self.title = Title
+        self.draft = Draft
 
-    def create_draft(self, Username, title, content):
-        # Implement code to create a new draft in the "Drafts" table
-        self.cursor.execute("INSERT INTO Drafts (Username, Title, Content) VALUES (?, ?, ?);",
-                            (Username, title, content))
-        self.conn.commit()
+    def set_title(self, title):
+        self.title = title
 
-    def save_draft(self, draft_id, content):
-        # Implement code to update the content of a draft
-        self.cursor.execute("UPDATE Drafts SET Content = ? WHERE DraftID = ?;",
-                            (content, draft_id))
-        self.conn.commit()
+    def set_daft(self, string):
+        self.draft = string
 
-    def get_drafts(self, Username):
-        # Implement code to retrieve a user's drafts
-        self.cursor.execute("SELECT * FROM Drafts WHERE Username = ?;", (Username,))
-        drafts = self.cursor.fetchall()
-        return drafts
+    def set_title_and_draft(self, title, string):
+        self.title = title
+        self.draft = string
 
-    def close_connection(self):
-        self.conn.close()
+    def get_title(self):
+        return self.title
 
+    def get_draft(self):
+        return self.draft
+
+    def get_title_and_draft(self):
+        return self.title, self.draft
