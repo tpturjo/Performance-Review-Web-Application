@@ -183,3 +183,4 @@ Decisions:
 2) Caleb to decide if there should be any ID in database.
 3) Discussed essential user stories for documentation.
 4) Agreed to meet tomorrow in class 
+
