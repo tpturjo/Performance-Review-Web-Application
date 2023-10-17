@@ -68,6 +68,3 @@ class Draft:
 
     def get_title_and_draft(self):
         return self.title, self.draft
-
-
-
