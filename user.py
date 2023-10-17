@@ -26,6 +26,7 @@ THIS IS THE DATASTRUCTURE MODEL
 #     def get_password(self):
 #         return self.password
 
+
 class User:
     def __init__(self, Username, Password):
         self.username = Username
