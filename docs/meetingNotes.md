@@ -139,4 +139,47 @@ Decisions:
 3) Some files will be altered to make the code more efficient.
 4) The application will be functional by the end of Tuesday to allow time for proper testing.
  
+## Oct 15, 2023
 
+**Recorded by:** Tridib Paul
+
+**Notes submitted on:** 16 October 2023
+
+**Venue:** Discord call
+
+**SCRUM Master:** Caleb
+
+**Time:** (12 Oct 2023) 6:30-9:30
+
+Team meeting 14 October 2023.
+
+Present: Caleb, Tanjeet, Tridib Paul
+
+Decisions: 
+
+1) Review what Tanjeet missed in the last meeting.
+2) Review the class developed by Caleb.
+3) Tanjeet to complete specific methods for the user class.
+4) Decide to meet in the class tomorrow.
+
+## Oct 16, 2023
+
+**Recorded by:** Tridib Paul
+
+**Notes submitted on:** 16 October 2023
+
+**Venue:**  In class ( 1- 1.50)
+
+**SCRUM Master:** Tanjeet
+
+**Time:** (12 Oct 2023) 6:30-9:30
+
+Team meeting 14 October 2023.
+
+Present: Caleb, Tanjeet, Tridib Paul, Daniel
+
+Decisions: 
+1) Went to the code developed by Tanjeet.
+2) Caleb to decide if there should be any ID in database.
+3) Discussed essential user stories for documentation.
+4) Agreed to meet tomorrow in class 
