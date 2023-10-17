@@ -27,11 +27,13 @@ def create_user(user):
         return True
 
 def check_credentials(user_name, user_password):
-    conn = sqlite3.connect('your_database.db')
+    conn = sqlite3.connect(database_name)
     cursor = conn.cursor()
 
     # Execute the query
-    cursor.execute('SELECT * FROM your_table WHERE ID=? AND password=?', (user_name, user_password))
+    # cursor.execute("SELECT UserID FROM Users WHERE Username = ?", (user.get_user_name()))
+    print("matching credentials")
+    cursor.execute('SELECT * FROM Users WHERE Username=? AND password=?', (user_name, user_password))
     result = cursor.fetchone()
 
     # Close the connection
@@ -41,7 +43,7 @@ def check_credentials(user_name, user_password):
     else:
         return True
 
-
+#
 def get_user_data_by_id(UserID):
     conn = sqlite3.connect(database_name)
     cursor = conn.cursor()
@@ -55,8 +57,18 @@ def get_user_data_by_id(UserID):
     # Returns user_data if successful. Return "None" if there is no such user_id
     return user_data if user_data else None
 
+def get_user_data_by_userName(user_name):
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
 
+    # Execute the query
+    cursor.execute('SELECT ID, name, password FROM user WHERE ID=?', (user_name,))
+    user_data = cursor.fetchone()
 
+    # Close the connection
+    conn.close()
+    # Returns user_data if successful. Return "None" if there is no such user_id
+    return user_data if user_data else None
 
 def save_user_draft_by_id(UserID):
     pass
@@ -64,6 +76,26 @@ def save_user_draft_by_id(UserID):
 def get_users_draft_by_id(UserID):
     pass
 
-def publish(draft):
-    # Write into database
-    return
+
+"""
+    Args: 
+        draft (type string)
+    Return:
+        NONE
+    Details: 
+        takes one draft and add it to "publish" database 
+"""
+def publish_review(text):
+    #Write into database
+    #please implement @Caleb
+
+"""
+    Args :
+        NONE
+    Return :
+        List of reviews
+"""
+def get_published_reviews():
+
+
+

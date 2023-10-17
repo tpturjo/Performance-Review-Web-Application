@@ -55,9 +55,12 @@ def submit():
         password = request.forms.get('password')
         can_log = database.check_credentials(username, password)
         if can_log:
+
             return redirect('/review')
         else:
+            print("Wrong ID or Password")
             return redirect('/')
+
 
 
     elif action == 'CREATE':
