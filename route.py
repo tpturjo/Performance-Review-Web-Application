@@ -73,7 +73,7 @@ def submit():
             # return redirect('/review')
         else:
             print("Wrong ID or Password")
-            return "Failure"  # This message will be received by JavaScript
+            return static_file('login.html', root='./templates')
 
     elif action == 'CREATE':
         username = request.forms.get('username')
