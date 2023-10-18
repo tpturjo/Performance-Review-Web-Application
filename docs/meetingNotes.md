@@ -184,3 +184,17 @@ Decisions:
 3) Discussed essential user stories for documentation.
 4) Agreed to meet tomorrow in class 
 
+
+**Recorded by:** Daniel Cho  
+**Notes submitted on:** 18 October 2023  
+**Scrum master:** Caleb  
+**Attendance:** Turjo, Tanjet, Caleb, Daniel  
+**Venue:** In class(1:00-1:50)  17 October 2023 
+
+Daniel pushed the code for class.py, database.py, and route.py for added functionality.
+Draft and topic name will be added into the user table database. ( Caleb)
+Unit test and Documentation will be implemented.(Assigned: Tanjet and Turjo)
+Finishing goal features and writing code for this cycle. (Assigned: Daniel and Caleb)
+Everyone will add their user stories by the first cycle.
+
+

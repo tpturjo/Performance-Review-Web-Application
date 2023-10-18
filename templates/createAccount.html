@@ -36,6 +36,32 @@
         </form>
     </div>
 
+    <div id="output_text"></div>
+
+<!--    <script>-->
+<!--        document.querySelector('form').addEventListener('submit', function(event) {-->
+<!--            event.preventDefault();  // Prevents the form from submitting in the traditional way-->
+
+<!--            var username = document.querySelector('input[name="username"]').value;-->
+<!--            var password = document.querySelector('input[name="password"]').value;-->
+
+<!--            var xhr = new XMLHttpRequest();-->
+<!--            xhr.open('POST', '/submit', true);-->
+<!--            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');-->
+
+<!--            xhr.onload = function() {-->
+<!--                if (xhr.status === 200) {-->
+<!--                    if (xhr.responseText === 'Success') {-->
+<!--                        document.getElementById('output_text').innerHTML = 'User created successfully!';-->
+<!--                    } else if (xhr.responseText === 'Failure') {-->
+<!--                        document.getElementById('output_text').innerHTML = 'Error: Username already taken. Please try again.';-->
+<!--                    }-->
+<!--                }-->
+<!--            }-->
+
+<!--            xhr.send('action=CREATE&username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));-->
+<!--        });-->
+<!--    </script>-->
 
 
 </body>
