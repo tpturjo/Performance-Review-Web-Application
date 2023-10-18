@@ -36,5 +36,40 @@
              </form>
     </div>
 
+    <div class="button">
+             <form action="/public">
+                <button>
+                  View All Reviews
+                </button>
+             </form>
+    </div>
+
+
+    <div id="output_text"></div>
+
+
+    <!-- Needs to be properly implented. Source of Bug at the moment -->
+<!--    <script>-->
+<!--        document.querySelector('form').addEventListener('submit', function(event) {-->
+<!--            event.preventDefault();  // Prevents the form from submitting in the traditional way-->
+<!--            var username = document.querySelector('input[name="username"]').value;-->
+<!--            var password = document.querySelector('input[name="password"]').value;-->
+<!--            var xhr = new XMLHttpRequest();-->
+<!--            xhr.open('POST', '/submit', true);-->
+<!--            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');-->
+
+<!--            xhr.onload = function() {-->
+<!--                if (xhr.status === 200) {-->
+<!--                    if (xhr.responseText === 'Failure') {-->
+<!--                        document.getElementById('output_text').innerHTML = 'Wrong ID or Password.';-->
+<!--                    } elese -->
+<!--                }-->
+<!--            }-->
+
+<!--            xhr.send('action=LOGIN&username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));-->
+<!--        });-->
+<!--    </script>-->
+
+
 </body>
 </html>
