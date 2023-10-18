@@ -12,8 +12,20 @@
         <h1>Performance Review</h1>
     </div>
 
-    <div class = "title">
-        <a href = "/"><button>LOG in to write a draft</button></a>
+    <div class = "reviews">
+        <ul class = "reviews">
+        % for review in reviews:
+            <li class = "reviews">{{ review }}</li>
+        % end
+        </ul>
+    </div>
+
+    <div class="button">
+             <form action="/">
+                <button>
+                  Login to write a review
+                </button>
+             </form>
     </div>
 </body>
 </html>

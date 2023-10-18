@@ -10,24 +10,15 @@
 <body>
     <div class = "save">
         <h2>Enter Review</h2>
-
-<!--        <form action="/submit" method="post">-->
-<!--            <label for="title">title:</label>-->
-<!--            <input type="text" id="title" name="title">-->
-
-<!--            <textarea id="text"></textarea>-->
-<!--            <div class="button">-->
-<!--                <input type="submit" name="action" value="SAVE">-->
-<!--                <input type="submit" name="action" value="PUBLISH">-->
-<!--            </div>-->
-<!--        </form>-->
-        <form action="/receive" method="post">
+        <form action="/submit" method="post">
             <label for="title">title:</label>
-            <input type="text" id="title" name="title">
-
-            <textarea id="text"></textarea>
+                <div>
+                    <input type="text" id="title" name="title">
+                </div>
+            <textarea id="text" name="text"></textarea>
             <div class="button">
-                <input type="submit" name="action" value="SAVE">
+<!--                not using save button because not implemented yet-->
+<!--                <input type="submit" name="action" value="SAVE">-->
                 <input type="submit" name="action" value="PUBLISH">
             </div>
         </form>

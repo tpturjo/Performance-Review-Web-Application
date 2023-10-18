@@ -50,7 +50,7 @@ def get_user_data_by_id(UserID):
     cursor = conn.cursor()
 
     # Execute the query
-    cursor.execute('SELECT ID, name, password FROM user WHERE ID=?', (UserID,))
+    cursor.execute('SELECT * FROM Users WHERE ID=?', (UserID,))
     user_data = cursor.fetchone()
 
     # Close the connection
@@ -58,12 +58,12 @@ def get_user_data_by_id(UserID):
     # Returns user_data if successful. Return "None" if there is no such user_id
     return user_data if user_data else None
 
-def get_user_data_by_userName(user_name):
+def get_user_data_by_username(user_name):
     conn = sqlite3.connect(database_name)
     cursor = conn.cursor()
 
     # Execute the query
-    cursor.execute('SELECT ID, name, password FROM user WHERE ID=?', (user_name,))
+    cursor.execute('SELECT * FROM Users WHERE username=?', (user_name,))
     user_data = cursor.fetchone()
 
     # Close the connection
@@ -71,10 +71,21 @@ def get_user_data_by_userName(user_name):
     # Returns user_data if successful. Return "None" if there is no such user_id
     return user_data if user_data else None
 
-def save_user_draft_by_id(username):
-    pass
+def save_user_draft_by_username(username, title, text):
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
+    cursor.execute("SELECT Username FROM Users WHERE Username = ?", (username))
+    existing_user = cursor.fetchone()
+
+    # Insert the new user into the 'Users' table
+    cursor.execute("INSERT INTO Users (Title, Draft) VALUES (?, ?)",
+                   (title, text))
+    conn.commit()
+    conn.close()
+
 
 def get_users_draft_by_id(username):
+
     pass
 
 
@@ -86,10 +97,14 @@ def get_users_draft_by_id(username):
     Details: 
         takes one draft and add it to "publish" database 
 """
-def publish_review(text):
-    #Write into database
-    #please implement @Caleb
+def publish_review(username, title, content):
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO Reviews (Username, Title, Content) VALUES (?, ?, ?)", (username, title, content))
+    conn.commit()
+    conn.close()
     pass
+
 """
     Args :
         NONE
@@ -97,6 +112,17 @@ def publish_review(text):
         List of reviews
 """
 def get_published_reviews():
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
+
+    # Execute the query to get all reviews
+    cursor.execute('SELECT * FROM Reviews')
+    reviews_data = cursor.fetchall()
+
+    # Close the connection
+    conn.close()
+
+    return reviews_data
     pass
 
 

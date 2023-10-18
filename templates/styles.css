@@ -4,7 +4,7 @@ body {
 
 h1 {
     font-size: 4rem;
-    color: blue;
+    color: red;
 }
 
 #text{
@@ -15,4 +15,24 @@ h1 {
 .button{
     margin-top: 10px;
     margin-bottom: 50px;
+}
+
+.list{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#reviews{
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 4rem;
+    color: blue;
+}
+.reviews{
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: purple;
 }
