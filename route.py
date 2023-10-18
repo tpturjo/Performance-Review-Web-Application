@@ -1,7 +1,7 @@
 """
 Import statements for the Bottle web framework.
 """
-from bottle import Bottle, request, run, template, static_file, redirect
+from bottle import Bottle, request, run, template, static_file, redirect, response
 import sqlite3, app, user, database
 
 
@@ -28,6 +28,16 @@ def review():
 def serve_static(filename):
     return static_file(filename, root='./templates')
 
+@app.route('/receive', method ='POST')
+def receive():
+    action = request.forms.get('action')
+    if action == 'SAVE':
+        # username = request.forms.get('username')
+        username = request.get_cookie('username')
+
+        print("did it come through in this new funct?: ")
+        print(username)
+        pass
 
 @app.route('/submit', method='POST')
 def submit():
@@ -36,18 +46,11 @@ def submit():
     # redirect(f'/review?username={username}')
     action = request.forms.get('action')
     if action == 'SAVE':
-
-        # username is a dummy variable pretend username works
-        username = username
-        # Logic for saving
-        """ To implement
-            - pull out draft belonging to the username  
-            - spit out draft string; save it in a var which is ready for output. 
-        """
-
+        username = request.get_cookie('username')
+        print("did it come through?: ")
+        print(username)
         pass
     elif action == 'PUBLISH':
-        # Logic for publishing
         pass
     elif action == 'LOGIN':
         # Logic for login
@@ -56,12 +59,13 @@ def submit():
         can_log = database.check_credentials(username, password)
         if can_log:
 
-            return redirect('/review')
+            # return redirect('/review')
+            response.set_cookie('username', username)
+            return redirect(f'/review?username={username}')
         else:
             print("Wrong ID or Password")
             return redirect('/')
-
-
+            #bruh
 
     elif action == 'CREATE':
         username = request.forms.get('username')
@@ -74,12 +78,11 @@ def submit():
 
         if(success):
             print("Successfully created user")
-            login()
-            # return static_file('login.html', root='./templates')
             return redirect('/')
+
         else:
             print("ERROR: username already taken. Try again")
-            return redirect('/createAccount')
+            return "Failure"  # This message will be received by JavaScript
             # return static_file('createAccount.html', root='./templates')
 
 

@@ -14,7 +14,8 @@ THIS PROGRAM HANDLES ALL SQL LOGIC AND TRAFFIC
 def create_user(user):
     conn = sqlite3.connect(database_name)
     cursor = conn.cursor()
-    cursor.execute("SELECT UserID FROM Users WHERE Username = ?", (user.get_user_name()))
+    print(user.get_user_name())
+    cursor.execute("SELECT Username FROM Users WHERE Username = ?", (user.get_user_name(),))
     existing_user = cursor.fetchone()
     if existing_user:
         conn.close()
@@ -70,10 +71,10 @@ def get_user_data_by_userName(user_name):
     # Returns user_data if successful. Return "None" if there is no such user_id
     return user_data if user_data else None
 
-def save_user_draft_by_id(UserID):
+def save_user_draft_by_id(username):
     pass
 
-def get_users_draft_by_id(UserID):
+def get_users_draft_by_id(username):
     pass
 
 
@@ -88,7 +89,7 @@ def get_users_draft_by_id(UserID):
 def publish_review(text):
     #Write into database
     #please implement @Caleb
-
+    pass
 """
     Args :
         NONE
@@ -96,6 +97,6 @@ def publish_review(text):
         List of reviews
 """
 def get_published_reviews():
-
+    pass
 
 
