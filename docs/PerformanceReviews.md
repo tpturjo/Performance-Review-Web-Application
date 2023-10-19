@@ -14,7 +14,7 @@ contribution that greatly enhanced our project's performance. Moreover, his comm
 has helped the team better understand the SQL components of our project. His extensive effort and time spent on the project 
 are indeed noteworthy.
 
-Tanjeet's contributions to the team are commendable. He has excelled in developing app logics and is dedicated to 
+Tanjet's contributions to the team are commendable. He has excelled in developing app logics and is dedicated to 
 maintaining our project documentation with precision. His commitment to ensuring accurate and error-free documentation is
 highly valuable to the team's success.
 
@@ -22,3 +22,21 @@ While we haven't encountered any major issues so far, we do have occasional disa
 we've always managed to find a solution in the end. Our main challenge has been coordinating our time for collaborative work,
 but I appreciate that most of our progress was achieved during our meetings. We've all put in a significant amount of effort
 for this course, and I'm optimistic that we can successfully complete it.
+
+
+## Performance review by Daniel Cho
+I am pleased working with my teammates and how our first cycle turned out.
+
+In the initial process, Caleb has volunteered and took to initiative to work on a Database. He decided on SQL, which he has never used before. 
+Caleb successfully learned and implemented the necessary functions and tables necessary, and requested, by his teammates.
+Caleb continuously made sure that all everyone was on the same page during all our group meetings.
+He is a good communicator and team player.
+
+Turjo had been a valuable asset to our team. He set up the bottle framework on day one and kickstarted the project.
+He took lead in documentation, and he made sure everyone supplied the appropriate documents via Kanban, comments, or documents.
+Throughout the whole process, Turjo was quick to read the latest updates on the professor's homepage and understanding the specifications.  
+Turjo has been present in all the meetings, and has been readily available for collaberation and support.
+
+Tanjet worked indirectly with me, and more directly with Turjo and Caleb. However, to my limited observation, I'm pleased with Tanjet's cooperation.
+Tanjet was the initial designer for the data structures. He is easy to work with, and he delivers code and results in a timely manner. 
+Tanjet has shown good documentation skills and support for his teammates.   
