@@ -14,6 +14,8 @@ Put any decision or other important discussion details in the body of this secti
 
 # Meeting Notes
 
+
+## Oct 3, 2023
 **Recorded by:** Tanjet
 
 **Notes submiited on:** 5 October 2023
@@ -184,7 +186,7 @@ Decisions:
 3) Discussed essential user stories for documentation.
 4) Agreed to meet tomorrow in class 
 
-
+## Oct 17, 2023
 **Recorded by:** Daniel Cho  
 **Notes submitted on:** 18 October 2023  
 **Scrum master:** Caleb  
