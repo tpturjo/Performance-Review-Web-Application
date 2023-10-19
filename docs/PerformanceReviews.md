@@ -27,7 +27,7 @@ for this course, and I'm optimistic that we can successfully complete it.
 ## Performance review by Daniel Cho
 I am pleased working with my teammates and how our first cycle turned out.
 
-In the initial process, Caleb has volunteered and took to initiative to work on a Database. He decided on SQL, which he has never used before. 
+In the initial process, Caleb has volunteered and took the initiative to work on our Database. He decided on SQL, which he has never used before. 
 Caleb successfully learned and implemented the necessary functions and tables necessary, and requested, by his teammates.
 Caleb continuously made sure that all everyone was on the same page during all our group meetings.
 He is a good communicator and team player.
