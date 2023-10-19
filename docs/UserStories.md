@@ -23,3 +23,13 @@ the performance of his team, ensuring that his reputation remains intact as Even
 
 **Propose Feature 1:** Group Formation  
 **Propose Feature 2:** Anonymous Reviews
+
+## User review of Tanjet
+
+John, as an HR manager, wants to easily create and manage performance review cycles for employees, including setting review 
+periods and assigning reviewers. Supervisor Mike wants to be able to easily access and review his team members' performance
+data and provide feedback within the app . As an employee, I want to have a centralized platform where I can view my review.
+Our team leader wants to be able to compare performance data across team members to identify trends, strengths, and weaknesses. 
+**Propose Feature :** Adding rating
+**Propose Feature :** Adding guest login(i.e. someone without an account)
+
