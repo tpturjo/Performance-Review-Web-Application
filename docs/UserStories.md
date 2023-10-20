@@ -33,3 +33,13 @@ Our team leader wants to be able to compare performance data across team members
 **Propose Feature :** Adding rating
 **Propose Feature :** Adding guest login(i.e. someone without an account)
 
+
+## User review by Daniel
+
+Sarah, 28, is a marketing specialist living in the big apple, Silicon Valley. She completed her undergraduate degree in Marketing at the University of Texas and has been working in the digital marketing industry for 6 years. Sarah is a tech-savvy professional who has a keen eye for user experience and design. She loves exploring new web applications and platforms that can help streamline her work. She frequently needs to gather user feedback on various products and services. 
+
+She saw the first version of our product and wants the following features. She proposed:   
+1. **Customization Options**: As a marketing specialist, I often need to add a professional touch to my reviews. Being able to add a profile picture, a short bio, and perhaps a link to various social medias will help me understand my clients better.  
+2. **Moderation and Reporting**: Given the public nature of the reviews, a robust moderation and reporting system is essential. It would be reassuring to shoot down inappropriate content or spam.  
+3. **Draft functionality**: As a marketer, I need to assure that my clients are most cooperative with handing in reviews. Writing a long, well thought-out review might take longer than one seating. A "save-draft" function will encourage my clients to write and submit reviews.  
+4. **Design**: As a marketing specialist, I take user experience and perception seriously. Currently, the design of the product is rudimentary, so some more styling would add to the user experience.  
