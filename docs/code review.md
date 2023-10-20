@@ -8,7 +8,7 @@ Our team has made significant progress in developing the Performance Review web-
 Turjo has successfully set up the server, enabling seamless communication for our application. 
 Daniel has constructed the HTML and implemented a robust templating engine, providing a foundation for the app's frontend logic. 
 Caleb has established the data store and object mapping, crucial for managing and organizing our application's data.
-Tanjeet has been instrumental in developing user info and security features, focusing on safeguarding user data and access. 
+Tanjet has been instrumental in developing user info and security features, focusing on safeguarding user data and access. 
 
 Currently, we have a functional server and a structured HTML layout for the application. 
 Connections between various components are established, allowing us to access essential user information through the implemented logic.

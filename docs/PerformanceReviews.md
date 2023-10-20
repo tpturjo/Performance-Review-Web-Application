@@ -39,4 +39,14 @@ Turjo has been present in all the meetings, and has been readily available for c
 
 Tanjet worked indirectly with me, and more directly with Turjo and Caleb. However, to my limited observation, I'm pleased with Tanjet's cooperation.
 Tanjet was the initial designer for the data structures. He is easy to work with, and he delivers code and results in a timely manner. 
-Tanjet has shown good documentation skills and support for his teammates.   
+Tanjet has shown good documentation skills and support for his teammates. 
+
+## Performance review by Tanjet
+
+Caleb has been a SQL master and has made impressive progress in our database implementation. His contribution to the app logic has been invaluable. 
+
+Daniel has been a great team member, providing structure and guidance for our project. His coding experience has been a major asset to the team, and he's always ensured the code is clean and organized. 
+
+Turjo is a creative thinker, constantly coming up with fantastic ideas and features for our project. Even though our collaboration has been limited, his strong and helpful opinions shine through. 
+
+Overall, I feel lucky to work with such amazing teammates who have made our server implementation successful.

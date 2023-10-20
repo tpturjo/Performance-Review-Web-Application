@@ -172,13 +172,13 @@ Decisions:
 
 **Venue:**  In class ( 1- 1.50)
 
-**SCRUM Master:** Tanjeet
+**SCRUM Master:** Tanjet
 
 **Time:** (12 Oct 2023) 6:30-9:30
 
 Team meeting 14 October 2023.
 
-Present: Caleb, Tanjeet, Tridib Paul, Daniel
+Present: Caleb, Tanjet, Tridib Paul, Daniel
 
 Decisions: 
 1) Went to the code developed by Tanjeet.
