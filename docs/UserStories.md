@@ -24,6 +24,7 @@ the performance of his team, ensuring that his reputation remains intact as Even
 **Propose Feature 1:** Group Formation  
 **Propose Feature 2:** Anonymous Reviews
 
+
 ## User review of Tanjet
 
 John, as an HR manager, wants to easily create and manage performance review cycles for employees, including setting review 
@@ -43,3 +44,14 @@ She saw the first version of our product and wants the following features. She p
 2. **Moderation and Reporting**: Given the public nature of the reviews, a robust moderation and reporting system is essential. It would be reassuring to shoot down inappropriate content or spam.  
 3. **Draft functionality**: As a marketer, I need to assure that my clients are most cooperative with handing in reviews. Writing a long, well thought-out review might take longer than one seating. A "save-draft" function will encourage my clients to write and submit reviews.  
 4. **Design**: As a marketing specialist, I take user experience and perception seriously. Currently, the design of the product is rudimentary, so some more styling would add to the user experience.  
+
+
+## User story by Caleb Doupe
+
+Kora is the founder of The SMILEY Financial Firm. She is interested in having her staff make use of a performance review
+application in which staff can highlight each other's achievements, through the use of not only text but also photos. 
+Kora also realizes some staff members will want to write less positive reviews about their co-workers. 
+She would like for staff to be able to privately message reviews in case the information within the review is sensitive.
+
+**Propose Feature :** Photo sharing  
+**Propose Feature :** Private messaging of reviews

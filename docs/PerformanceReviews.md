@@ -24,6 +24,7 @@ but I appreciate that most of our progress was achieved during our meetings. We'
 for this course, and I'm optimistic that we can successfully complete it.
 
 
+
 ## Performance review by Daniel Cho
 I am pleased working with my teammates and how our first cycle turned out.
 
@@ -41,6 +42,8 @@ Tanjet worked indirectly with me, and more directly with Turjo and Caleb. Howeve
 Tanjet was the initial designer for the data structures. He is easy to work with, and he delivers code and results in a timely manner. 
 Tanjet has shown good documentation skills and support for his teammates. 
 
+
+
 ## Performance review by Tanjet
 
 Caleb has been a SQL master and has made impressive progress in our database implementation. His contribution to the app logic has been invaluable. 
@@ -50,3 +53,17 @@ Daniel has been a great team member, providing structure and guidance for our pr
 Turjo is a creative thinker, constantly coming up with fantastic ideas and features for our project. Even though our collaboration has been limited, his strong and helpful opinions shine through. 
 
 Overall, I feel lucky to work with such amazing teammates who have made our server implementation successful.
+
+
+
+## Performance review by Caleb Doupe
+Overall I am very happy with the progress our team made during our first sprint and how we cooperated with each other.
+
+Daniel did a fantastic job implementing his code on the project. He was very organized and on topic during the project. 
+He displayed several leader based qualities, and did a great job bringing the group together.
+
+Turjo was very patient and dedicated throughout the entirety of our sprint. If he struggled on a concept, we could always
+rely on him to find a solution. Turjo acted as a great scrum master by keeping us on track and focused on our deliverables.
+
+Tanjet did a great job implementing the tasks he was assigned and providing support. While he wasn't as vocal or present 
+as the rest of the group members, he would always provide assistance when he could and implement his tasks in a timely manner.
