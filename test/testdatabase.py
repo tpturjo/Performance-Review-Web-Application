@@ -141,7 +141,7 @@ class TestDatabaseMethods(unittest.TestCase):
 
         self.assertTrue(any(title in review[2] for review in published_reviews))
 
-        remove_test_user(user)
+        remove_test_user(self.test_user)
 
     def test_get_published_reviews(self):
         """
@@ -156,7 +156,7 @@ class TestDatabaseMethods(unittest.TestCase):
         publish_review(username, title, content)
         published_reviews = get_published_reviews()
         self.assertIsNotNone(published_reviews)
-        remove_test_user(user)
+        remove_test_user(self.test_user)
 
 
 if __name__ == '__main__':
