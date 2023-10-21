@@ -32,7 +32,7 @@ so it can be used by the database.
 - The route.py file contains the mapping functionality for the user as well as the method call to start the 
 performance review application through the use of the Bottle web framework. It establishes the various routes for 
 the application's web page and buttons. It calls user.py to package user data for when it calls database.py. 
-It calls functions from the database.py file to manipulate the data from the user. 
+It calls functions from the database.py file to manipulate the data from the user.   
 
 
 - The application can be run using the "if __name__ == '__main__':" line of code at the bottom of the file.
