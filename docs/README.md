@@ -37,7 +37,9 @@ from the user.
 - The application can be run using the "if __name__ == '__main__':" line of code at the bottom of the file.
 
 
-- The userDatabase.db file contains
+- The userDatabase.db file contains the Users and Reviews tables that allow for manipulation of data for the application.
+By installing the simplesqlite plugin, you can view the tables and what they contain as data as manipulated within them.
+
 
 # Additional Important Information
 - Due to several components of the assignment being unclear, and some components being explained in more detail later 
@@ -58,6 +60,7 @@ components. This is not to say we did not perform them during meetings, as we di
 review each other's code in detail before merging pull requests. We also do not believe it to be fair to be 
 penalized for our documentation of them due to the confusion we had until later into the sprint.
 
+
 # Unit Tests
 - Unit tests are broken up into two files under the test folder. 
 Manuel Server Module Testing.pdf contains unit testing instructions for the route.py file.
@@ -66,6 +69,7 @@ testdatabase.py contains unit tests for the database.py file.
 
 - The user.py file did not require unit tests since it only contains setter and getter methods for the data in the
 userDatabase.db file.
+
 
 # Meeting Notes
 - Meeting notes can be found in the MeetingNotes.md file.
@@ -85,6 +89,7 @@ meeting notes at the end of the sprint in one pull request.
 
 - Meeting notes contain some of our code reviews.
 
+
 # Code Reviews
 - Some documented code reviews can be found in the MeetingNotes.md file. A large code review can be found in the
 CodeReview.md file.
@@ -93,17 +98,21 @@ CodeReview.md file.
 - Each recorded meeting contains various small segments of code reviews. As we described in the "Additional Important
 Information" section, the documentation of this component of the project was unclear to us until later into the sprint.
 
+
 # User Stories
 - All user stories can be found in the UserStories.md file.
 Path docs/UserStories.md
+
 
 # Kanban Board
 - Kanban board can be located on our remote git under projects. Our Backlog in our Kanban board includes tasks we 
 intend to implement in future Sprints
 
+
 # Performance Reviews
 - Performance reviews can be found in the PerformanceReviews.md file.
 Path: docs/PerformanceReviews.md
+
 
 # Attribution Table
 - The Attribution table containing all references used can be found in the AttributionTable.md file.

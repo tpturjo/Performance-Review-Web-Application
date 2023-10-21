@@ -1,5 +1,4 @@
 ## Performance review by Tridib Paul Turjo
-
 I'm delighted that we managed to meet the professor's requirements in the first sprint cycle. Initially, I had concerns 
 about our project's progress, especially when everyone had plans during the midterm break, making it difficult to coordinate. 
 This made me worry about our ability to complete the project on time. However, it's worth noting that we had a functional
@@ -45,7 +44,6 @@ Tanjet has shown good documentation skills and support for his teammates.
 
 
 ## Performance review by Tanjet
-
 Caleb has been a SQL master and has made impressive progress in our database implementation. His contribution to the app logic has been invaluable. 
 
 Daniel has been a great team member, providing structure and guidance for our project. His coding experience has been a major asset to the team, and he's always ensured the code is clean and organized. 
