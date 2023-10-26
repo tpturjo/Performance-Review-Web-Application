@@ -2,6 +2,10 @@
 
 
 
+# Sprint Cycle 1
+
+
+
 ## Oct 3, 2023
 
 **Recorded by:** Tanjet  
@@ -216,6 +220,40 @@ of our application's code for the first sprint.
 **Decisions** 
 1) Caleb will complete the README file. Everyone will review and add to it as necessary. 
 2) All other final components will be added to the program before the deadline.
+
+
+
+# Sprint Cycle 2
+
+
+
+## Oct 26, 2023
+**Recorded by:** Caleb Doupe      
+**Scrum master:** Daniel       
+**Venue:** CS Student Lab   
+**Time:** 1:00 PM - 2:00 PM   
+**Attendance:** Caleb, Daniel, Turjo, Tanjet  
+
+**Professor's Suggestions & Topics To Discuss**
+1) Discuss team tasks for 2nd sprint.
+2) Discuss tasks that were not implemented in sprint 1.
+3) Discuss features to implement in sprint 2.
+4) Assign coding tasks and set initial deadlines.
+5) Set deadline for final code submissions for sprint 2.
+
+**Decisions** 
+1) The group members have each chosen a feature to research and implement. Before next meeting, 
+each group member will research and start implementation if possible. 
+2) Each group member will choose their second feature for next meeting (Monday Oct 26).
+3) Caleb will implement review items for reviews. 
+4) Daniel will implement session management.
+5) Daniel will decouple some of our code from sprint 1 to adhere to SOLID.
+6) Turjo will implement the search function, and learn postman. 
+7) Tanjet will implement a feature to allow users to publish reviews anonymously.
+8) Tanjet will make a list of all variable and method names as well as conform to PEP guidelines.
+9) Soft deadline (Based on difficulty of feature implementation) for final code submissions is 
+set to be November 8. 
+10) Update kanban board based on backlog and chosen features for implementation.
 
 
 
