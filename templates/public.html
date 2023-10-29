@@ -12,10 +12,15 @@
         <h1>Performance Review</h1>
     </div>
 
-    <div class = "reviews">
+    <div class = "content">
         <ul class = "reviews">
         % for review in reviews:
-            <li class = "reviews">{{ review }}</li>
+            <li class = "reviews_history">
+                <div class = "reviews">
+                    <h5 id="title">{{ review[1] }}</h5>
+                    <h5>{{ review[0] }}</h5>
+                    <h5>{{ review[2] }}</h5>
+            </li>
         % end
         </ul>
     </div>
