@@ -11,7 +11,7 @@ in group work and assisting me in resolving errors.
 Caleb's dedication is truly exceptional; he invested time in mastering SQL to develop our project's database, a substantial
 contribution that greatly enhanced our project's performance. Moreover, his commitment to clarifying his code thoroughly 
 has helped the team better understand the SQL components of our project. His extensive effort and time spent on the project 
-are indeed noteworthy.
+are indeed noteworthy. 
 
 Tanjet's contributions to the team are commendable. He has excelled in developing app logics and is dedicated to 
 maintaining our project documentation with precision. His commitment to ensuring accurate and error-free documentation is
