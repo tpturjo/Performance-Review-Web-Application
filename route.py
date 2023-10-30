@@ -1,6 +1,6 @@
 from bottle import Bottle, request, run, template, static_file, redirect, response
 import sqlite3
-import app
+import methods
 import user
 import database
 
@@ -31,7 +31,7 @@ def public():
 
     """
     all_published = database.get_published_reviews()
-    all_published_reformatted = format_list_for_public(all_published)
+    all_published_reformatted = methods.format_list_for_public(all_published)
     return template('templates/public.html', reviews=all_published_reformatted)
 
 
@@ -56,10 +56,10 @@ def review():
         str: The review page HTML.
 
     """
-    username = request.query.username
+    # username = request.query.username
     username = request.get_cookie('username')
-    data = database.get_user_data_by_username(username)
-    text = data[2]
+    # data = database.get_user_data_by_username(username)
+    # text = data[2]
     return template('templates/review.html', username=username)
 
 
@@ -84,7 +84,7 @@ def submit():
     Handles the form submission.
 
     Returns:
-        str: The response HTML.
+        link: Route to an HTML service.
 
     """
     action = request.forms.get('action')
@@ -127,45 +127,6 @@ def submit():
             return "Failure"  # This message will be received by JavaScript
 
 
-def format_list_for_public(lst):
-    """
-    Formats the list of published reviews for the public page.
-
-    Args:
-        lst (list): The list of published reviews.
-
-    Returns:
-        list: The formatted list of reviews.
-
-    """
-    new_list = []
-    for element in lst:
-        new_tuple = []
-        myString1 = "Author: " + handle_none_variables(element[0])
-        myString2 = "Title: " + handle_none_variables(element[1])
-        myString3 = "Content: " + handle_none_variables(element[2])
-        new_tuple.append(myString1)
-        new_tuple.append(myString2)
-        new_tuple.append(myString3)
-        new_list.append(new_tuple)
-    return new_list
-
-
-def handle_none_variables(element):
-    """
-    Handles None values by converting them to the string "none".
-
-    Args:
-        element: The value to handle.
-
-    Returns:
-        str: The converted value.
-
-    """
-    if element == None:
-        return "none"
-    else:
-        return element
 
 
 if __name__ == '__main__':
