@@ -1,5 +1,8 @@
 body {
     text-align: center;
+    height: 100vh;
+    margin-top: 0px;
+    background-color: black;
 }
 
 h1 {
@@ -7,6 +10,13 @@ h1 {
     color: red;
 }
 
+#output_text{
+    color: red;
+}
+
+label{
+    color: white;
+}
 #text{
     width: 80vw;
     height: 30vh;
@@ -29,15 +39,15 @@ h1 {
 
 .reviews_history{
     list-style-type: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .reviews{
     list-style-type: none;
     margin: ;
     font-size: 1rem;
-    color: black;
+    color: white;
 }
 h5{
     text-align: left;

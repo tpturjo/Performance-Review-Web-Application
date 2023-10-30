@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <title>createAccount</title>
-  <link rel="stylesheet" href="static/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>createAccount</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Create Account :)</h1>
+    <h1>Create Account</h1>
     <div class="createAccount">
          <div id = "createAccount">
                 <form action="/submit" method="post">
@@ -52,8 +52,13 @@
             xhr.onload = function() {
                 if (xhr.status === 200) {
                     if (xhr.responseText === 'Failure') {
-                        event.preventDefault();  // Prevents the form from submitting in the traditional way
-                        document.getElementById('output_text').innerHTML = 'Error: Username already taken. Please try again.';
+                        // Prevents the form from submitting in the traditional way
+                        event.preventDefault();
+                        document.getElementById('output_text').innerHTML = 'Error: Username already taken. Please try again....';
+                        setTimeout(function() {
+                        // Remove the error message after 5 seconds (5000 milliseconds)
+                        document.getElementById('output_text').innerHTML = '';
+                        }, 5000);
                     }
                     else {
                         document.getElementById('output_text').innerHTML = 'Successfully Created Account. Please press "Go Back"';

@@ -38,6 +38,3 @@ def handle_none_variables(element):
         return "none"
     else:
         return element
-
-def sayHi():
-    print("hi")

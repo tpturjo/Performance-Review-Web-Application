@@ -30,7 +30,6 @@ def public():
         str: The public page HTML.
 
     """
-    methods.sayHi()
     all_published = database.get_published_reviews()
     all_published_reformatted = methods.format_list_for_public(all_published)
     return template('templates/public.html', reviews=all_published_reformatted)
@@ -57,10 +56,10 @@ def review():
         str: The review page HTML.
 
     """
-    username = request.query.username
+    # username = request.query.username
     username = request.get_cookie('username')
-    data = database.get_user_data_by_username(username)
-    text = data[2]
+    # data = database.get_user_data_by_username(username)
+    # text = data[2]
     return template('templates/review.html', username=username)
 
 
