@@ -256,4 +256,24 @@ set to be November 8.
 10) Update kanban board based on backlog and chosen features for implementation.
 
 
+## Oct 30, 2023
+**Recorded by:** Daniel        
+**Scrum master:** Tanjet        
+**Venue:** CS Student Lab    
+**Time:** 1:00 PM - 2:00 PM     
+**Attendance:** Caleb, Daniel, Turjo, Tanjet    
 
+**Professor's Suggestions & Topics To Discuss**  
+1) Assign remaining team tasks for 2nd sprint.  
+2) Discuss current progress   
+
+**Decisions** 
+1) Turjo did pursue postman. Will transfer route testing file from pdf to code using postman.  
+2) Tanjet will implement a feature to allow users to change their password.  
+3) Turjo has decided he will implement a share feature for use outside of the application.  
+4) Daniel will implement a save draft feature for the application  
+5) Caleb will implement a comment section for reviews in the application.  
+
+**Code Review**  
+1) Daniels Code: Decoupled messy code from route.py and reformatted the public review page. Also optimized html and css code.  
+- Approved PR. Code worked properly.  
