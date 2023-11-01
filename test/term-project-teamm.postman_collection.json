@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "5d12b474-e950-42ab-9ec9-e4dffea4e88a",
+		"name": "term-project-teamm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30888994"
+	},
+	"item": [
+		{
+			"name": "Initial",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": [
+				{
+					"name": "Initial",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 15:06:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2663"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Wed, 01 Nov 2023 14:16:15 GMT"
+						},
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE HTML>\n<html lang=\"en\" dir=\"ltr\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>login</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\r\n\n    </head>\n    <body>\n        <h1>Performance Review</h1>\n        <h3>login</h3>\n        <div class=\"main\">\n            <div id = \"user\">\n                <form action=\"/submit\" method=\"post\">\n                    <div>\n                        <label for=\"username\">Username:</label>\n                        <input type=\"text\" id=\"username\" name=\"username\">\r\n                    \n                    </div>\n                    <div>\n                        <label for=\"password\">Password:</label>\n                        <input type=\"text\" id=\"password\" name=\"password\">\r\n                    \n                    </div>\n                    <div class = \"button\">\n                        <input type=\"submit\" name=\"action\" value=\"LOGIN\">\r\n                    \n                    </div>\n                </form>\n            </div>\n        </div>\n        <div class=\"button\">\n            <form action=\"/createAccount\">\n                <button>\r\n                  Create Account\r\n                </button>\n            </form>\n        </div>\n        <div class=\"button\">\n            <form action=\"/public\">\n                <button>\r\n                  View All Reviews\r\n                </button>\n            </form>\n        </div>\n        <div id=\"output_text\"></div>\n        <!-- Needs to be properly implented. Source of Bug at the moment -->\n        <!--    <script>-->\n        <!--        document.querySelector('form').addEventListener('submit', function(event) {-->\n        <!--            event.preventDefault();  // Prevents the form from submitting in the traditional way-->\n        <!--            var username = document.querySelector('input[name=\"username\"]').value;-->\n        <!--            var password = document.querySelector('input[name=\"password\"]').value;-->\n        <!--            var xhr = new XMLHttpRequest();-->\n        <!--            xhr.open('POST', '/submit', true);-->\n        <!--            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');-->\n        <!--            xhr.onload = function() {-->\n        <!--                if (xhr.status === 200) {-->\n        <!--                    if (xhr.responseText === 'Failure') {-->\n        <!--                        document.getElementById('output_text').innerHTML = 'Wrong ID or Password.';-->\n        <!--                    } elese -->\n        <!--                }-->\n        <!--            }-->\n        <!--            xhr.send('action=LOGIN&username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));-->\n        <!--        });-->\n        <!--    </script>-->\r\n\r\n\r\n\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 15:07:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2663"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Wed, 01 Nov 2023 14:16:15 GMT"
+						},
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE HTML>\n<html lang=\"en\" dir=\"ltr\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>login</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\r\n\n    </head>\n    <body>\n        <h1>Performance Review</h1>\n        <h3>login</h3>\n        <div class=\"main\">\n            <div id = \"user\">\n                <form action=\"/submit\" method=\"post\">\n                    <div>\n                        <label for=\"username\">Username:</label>\n                        <input type=\"text\" id=\"username\" name=\"username\">\r\n                    \n                    </div>\n                    <div>\n                        <label for=\"password\">Password:</label>\n                        <input type=\"text\" id=\"password\" name=\"password\">\r\n                    \n                    </div>\n                    <div class = \"button\">\n                        <input type=\"submit\" name=\"action\" value=\"LOGIN\">\r\n                    \n                    </div>\n                </form>\n            </div>\n        </div>\n        <div class=\"button\">\n            <form action=\"/createAccount\">\n                <button>\r\n                  Create Account\r\n                </button>\n            </form>\n        </div>\n        <div class=\"button\">\n            <form action=\"/public\">\n                <button>\r\n                  View All Reviews\r\n                </button>\n            </form>\n        </div>\n        <div id=\"output_text\"></div>\n        <!-- Needs to be properly implented. Source of Bug at the moment -->\n        <!--    <script>-->\n        <!--        document.querySelector('form').addEventListener('submit', function(event) {-->\n        <!--            event.preventDefault();  // Prevents the form from submitting in the traditional way-->\n        <!--            var username = document.querySelector('input[name=\"username\"]').value;-->\n        <!--            var password = document.querySelector('input[name=\"password\"]').value;-->\n        <!--            var xhr = new XMLHttpRequest();-->\n        <!--            xhr.open('POST', '/submit', true);-->\n        <!--            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');-->\n        <!--            xhr.onload = function() {-->\n        <!--                if (xhr.status === 200) {-->\n        <!--                    if (xhr.responseText === 'Failure') {-->\n        <!--                        document.getElementById('output_text').innerHTML = 'Wrong ID or Password.';-->\n        <!--                    } elese -->\n        <!--                }-->\n        <!--            }-->\n        <!--            xhr.send('action=LOGIN&username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));-->\n        <!--        });-->\n        <!--    </script>-->\r\n\r\n\r\n\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "publicService",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/public",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"public"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "publicService",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/public",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"public"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 15:11:37 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1261"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>public</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n\n    </head>\n    <body>\n        <div class = \"title\">\n            <h1>Performance Review</h1>\n        </div>\n        <div class = \"content\">\n            <ul class = \"reviews\">\n                <li class = \"reviews_history\">\n                    <div class = \"reviews\">\n                        <h5 id=\"title\">Title: hi</h5>\n                        <h5>Author: Daniel</h5>\n                        <h5>Content: testing comment 1</h5>\n                    </div>\n                </li>\n                <li class = \"reviews_history\">\n                    <div class = \"reviews\">\n                        <h5 id=\"title\">Title: bye</h5>\n                        <h5>Author: Daniel</h5>\n                        <h5>Content: testing comment 2</h5>\n                    </div>\n                </li>\n            </ul>\n        </div>\n        <div class=\"button\">\n            <form action=\"/\">\n                <button>\r\n                  Login to write a review\r\n                </button>\n            </form>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "createAccount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/createAccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createAccount"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "createAccount",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/createAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createAccount"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 15:13:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2835"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Wed, 01 Nov 2023 14:16:15 GMT"
+						},
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE HTML>\n<html lang=\"en\" dir=\"ltr\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>createAccount</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\r\n\n    </head>\n    <body>\n        <h1>Create Account</h1>\n        <div class=\"createAccount\">\n            <div id = \"createAccount\">\n                <form action=\"/submit\" method=\"post\">\n                    <div>\n                        <label for=\"username\">Username:</label>\n                        <input type=\"text\" id=\"username\" name=\"username\">\r\n                    \n                    </div>\n                    <div>\n                        <label for=\"password\">Password:</label>\n                        <input type=\"text\" id=\"password\" name=\"password\">\r\n                    \n                    </div>\n                    <div class = \"button\">\n                        <input type=\"submit\" name=\"action\" value=\"CREATE\">\r\n                    \n                    </div>\n                </form>\n            </div>\n        </div>\n        <div class = \"button\">\n            <form action=\"/\">\n                <button>\r\n                Go Back\r\n            </button>\n            </form>\n        </div>\n        <div id=\"output_text\"></div>\n        <script>\r\n        document.querySelector('form').addEventListener('submit', function(event) {\r\n            event.preventDefault();  // Prevents the form from submitting in the traditional way\r\n\r\n            var username = document.querySelector('input[name=\"username\"]').value;\r\n            var password = document.querySelector('input[name=\"password\"]').value;\r\n\r\n            var xhr = new XMLHttpRequest();\r\n            xhr.open('POST', '/submit', true);\r\n            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');\r\n\r\n            xhr.onload = function() {\r\n                if (xhr.status === 200) {\r\n                    if (xhr.responseText === 'Failure') {\r\n                        // Prevents the form from submitting in the traditional way\r\n                        event.preventDefault();\r\n                        document.getElementById('output_text').innerHTML = 'Error: Username already taken. Please try again....';\r\n                        setTimeout(function() {\r\n                        // Remove the error message after 5 seconds (5000 milliseconds)\r\n                        document.getElementById('output_text').innerHTML = '';\r\n                        }, 5000);\r\n                    }\r\n                    else {\r\n                        document.getElementById('output_text').innerHTML = 'Successfully Created Account. Please press \"Go Back\"';\r\n\r\n                    }\r\n                }\r\n            }\r\n\r\n            xhr.send('action=CREATE&username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));\r\n        });\r\n    </script>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "review",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"review"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "review",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/review",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"review"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 15:15:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1079"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>review</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n\n    </head>\n    <body>\n        <div class = \"save\">\n            <h1>Enter Review</h1>\n            <form action=\"/submit\" method=\"post\">\n                <label for=\"title\">Enter Title:</label>\n                <div>\n                    <input type=\"text\" id=\"title\" name=\"title\">\r\n                \n                </div>\n                <textarea id=\"text\" name=\"text\"></textarea>\n                <div class=\"button\">\n                    <!--                not using save button because not implemented yet-->\n                    <!--                <input type=\"submit\" name=\"action\" value=\"SAVE\">-->\n                    <input type=\"submit\" name=\"action\" value=\"PUBLISH\">\r\n            \n                </div>\n            </form>\n        </div>\n        <div class = \"public\">\n            <a href=\"/public\">\n                <button>Go to Public Page</button>\n            </a>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "submit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "SAVE",
+							"value": "pass",
+							"type": "text"
+						},
+						{
+							"key": "PUBLISH",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "submit",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "SAVE",
+									"value": "pass",
+									"type": "text"
+								},
+								{
+									"key": "PUBLISH",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/submit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 15:19:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
