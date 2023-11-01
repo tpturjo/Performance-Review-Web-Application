@@ -275,5 +275,8 @@ set to be November 8.
 5) Caleb will implement a comment section for reviews in the application.  
 
 **Code Review**  
-1) Daniels Code: Decoupled messy code from route.py and reformatted the public review page. Also optimized html and css code.  
-- Approved PR. Code worked properly.  
+1) Daniels Code: Decoupled messy code from route.py and reformatted the public review page. Also optimized html and css code. 
+ Comments:
+  Caleb:Approved PR. Code worked properly.
+  Tanjet: Naming could be better
+  Turjo: css needs more work. It's pretty bland. Buttons can be stylized
