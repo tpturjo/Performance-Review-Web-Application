@@ -149,7 +149,16 @@ def format_list_for_public(lst):
         new_tuple.append(myString3)
         new_list.append(new_tuple)
     return new_list
+@app.route('/changePassword')
+def change_password():
+    """
+    Serves the change password page.
 
+    Returns:
+        str: The change password page HTML.
+
+    """
+    return static_file('changePassword.html', root='./templates')
 
 def handle_none_variables(element):
     """
