@@ -277,3 +277,18 @@ set to be November 8.
 **Code Review**  
 1) Daniels Code: Decoupled messy code from route.py and reformatted the public review page. Also optimized html and css code.  
 - Approved PR. Code worked properly.  
+
+## Oct 31, 2023
+**Recorded by:** Turjo      
+**Scrum master:** Daniel      
+**Venue:** Classroom   
+**Time:** 1:00 PM - 1:50 PM     
+**Attendance:** Daniel, Turjo 
+
+**Professor's Suggestions & Topics To Discuss**
+1) Review contributions to the architecture document.
+
+**Decisions**
+1) We cleared the doubts regarding the architecture and UML diagram with the professor.
+2) We decided to focus on our assigned tasks.
+
