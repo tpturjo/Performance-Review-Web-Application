@@ -275,8 +275,45 @@ set to be November 8.
 5) Caleb will implement a comment section for reviews in the application.  
 
 **Code Review**  
-1) Daniels Code: Decoupled messy code from route.py and reformatted the public review page. Also optimized html and css code.   
- Comments:  
+1) Daniels Code: Decoupled messy code from route.py and reformatted the public review page. Also optimized html and css code.
+- Comments:  
   Caleb:Approved PR. Code worked properly.  
   Tanjet: Naming could be better  
   Turjo: css needs more work. It's pretty bland. Buttons can be stylized  
+
+## Oct 31, 2023
+**Recorded by:** Turjo      
+**Scrum master:** Daniel      
+**Venue:** Classroom   
+**Time:** 1:00 PM - 1:50 PM     
+**Attendance:** Daniel, Turjo 
+
+**Professor's Suggestions & Topics To Discuss**
+1) Review contributions to the architecture document.
+
+**Decisions**
+1) We cleared the doubts regarding the architecture and UML diagram with the professor.
+2) We decided to focus on our assigned tasks.
+
+## Nov 1, 2023
+**Recorded by:** Turjo      
+**Scrum master:** Caleb     
+**Venue:** CS Student Lab   
+**Time:** 1:00 PM - 2.00 PM     
+**Attendance:** Caleb, Daniel, Turjo, Tanjet
+
+**Professor's Suggestions & Topics To Discuss**
+1) Discuss changes to the database.
+
+**Decisions**
+1) Caleb will add several new tables to the database for enhanced data entry, retrieval, and new 
+features like review ratings.
+2) Turjo encountered an issue while testing the server with Postman. We attempted to resolve it
+but couldn't find a definitive solution. We agreed to consult the professor about it.
+
+**Code Review** 
+1) Daniel's raised a concern about the need for a review option for individuals without an ID 
+and whether the database can handle that scenario.
+2) Turjo's contradicted Daniel, highlighting the need for an ID to have control over anonymous 
+reviews. Without an ID, the person who posted the review wouldn't have any means to edit or delete 
+their posts. 

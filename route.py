@@ -83,6 +83,7 @@ def submit():
     """
     Handles the form submission.
 
+
     Returns:
         link: Route to an HTML service.
 
