@@ -313,4 +313,4 @@ but couldn't find a definitive solution. We agreed to consult the professor abou
 and whether the database can handle that scenario.
 2) Turjo's contradicted Daniel, highlighting the need for an ID to have control over anonymous 
 reviews. Without an ID, the person who posted the review wouldn't have any means to edit or delete 
-their posts.
+their posts. 
