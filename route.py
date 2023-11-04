@@ -47,6 +47,17 @@ def create_account():
 
     """
     return static_file('createAccount.html', root='./templates')
+@app.route('/changePassword')
+def change_password():
+    """
+    Serves the change password page.
+
+    Returns:
+        str: The change password page HTML.
+
+    """
+    return static_file('changePassword.html', root='./templates')
+
 
 
 @app.route('/review')
