@@ -30,9 +30,16 @@ def public():
         str: The public page HTML.
 
     """
+    search_query = request.query.get('search')
     all_published = database.get_published_reviews()
-    all_published_reformatted = methods.format_list_for_public(all_published)
-    return template('templates/public.html', reviews=all_published_reformatted)
+    if search_query:
+        # Filter the reviews based on the search query
+        filtered_reviews = [review for review in all_published if
+                            search_query.lower() in review[0].lower() or search_query.lower() in review[1].lower()]
+        all_published_reformatted = methods.format_list_for_public(filtered_reviews)
+    else:
+        all_published_reformatted = methods.format_list_for_public(all_published)
+    return template('templates/public.html', reviews=all_published_reformatted, search_query=search_query)
 
 
 @app.route('/createAccount')
