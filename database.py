@@ -66,29 +66,6 @@ def check_credentials(user_name, user_password):
         return True
 
 
-def get_user_data_by_id(UserID):
-    """
-    Retrieves user data from the database by ID.
-
-    Args:
-        UserID (int): The ID of the user.
-
-    Returns:
-        tuple: User data if successful, None if the user does not exist.
-
-    """
-    conn = sqlite3.connect(database_name)
-    cursor = conn.cursor()
-
-    # Execute the query to get user data
-    cursor.execute('SELECT * FROM Users WHERE ID=?', (UserID,))
-    user_data = cursor.fetchone()
-
-    # Close the connection
-    conn.close()
-
-    return user_data if user_data else None
-
 
 def get_user_data_by_username(user_name):
     """
@@ -113,7 +90,7 @@ def get_user_data_by_username(user_name):
 
     return user_data if user_data else None
 
-
+'''
 def save_user_draft_by_username(username, title, text):
     """
     Saves a user draft in the database.
@@ -130,14 +107,14 @@ def save_user_draft_by_username(username, title, text):
     conn = sqlite3.connect(database_name)
     cursor = conn.cursor()
 
-    cursor.execute("SELECT Username FROM Users WHERE Username = ?", (username,))
+    cursor.execute("SELECT Username FROM Drafts WHERE Username = ?", (username,))
     existing_user = cursor.fetchone()
 
     # Insert the new draft into the 'Users' table
     cursor.execute("INSERT INTO Users (Title, Draft) VALUES (?, ?)", (title, text))
     conn.commit()
     conn.close()
-
+'''
 
 def publish_review(username, title, content):
     """
@@ -156,7 +133,11 @@ def publish_review(username, title, content):
     cursor = conn.cursor()
 
     cursor.execute("INSERT INTO Reviews (Username, Title, Content) VALUES (?, ?, ?)", (username, title, content))
+
+    # Commits the changes to the database
     conn.commit()
+
+    # Closes the connection
     conn.close()
 
 
@@ -179,3 +160,109 @@ def get_published_reviews():
     conn.close()
 
     return reviews_data
+
+
+def get_users_published_reviews(username):
+    """
+        Retrieves the user's published reviews from the 'Reviews' table in the database.
+
+        Returns:
+            list: List of reviews (tuples) if successful.
+
+        """
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
+
+    # Execute the query to get all reviews
+    cursor.execute("SELECT * FROM Reviews WHERE Username = ?", (username,))
+    reviews_data = cursor.fetchall()
+
+    # Close the connection
+    conn.close()
+    # Returns all of the user's reviews
+    return reviews_data
+
+
+"""
+Draft Methods
+"""
+
+def save_draft(username, title, content):
+    """
+    Saves a draft review instead of publishing it publicly.
+    Args:
+        username: The username
+        title: The title of the draft
+        content: The content of the draft
+    """
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
+
+    cursor.execute("INSERT INTO Drafts (Username, Title, Content) VALUES (?, ?, ?)", (username, title, content))
+
+    # Commits the changes to the database
+    conn.commit()
+    # Closes the connection
+    conn.close()
+
+
+def get_drafts(username):
+    """
+        Retrieves the user's saved drafts from the 'Drafts' table in the database.
+
+        Returns:
+            list: List of drafts (tuples) if successful.
+
+        """
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
+
+    # Execute the query to get all saved drafts
+    cursor.execute('SELECT * FROM Drafts WHERE Username = ?', (username,))
+    drafts_data = cursor.fetchall()
+
+    #Closes the connection
+    conn.close()
+    #Returns all of the user's drafts
+    return drafts_data
+
+def save_rating(submission_id, username, rating):
+    """
+            Saves a review's rating score when a user rates a review.
+    """
+
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
+
+    cursor.execute("INSERT INTO Ratings(Submission_ID, Username, Rating) VALUES (?, ?, ?)", (submission_id, username, rating))
+
+    # Commits the changes to the database
+    conn.commit()
+    # Closes the connection
+    conn.close()
+
+
+def get_average_rating(submission_id):
+    """
+        Calculates the average rating for a specific review.
+
+        Args:
+            Submission_ID INT - The ID of the review.
+
+        Returns:
+            The average of all ratings of a review.
+        """
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT Rating FROM Ratings WHERE Submission_ID = ?", (submission_id,))
+    allRatings = cursor.fetchall()
+
+    conn.close()
+
+    if allRatings:
+        total_rating = sum(allRatings[0] for i in allRatings)
+        average_rating = total_rating / len(allRatings)
+        return average_rating
+    else:
+        return None
