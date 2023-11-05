@@ -360,7 +360,7 @@ Reviewed Turjo’s code. Turjo added Share-URL and Search-by-title and Search-by
 2) Turjo: Don’t know CSS, so will pass on the styling to Daniel.  
 
 **Difficulties**
-1) Daniel: having issues with multiple actions/submits in html/bottle. One submit overrides the other submit. Delays CSS/HTML delivery.
-2) Caleb: Some SQL methods may have potential of entanglement. Will resolve by Monday.
-3) Turjo: no issues. all code working
-4) Tanjett: absent
+1) Daniel: having issues with multiple actions/submits in html/bottle. One submit overrides the other submit. Delays CSS/HTML delivery.    
+2) Caleb: Some SQL methods may have potential of entanglement. Will resolve by Monday.  
+3) Turjo: no issues. all code working  
+4) Tanjett: absent  
