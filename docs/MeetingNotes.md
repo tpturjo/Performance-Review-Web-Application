@@ -317,3 +317,44 @@ and whether the database can handle that scenario.
 2) Turjo's contradicted Daniel, highlighting the need for an ID to have control over anonymous 
 reviews. Without an ID, the person who posted the review wouldn't have any means to edit or delete 
 their posts. 
+
+
+
+
+
+## Nov 4, 2023
+**Recorded by:** Daniel     
+**Scrum master:** Turjo      
+**Venue:** CS Student Lab  
+**Time:** 10:30 AM - 1:30 PM  
+**Attendance:** Caleb, Daniel, Turjo,
+
+**Progress Since Last Meeting**  
+1) Daniel has almost finished setting up multi-session. Just need to be able to destroy cookies to end sessions.  
+2) Daniel has almost finished CSS code.  
+3) Caleb rehauled the userDatabase.db file to add a user, review, draft, and rating table. Added code for the draft functionality for draft and saving. Added code for saving ratings and retrieving. Calculation of avg. rating for each review functionality added.  
+4) Implemented partial match searches by “username” or “topic”. Also implemented a share button to share your current link to social media.    
+
+**Professor's Suggestions & Topics To Discuss**  
+1) Discuss changes to the database.  
+2) Discuss the UML Architecture of our project  
+3) Outline the architecture document incorporating updated modules interfaces for current sprint  
+4) review architecture document contributions  
+
+**Decisions**  
+1) We went through the UML notes together and decided we would create an evolving UML diagram as we designed our application. Since the purpose of this project is to learn, we didn’t want to pigeonhole ourselves into a specific architecture.   
+2) Caleb explained basics of SQL and the properties behind it.   
+3) Caleb’s code pull request denied. Needs further refinement.   
+4) Turjo’s code works well. Pull request accepted. Deadline met.  
+5) Daniel’s deadline set to Monday. Daniel must submit multisession and new CSS. Caleb’s new deadline by Monday. Must refine/finish implementing SQL and submit.  
+6) Tanjet’s pull request denied as it causes conflict with existing code. New deadline is by Monday.   
+
+**Code Review**  
+Reviewed Caleb’s code for changes in database.py  
+1) Daniel: new code save_draft() could be a little more descriptive. Such as save_draft_by_user_name(). Get_average_rating has code that needs decoupling and code separation.  
+2) Turjo: raised doubt if these new methods will cause entanglement or complications due to inconsistencies.
+Reviewed Caleb’s code for changes in SQL  
+1) Daniel: Currently SQL allows multiple drafts, but that might be a bad idea HTML side.
+Reviewed Turjo’s code. Turjo added Share-URL and Search-by-title and Search-by-author functionality.  
+1) Daniel: Both functions look great. Styling will be needed, which I will handle.  
+2) Turjo: Don’t know CSS, so will pass on the styling to Daniel.  
