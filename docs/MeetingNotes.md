@@ -2,6 +2,10 @@
 
 
 
+# Sprint Cycle 1
+
+
+
 ## Oct 3, 2023
 
 **Recorded by:** Tanjet  
@@ -219,3 +223,144 @@ of our application's code for the first sprint.
 
 
 
+# Sprint Cycle 2
+
+
+
+## Oct 26, 2023
+**Recorded by:** Caleb Doupe      
+**Scrum master:** Daniel       
+**Venue:** CS Student Lab   
+**Time:** 1:00 PM - 2:00 PM   
+**Attendance:** Caleb, Daniel, Turjo, Tanjet  
+
+**Professor's Suggestions & Topics To Discuss**
+1) Discuss team tasks for 2nd sprint.
+2) Discuss tasks that were not implemented in sprint 1.
+3) Discuss features to implement in sprint 2.
+4) Assign coding tasks and set initial deadlines.
+5) Set deadline for final code submissions for sprint 2.
+
+**Decisions** 
+1) The group members have each chosen a feature to research and implement. Before next meeting, 
+each group member will research and start implementation if possible. 
+2) Each group member will choose their second feature for next meeting (Monday Oct 26).
+3) Caleb will implement review items for reviews. 
+4) Daniel will implement session management.
+5) Daniel will decouple some of our code from sprint 1 to adhere to SOLID.
+6) Turjo will implement the search function, and learn postman. 
+7) Tanjet will implement a feature to allow users to publish reviews anonymously.
+8) Tanjet will make a list of all variable and method names as well as conform to PEP guidelines.
+9) Soft deadline (Based on difficulty of feature implementation) for final code submissions is 
+set to be November 8. 
+10) Update kanban board based on backlog and chosen features for implementation.
+
+
+## Oct 30, 2023
+**Recorded by:** Daniel        
+**Scrum master:** Tanjet        
+**Venue:** CS Student Lab    
+**Time:** 1:00 PM - 2:00 PM     
+**Attendance:** Caleb, Daniel, Turjo, Tanjet    
+
+**Professor's Suggestions & Topics To Discuss**  
+1) Assign remaining team tasks for 2nd sprint.  
+2) Discuss current progress   
+
+**Decisions** 
+1) Turjo did pursue postman. Will transfer route testing file from pdf to code using postman.  
+2) Tanjet will implement a feature to allow users to change their password.  
+3) Turjo has decided he will implement a share feature for use outside of the application.  
+4) Daniel will implement a save draft feature for the application  
+5) Caleb will implement a comment section for reviews in the application.  
+
+**Code Review**  
+1) Daniels Code: Decoupled messy code from route.py and reformatted the public review page. Also optimized html and css code.
+- Comments:  
+  Caleb:Approved PR. Code worked properly.  
+  Tanjet: Naming could be better  
+  Turjo: css needs more work. It's pretty bland. Buttons can be stylized  
+
+## Oct 31, 2023
+**Recorded by:** Turjo      
+**Scrum master:** Daniel      
+**Venue:** Classroom   
+**Time:** 1:00 PM - 1:50 PM     
+**Attendance:** Daniel, Turjo 
+
+**Professor's Suggestions & Topics To Discuss**
+1) Review contributions to the architecture document.
+
+**Decisions**
+1) We cleared the doubts regarding the architecture and UML diagram with the professor.
+2) We decided to focus on our assigned tasks.
+
+## Nov 1, 2023
+**Recorded by:** Turjo      
+**Scrum master:** Caleb     
+**Venue:** CS Student Lab   
+**Time:** 1:00 PM - 2.00 PM     
+**Attendance:** Caleb, Daniel, Turjo, Tanjet
+
+**Professor's Suggestions & Topics To Discuss**
+1) Discuss changes to the database.
+
+**Decisions**
+1) Caleb will add several new tables to the database for enhanced data entry, retrieval, and new 
+features like review ratings.
+2) Turjo encountered an issue while testing the server with Postman. We attempted to resolve it
+but couldn't find a definitive solution. We agreed to consult the professor about it.
+
+**Code Review** 
+1) Daniel's raised a concern about the need for a review option for individuals without an ID 
+and whether the database can handle that scenario.
+2) Turjo's contradicted Daniel, highlighting the need for an ID to have control over anonymous 
+reviews. Without an ID, the person who posted the review wouldn't have any means to edit or delete 
+their posts. 
+
+
+
+
+
+## Nov 4, 2023
+**Recorded by:** Daniel     
+**Scrum master:** Turjo      
+**Venue:** CS Student Lab  
+**Time:** 10:30 AM - 1:30 PM  
+**Attendance:** Caleb, Daniel, Turjo,
+
+**Progress Since Last Meeting**  
+1) Daniel has almost finished setting up multi-session. Just need to be able to destroy cookies to end sessions.  
+2) Daniel has almost finished CSS code.  
+3) Caleb rehauled the userDatabase.db file to add a user, review, draft, and rating table. Added code for the draft functionality for draft and saving. Added code for saving ratings and retrieving. Calculation of avg. rating for each review functionality added.  
+4) Implemented partial match searches by “username” or “topic”. Also implemented a share button to share your current link to social media.    
+
+**Professor's Suggestions & Topics To Discuss**  
+1) Discuss changes to the database.  
+2) Discuss the UML Architecture of our project  
+3) Outline the architecture document incorporating updated modules interfaces for current sprint  
+4) review architecture document contributions  
+
+**Decisions**  
+1) We went through the UML notes together and decided we would create an evolving UML diagram as we designed our application. Since the purpose of this project is to learn, we didn’t want to pigeonhole ourselves into a specific architecture.   
+2) Caleb explained basics of SQL and the properties behind it.   
+3) Caleb’s code pull request denied. Needs further refinement.   
+4) Turjo’s code works well. Pull request accepted. Deadline met.  
+5) Daniel’s deadline set to Monday. Daniel must submit multisession and new CSS. Caleb’s new deadline by Monday. Must refine/finish implementing SQL and submit.  
+6) Tanjet’s pull request denied as it causes conflict with existing code. New deadline is by Monday.   
+
+**Code Review**  
+Reviewed Caleb’s code for changes in database.py  
+1) Daniel: new code save_draft() could be a little more descriptive. Such as save_draft_by_user_name(). Get_average_rating has code that needs decoupling and code separation.  
+2) Turjo: raised doubt if these new methods will cause entanglement or complications due to inconsistencies.
+Reviewed Caleb’s code for changes in SQL  
+1) Daniel: Currently SQL allows multiple drafts, but that might be a bad idea HTML side.
+Reviewed Turjo’s code. Turjo added Share-URL and Search-by-title and Search-by-author functionality.  
+1) Daniel: Both functions look great. Styling will be needed, which I will handle.  
+2) Turjo: Don’t know CSS, so will pass on the styling to Daniel.  
+
+**Difficulties**
+1) Daniel: having issues with multiple actions/submits in html/bottle. One submit overrides the other submit. Delays CSS/HTML delivery.    
+2) Caleb: Some SQL methods may have potential of entanglement. Will resolve by Monday.  
+3) Turjo: no issues. all code working  
+4) Tanjett: absent  

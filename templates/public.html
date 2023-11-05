@@ -11,11 +11,26 @@
     <div class = "title">
         <h1>Performance Review</h1>
     </div>
+    <!-- Adding the search input -->
+    <div class="search">
+        <form action="/public" method="get">
+            <input type="text" name="search" placeholder="Search by author or title" value="{{search_query}}">
+            <input type="submit" value="Search">
+        </form>
+    </div>
 
-    <div class = "reviews">
+    <div class = "content">
         <ul class = "reviews">
         % for review in reviews:
-            <li class = "reviews">{{ review }}</li>
+            <li class = "reviews_history">
+                <div class = "reviews">
+                    <h5 id="title">{{ review[1] }}</h5>
+                    <h5>{{ review[0] }}</h5>
+                    <h5>{{ review[2] }}</h5>
+                    <!-- Adding a Share button -->
+                    <button class="share-button" data-title="{{ review[1] }}" data-content="{{ review[2] }}">Share</button>
+                </div>
+            </li>
         % end
         </ul>
     </div>
@@ -27,5 +42,32 @@
                 </button>
              </form>
     </div>
+    <script>
+        // JavaScript code to handle the Share button click event
+        const shareButtons = document.querySelectorAll('.share-button');
+
+        shareButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const title = this.getAttribute('data-title');
+                const content = this.getAttribute('data-content');
+                const shareText = `Check out this review: ${title} - ${content}`;
+
+
+                const shareUrl = 'http://localhost:8080/public?';
+
+                if (navigator.share) {
+                    navigator.share({
+                        title: title,
+                        text: shareText,
+                        url: shareUrl,
+                    })
+                        .then(() => console.log('Shared successfully'))
+                        .catch(error => console.error('Error sharing:', error));
+                } else {
+                    alert('Sharing is not supported on this device or browser.');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

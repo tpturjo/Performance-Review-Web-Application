@@ -1,57 +1,77 @@
 <!DOCTYPE HTML>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <title>login</title>
-  <link rel="stylesheet" href="static/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>login</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 </head>
 
 <body>
     <h1>Performance Review</h1>
     <h3>login</h3>
     <div class="main">
-         <div id="user">
-            <form action="/submit" method="post">
-                <div>
-                  <label for="username">Username:</label>
-                  <input type="text" id="username" name="username">
-                </div>
-                <div>
-                  <label for="password">Password:</label>
-                  <input type="text" id="password" name="password">
-                </div>
-                <div class="button">
-                  <input type="submit" name="action" value="LOGIN">
-                </div>
-            </form>
-            <form action="/createAccount">
-                <div class="button">
-                    <button>
-                      Create Account
-                    </button>
-                </div>
-            </form>
-            <form action="/changePassword">
-                <div class="button">
-                    <button>
-                      Change Password
-                    </button>
-                </div>
-            </form>
-        </div>
+         <div id = "user">
+                <form action="/submit" method="post">
+                    <div>
+                      <label for="username">Username:</label>
+                      <input type="text" id="username" name="username">
+                    </div>
+                    <div>
+                      <label for="password">Password:</label>
+                      <input type="text" id="password" name="password">
+                    </div>
+
+                    <div class = "button">
+                      <input type="submit" name="action" value="LOGIN">
+                    </div>
+
+                </form>
+         </div>
     </div>
 
     <div class="button">
-         <form action="/public">
-            <button>
-              View All Reviews
-            </button>
-         </form>
+             <form action="/createAccount">
+                <button>
+                  Create Account
+                </button>
+             </form>
     </div>
+
+    <div class="button">
+             <form action="/public">
+                <button>
+                  View All Reviews
+                </button>
+             </form>
+    </div>
+
 
     <div id="output_text"></div>
 
-    <!-- Needs to be properly implemented. Source of Bug at the moment -->
+
+    <!-- Needs to be properly implented. Source of Bug at the moment -->
+<!--    <script>-->
+<!--        document.querySelector('form').addEventListener('submit', function(event) {-->
+<!--            event.preventDefault();  // Prevents the form from submitting in the traditional way-->
+<!--            var username = document.querySelector('input[name="username"]').value;-->
+<!--            var password = document.querySelector('input[name="password"]').value;-->
+<!--            var xhr = new XMLHttpRequest();-->
+<!--            xhr.open('POST', '/submit', true);-->
+<!--            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');-->
+
+<!--            xhr.onload = function() {-->
+<!--                if (xhr.status === 200) {-->
+<!--                    if (xhr.responseText === 'Failure') {-->
+<!--                        document.getElementById('output_text').innerHTML = 'Wrong ID or Password.';-->
+<!--                    } elese -->
+<!--                }-->
+<!--            }-->
+
+<!--            xhr.send('action=LOGIN&username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));-->
+<!--        });-->
+<!--    </script>-->
+
+
 </body>
 </html>
