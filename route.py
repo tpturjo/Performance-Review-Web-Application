@@ -6,6 +6,15 @@ import database
 
 app = Bottle()
 
+
+def require_login(func):
+    def wrapper(*args, **kwargs):
+        if request.get_cookie('username'):
+            return func(*args, **kwargs)
+        else:
+            return redirect('/')  # Redirect to login page if not logged in
+    return wrapper
+
 """
 Services: File address reference for each HTML file  
 """
@@ -20,7 +29,7 @@ def login():
         str: The login page HTML.
 
     """
-    return static_file('login.html', root='./templates')
+    return template('templates/login.html', message=None)
 
 
 @app.route('/changePassword')
@@ -69,6 +78,7 @@ def create_account():
 
 
 @app.route('/review')
+@require_login
 def review():
     """
     Serves the review page.
@@ -77,10 +87,7 @@ def review():
         str: The review page HTML.
 
     """
-    # username = request.query.username
     username = request.get_cookie('username')
-    # data = database.get_user_data_by_username(username)
-    # text = data[2]
     return template('templates/review.html', username=username)
 
 
@@ -130,8 +137,7 @@ def submit():
             response.set_cookie('username', username)
             return redirect(f'/review?username={username}')
         else:
-            print("Wrong ID or Password")
-            return static_file('login.html', root='./templates')
+            return template('templates/login.html', message = "Incorrect username or password")
 
     elif action == 'CREATE':
         username = request.forms.get('username')
@@ -148,6 +154,15 @@ def submit():
             print("ERROR: username already taken. Try again")
             return "Failure"  # This message will be received by JavaScript
 
+    elif action == 'LOGOUT':
+        print("attept to destroy cookie")
+        username = request.get_cookie('username')
+        print("attept to destroy cookie", username)
+        # response.delete_cookie(username)
+        response.set_cookie("username", '', expires=0)
+
+        print("cookie destroyed")
+        return template('templates/login.html', message=None)
 
 @app.route('/change_password', method='POST')
 def change():

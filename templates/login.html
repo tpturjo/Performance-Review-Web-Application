@@ -4,80 +4,87 @@
     <meta charset="utf-8">
     <title>login</title>
     <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>Performance Review</h1>
-    <h3>login</h3>
-    <div class="main">
-         <div id = "user">
-                <form action="/submit" method="post">
-                    <div>
-                      <label for="username">Username:</label>
-                      <input type="text" id="username" name="username">
-                    </div>
-                    <div>
-                      <label for="password">Password:</label>
-                      <input type="text" id="password" name="password">
-                    </div>
 
-                    <div class = "button">
-                      <input type="submit" name="action" value="LOGIN">
-                    </div>
+  <header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
 
-                </form>
-         </div>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="/public" class="nav-link px-2 text-white">Reviews</a></li>
+        </ul>
+
+
+
+
+        <div class="big-button-div">
+          <div class = "public">
+            <a href="/createAccount"><button class="get-account-button">Get Account</button></a>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
     </div>
+  </header>
 
-    <div class="button">
-             <form action="/createAccount">
-                <button>
-                  Create Account
-                </button>
-             </form>
-    </div>
-    <form action="/changePassword">
-                <div class="button">
-                    <button>
-                      Change Password
-                    </button>
+
+
+  <div class="main-content-div">
+      <div class="login-cluster">
+        <h4 class="mb-3">LOGIN</h4>
+        <form action="/submit" method="post" onsubmit="return handleFormSubmission(event);">
+            <div class="row g-3">
+                <div class="input-group has-validation">
+                  <span class="input-group-text"><img class="person" src="static_img/person.png"></span>
+                  <input type="text" class="form-control" id="username" placeholder="Username" name="username">
                 </div>
+
+                <div class="input-group has-validation">
+                    <span class="input-group-text">🔒</span>
+                    <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                </div>
+                <div class = "button-group1 mt-3">
+
+                    <div id="output-text" class = "error-message"></div>
+
+                    <div class = "button-div">
+                        <input id="log-button" class="button" type="submit" name="action" value="LOGIN">
+                    </div>
+                </div>
+            </div>
         </form>
 
-    <div class="button">
-             <form action="/public">
-                <button>
-                  View All Reviews
-                </button>
-             </form>
-    </div>
+      </div>
+  </div>
+
+<!--  var myDiv = document.getElementById('myDiv');-->
+<!--  myDiv.classList.toggle('hidden');-->
+<script>
+    window.onload = function() {
+        var errorMessage = "{{ message }}";
+        if (errorMessage && errorMessage !== 'None') {
+            var errorMessageDiv = document.querySelector('#output-text');
+            errorMessageDiv.textContent = errorMessage;
+            errorMessageDiv.style.display = 'block';
+            setTimeout(function() {
+                errorMessageDiv.classList.toggle('hidden');
+            }, 3000);
+        }
+    };
+</script>
 
 
-    <div id="output_text"></div>
-
-
-    <!-- Needs to be properly implented. Source of Bug at the moment -->
-<!--    <script>-->
-<!--        document.querySelector('form').addEventListener('submit', function(event) {-->
-<!--            event.preventDefault();  // Prevents the form from submitting in the traditional way-->
-<!--            var username = document.querySelector('input[name="username"]').value;-->
-<!--            var password = document.querySelector('input[name="password"]').value;-->
-<!--            var xhr = new XMLHttpRequest();-->
-<!--            xhr.open('POST', '/submit', true);-->
-<!--            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');-->
-
-<!--            xhr.onload = function() {-->
-<!--                if (xhr.status === 200) {-->
-<!--                    if (xhr.responseText === 'Failure') {-->
-<!--                        document.getElementById('output_text').innerHTML = 'Wrong ID or Password.';-->
-<!--                    } elese -->
-<!--                }-->
-<!--            }-->
-
-<!--            xhr.send('action=LOGIN&username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));-->
-<!--        });-->
-<!--    </script>-->
 
 
 </body>
