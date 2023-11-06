@@ -1,11 +1,11 @@
 from bottle import Bottle, request, run, template, static_file, redirect
 import sqlite3
 
-# Change this if database name is changed
+# Change this if the database name is changed
 database_name = 'userDatabase.db'
 
 """
-THIS PROGRAM HANDLES ALL SQL LOGIC AND TRAFFIC
+This program handles all SQL logic and traffic.
 """
 
 
@@ -24,7 +24,7 @@ def create_user(user):
     cursor = conn.cursor()
 
     # Check if the username already exists
-    cursor.execute("SELECT Username FROM Users WHERE Username = ?", (user.get_user_name(),))
+    cursor.execute("SELECT Username FROM Users WHERE Username = ?", (user.get_username(),))
     existing_user = cursor.fetchone()
 
     if existing_user:
@@ -32,19 +32,20 @@ def create_user(user):
         return False
     else:
         # Insert the new user into the 'Users' table
-        cursor.execute("INSERT INTO Users (Username, Password) VALUES (?, ?)", (user.get_user_name(), user.get_password()))
+        cursor.execute("INSERT INTO Users (Username, Password) VALUES (?, ?)",
+                       (user.get_username(), user.get_password()))
         conn.commit()
         conn.close()
         return True
 
 
-def check_credentials(user_name, user_password):
+def check_credentials(username, password):
     """
     Checks the credentials of a user.
 
     Args:
-        user_name (str): The username.
-        user_password (str): The password.
+        username (str): The username.
+        password (str): The password.
 
     Returns:
         bool: True if the credentials are valid, False otherwise.
@@ -54,7 +55,7 @@ def check_credentials(user_name, user_password):
     cursor = conn.cursor()
 
     # Execute the query to check the credentials
-    cursor.execute('SELECT * FROM Users WHERE Username=? AND password=?', (user_name, user_password))
+    cursor.execute('SELECT * FROM Users WHERE Username=? AND Password=?', (username, password))
     result = cursor.fetchone()
 
     # Close the connection
@@ -66,12 +67,12 @@ def check_credentials(user_name, user_password):
         return True
 
 
-def get_user_data_by_id(UserID):
+def get_user_data_by_id(user_id):
     """
     Retrieves user data from the database by ID.
 
     Args:
-        UserID (int): The ID of the user.
+        user_id (int): The ID of the user.
 
     Returns:
         tuple: User data if successful, None if the user does not exist.
@@ -81,7 +82,7 @@ def get_user_data_by_id(UserID):
     cursor = conn.cursor()
 
     # Execute the query to get user data
-    cursor.execute('SELECT * FROM Users WHERE ID=?', (UserID,))
+    cursor.execute('SELECT * FROM Users WHERE ID=?', (user_id,))
     user_data = cursor.fetchone()
 
     # Close the connection
@@ -90,12 +91,12 @@ def get_user_data_by_id(UserID):
     return user_data if user_data else None
 
 
-def get_user_data_by_username(user_name):
+def get_user_data_by_username(username):
     """
     Retrieves user data from the database by username.
 
     Args:
-        user_name (str): The username.
+        username (str): The username.
 
     Returns:
         tuple: User data if successful, None if the user does not exist.
@@ -105,7 +106,7 @@ def get_user_data_by_username(user_name):
     cursor = conn.cursor()
 
     # Execute the query to get user data
-    cursor.execute('SELECT * FROM Users WHERE username=?', (user_name,))
+    cursor.execute('SELECT * FROM Users WHERE Username=?', (username,))
     user_data = cursor.fetchone()
 
     # Close the connection
@@ -114,14 +115,14 @@ def get_user_data_by_username(user_name):
     return user_data if user_data else None
 
 
-def save_user_draft_by_username(username, title, text):
+def save_user_draft_by_username(username, title, content):
     """
     Saves a user draft in the database.
 
     Args:
         username (str): The username.
         title (str): The draft title.
-        text (str): The draft content.
+        content (str): The draft content.
 
     Returns:
         None
@@ -134,7 +135,7 @@ def save_user_draft_by_username(username, title, text):
     existing_user = cursor.fetchone()
 
     # Insert the new draft into the 'Users' table
-    cursor.execute("INSERT INTO Users (Title, Draft) VALUES (?, ?)", (title, text))
+    cursor.execute("INSERT INTO Users (Title, Draft) VALUES (?, ?)", (title, content))
     conn.commit()
     conn.close()
 
@@ -179,3 +180,20 @@ def get_published_reviews():
     conn.close()
 
     return reviews_data
+
+
+def change_password(username, new_password):
+    """
+    Processes the change password form and updates the user's password.
+
+    Returns:
+        str: Redirects to the members page.
+
+    """
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
+
+    # Update the user's password in the database
+    cursor.execute('UPDATE Users SET Password=? WHERE Username=?', (new_password, username))
+    conn.commit()
+    conn.close()

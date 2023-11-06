@@ -9,6 +9,8 @@ app = Bottle()
 """
 Services: File address reference for each HTML file  
 """
+
+
 @app.route('/')
 def login():
     """
@@ -19,6 +21,18 @@ def login():
 
     """
     return static_file('login.html', root='./templates')
+
+
+@app.route('/changePassword')
+def change_password():
+    """
+    Serves the change password page.
+
+    Returns:
+        str: The change password page HTML.
+
+    """
+    return static_file('changePassword.html', root='./templates')
 
 
 @app.route('/public')
@@ -135,6 +149,21 @@ def submit():
             return "Failure"  # This message will be received by JavaScript
 
 
+@app.route('/change_password', method='POST')
+def change():
+    action = request.forms.get('action')
+    if action == 'Change' or action == 'Change+':
+        username = request.forms.get('username')
+        current_password = request.forms.get('current-password')
+        new_password = request.forms.get('new-password')
+        login_status = database.check_credentials(username, current_password)
+        if login_status:
+            database.change_password(username, new_password)
+            print("successfully changed password")
+            return static_file('login.html', root='./templates')
+        else:
+            print("Wrong credentials")
+            return static_file('login.html', root='./templates')
 
 
 if __name__ == '__main__':
