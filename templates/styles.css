@@ -1,13 +1,10 @@
-body {
-    text-align: center;
-    height: 100vh;
-    margin-top: 0px;
-    background-color: black;
-}
-
 h1 {
     font-size: 4rem;
     color: red;
+}
+.person{
+    height: 16px;
+    width:16px;
 }
 
 #output_text{
@@ -22,9 +19,14 @@ label{
     height: 30vh;
 }
 
-.button{
-    margin-top: 10px;
-    margin-bottom: 50px;
+.navigate{
+    color: white;
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5em;
+}
+.nav-link{
+    font-size: 1.5em !important;
 }
 
 .list{
@@ -45,7 +47,7 @@ label{
 
 .reviews{
     list-style-type: none;
-    margin: ;
+    /* margin: 10; */
     font-size: 1rem;
     color: white;
 }
@@ -56,4 +58,151 @@ h5{
 }
 #title{
     text-align: center;
+}
+
+
+@media(min-width: 720px){
+    .main-content-div{
+        padding-left: 300px;
+        padding-right: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10vh;
+
+    }
+
+    .main-content-div-public{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10vh;
+        background-color: antiquewhite;
+        height: 100vh;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .login-cluster{
+        width: 400px;
+        /* text-align: center; */
+    }
+
+}
+
+@media(max-width: 720px){
+    .login-cluster{
+        width: 400px;
+    }
+
+    .main-content-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10vh;
+
+    }
+
+    .main-content-div-public{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10vh;
+        background-color: antiquewhite;
+        height: 100vh;
+    }
+}
+
+
+
+.input{
+    color:white;
+    background-color: black;
+    border-radius: 4px;
+}
+
+.button-group1{
+    border-radius: 5px;
+    display:flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.button-group1 .button{
+    border-radius: 4px;
+    background: black;
+    width: 100px;
+    height: 35px;
+    font-size: 19px;
+    color: white;
+    font-weight: 600;
+    justify-content: right;
+    align-content: right;
+}
+
+.create-button{
+    position:relative;
+    bottom: 45px;
+    left: 274px;
+}
+
+.go-back-button{
+    border-radius: 4px;
+    background-color: blue;
+    outline: none;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 19px;
+    color: white;
+    font-weight: 600;
+    justify-content: right;
+    align-content: right;
+
+
+}
+.get-account-button{
+    border-radius: 5px;
+    background-color: orange;
+    outline: none;
+    border: none;
+    width: 130px;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    justify-content: right;
+    align-content: right;
+}
+.log-out-button{
+    border-radius: 5px;
+    background-color: red;
+    outline: none;
+    border: none;
+    width: 130px;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    justify-content: right;
+    align-content: right;
+}
+
+
+#output_text{
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+    align-content: left;
+}
+
+
+.error-message{
+  color: red;
+  margin-top: 5px;
+}
+
+.hidden {
+  color: white !important;
+  margin-top: 5px;
 }
