@@ -1,5 +1,6 @@
 from bottle import Bottle, request, run, template, static_file, redirect
 import sqlite3
+from methods import *
 
 # Change this if database name is changed
 database_name = 'userDatabase.db'
@@ -198,7 +199,14 @@ def save_draft(username, title, content):
     conn = sqlite3.connect(database_name)
     cursor = conn.cursor()
 
-    cursor.execute("INSERT INTO Drafts (Username, Title, Content) VALUES (?, ?, ?)", (username, title, content))
+    cursor.execute("SELECT COUNT(*) FROM Drafts WHERE Username = ?", (username,))
+    current_draft = cursor.fetchone()[0]
+
+    if current_draft > 0:
+        cursor.execute("UPDATE Drafts SET Title = ?, Content = ?, WHERE Username = ?", (title, content, username))
+
+    else:
+        cursor.execute("INSERT INTO Drafts (Username, Title, Content) VALUES (?, ?, ?)", (username, title, content))
 
     # Commits the changes to the database
     conn.commit()
@@ -260,9 +268,6 @@ def get_average_rating(submission_id):
 
     conn.close()
 
-    if allRatings:
-        total_rating = sum(allRatings[0] for i in allRatings)
-        average_rating = total_rating / len(allRatings)
-        return average_rating
-    else:
-        return None
+    return average_ratings(allRatings)
+
+
