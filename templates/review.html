@@ -3,31 +3,60 @@
 <head>
     <meta charset="utf-8">
     <title>review</title>
+
+
     <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <div class = "save">
-        <h1>Enter Review</h1>
-        <form action="/submit" method="post">
-            <label for="title">Enter Title:</label>
-                <div>
-                    <input type="text" id="title" name="title">
-                </div>
-            <textarea id="text" name="text"></textarea>
-            <div class="button">
-<!--                not using save button because not implemented yet-->
-<!--                <input type="submit" name="action" value="SAVE">-->
-                <input type="submit" name="action" value="PUBLISH">
+
+
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
+              <li><a href="/public" class="nav-link px-2 text-white">View Reviews</a></li>
+            </ul>
+            <div class="big-button-div">
+              <div class = "public">
+                    <form action="/submit" method="post">
+                        <a href="/public"><button class="log-out-button" type="submit" name="action" value="LOGOUT">Logout</button></a>
+                    </form>
+              </div>
             </div>
-        </form>
+
+
+            </div>
+        </div>
+        </div>
+      </header>
+
+      <div class="main-content-div">
+
+        <div class = "save">
+            <h1>Enter Review</h1>
+            <form action="/submit" method="post">
+                <label for="title">Enter Title:</label>
+                    <div>
+                        <input type="text" id="title" name="title" placeholder="Enter Title">
+                    </div>
+                <textarea id="text" name="text"></textarea>
+                <div class="button">
+                    <input type="submit" name="action" value="PUBLISH">
+                </div>
+            </form>
+
+        </div>
 
     </div>
 
 
-    <div class = "public">
-        <a href="/public"><button>Go to Public Page</button></a>
-    </div>
 </body>
 </html>
