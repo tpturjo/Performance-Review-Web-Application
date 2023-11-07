@@ -363,4 +363,48 @@ Reviewed Turjo’s code. Turjo added Share-URL and Search-by-title and Search-by
 1) Daniel: having issues with multiple actions/submits in html/bottle. One submit overrides the other submit. Delays CSS/HTML delivery.    
 2) Caleb: Some SQL methods may have potential of entanglement. Will resolve by Monday.  
 3) Turjo: no issues. all code working  
-4) Tanjett: absent  
+4) Tanjett: absent 
+
+
+
+November 6 2024
+**Recorded by:** Caleb
+**Scrum master:** Caleb
+**Venue:** CS Student Lab
+**Time:** 1:00 PM- 2:00 PM
+**Attendance:** Caleb, Daniel, Tanjet, Turjo
+
+**Professor's Suggestions & Topics To Discuss**
+1) Discuss content of the process and architecture documents for sprint 2
+2) Discuss progress on remaining feature tasks for sprint 2
+
+**Progress Report**
+1) Daniel: Completed CSS / HTML and Multisession functionality. Waiting for code review. Pull request approved and no conflicts. Successfully merged. Deadline met.
+2) Caleb: Completed code (SQL) from previous meeting based on code review. Had difficulty merging. Issues with the idea
+file.
+3) Tanjet: Completed change password on HTML and Route.py. Need code review. Pull request approved by team members.Merged successfully. Deadline met.
+4) Turjo: For last two days studied POSTMAN for unit-test. Still in progress. 
+
+**Difficulties**
+1) Caleb: difficulty merging pull request due to .idea file
+2) Daniel : none
+3) Turjo: none
+4) Tanjet: difficulty merging pull request due to .idea file. Requested Daniel for the styling part.
+
+**Code Review**
+1) Reviewed Daniel's code for route.py, CSS, HTML, and multisession. (pull request1)
+- Caleb Looked fine. Good to merge
+- Tanjet- Daniel’s code works fine.
+
+2) Reviewed Daniel's code for public.HTML to work with turjo’s change to route.py. (pull request2)
+- Caleb: Looked fine. Good to merge
+- Tanjet: Looks fine. Good to merge.
+
+3) Reviewed Tanjet’s code for change password feature
+- Caleb: Code looked fine other than some inconsistent naming of parameters. 
+Fine to merge but should be changed in future updates.
+
+**Decision**
+1) Pull request extension for Caleb and Tanjet until Tuesday.
+2) Meeting tomorrow (1pm Tuesday Nov6) 
+3) Making slight edits to the architecture document based on changes discussed.
