@@ -188,7 +188,6 @@ def get_users_published_reviews(username):
 Draft Methods
 """
 
-
 def save_draft(username, title, content):
     """
     Saves a draft review instead of publishing it publicly.
