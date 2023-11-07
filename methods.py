@@ -39,6 +39,7 @@ def handle_none_variables(element):
     else:
         return element
 
+
 def average_ratings(ratings):
 
     if ratings:
