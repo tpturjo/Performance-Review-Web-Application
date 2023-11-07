@@ -12,12 +12,14 @@ def format_list_for_public(list):
     new_list = []
     for element in list:
         new_tuple = []
-        myString1 = "Author: " + handle_none_variables(element[0])
-        myString2 = "Title: " + handle_none_variables(element[1])
-        myString3 = "Content: " + handle_none_variables(element[2])
+        myString1 = "Author: " + handle_none_variables(element[1])
+        myString2 = "Title: " + handle_none_variables(element[2])
+        myString3 = "Content: " + handle_none_variables(element[3])
+        myString4 = "Rating: " + handle_none_variables(element[4])
         new_tuple.append(myString1)
         new_tuple.append(myString2)
         new_tuple.append(myString3)
+        new_tuple.append(myString4)
         new_list.append(new_tuple)
     return new_list
 
