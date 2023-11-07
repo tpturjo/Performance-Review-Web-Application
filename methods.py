@@ -21,7 +21,6 @@ def format_list_for_public(list):
         new_list.append(new_tuple)
     return new_list
 
-
 def handle_none_variables(element):
     """
     Handles None values by converting them to the string "none".

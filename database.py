@@ -251,7 +251,6 @@ def save_rating(submission_id, username, rating):
     conn.close()
 
 
-
 def get_average_rating(submission_id):
     """
         Calculates the average rating for a specific review.
