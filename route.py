@@ -33,6 +33,7 @@ def login():
 
 
 @app.route('/changePassword')
+@require_login
 def change_password():
     """
     Serves the change password page.
@@ -41,7 +42,7 @@ def change_password():
         str: The change password page HTML.
 
     """
-    return static_file('changePassword.html', root='./templates')
+    return template('templates/changePassword.html', message=None)
 
 
 @app.route('/public')
@@ -58,7 +59,7 @@ def public():
     if search_query:
         # Filter the reviews based on the search query
         filtered_reviews = [review for review in all_published if
-                            search_query.lower() in review[0].lower() or search_query.lower() in review[1].lower()]
+                            search_query.lower() in review[1].lower() or search_query.lower() in review[2].lower()]
         all_published_reformatted = methods.format_list_for_public(filtered_reviews)
     else:
         all_published_reformatted = methods.format_list_for_public(all_published)
@@ -104,6 +105,20 @@ def serve_static(filename):
 
     """
     return static_file(filename, root='./templates')
+
+@app.route('/static_img/<filename>')
+def serve_static_img(filename):
+    """
+    Serves static files.
+
+    Args:
+        filename (str): The name of the static file.
+
+    Returns:
+        str: The static file.
+
+    """
+    return static_file(filename, root='./templates/img')
 
 
 @app.route('/submit', method='POST')
@@ -175,10 +190,10 @@ def change():
         if login_status:
             database.change_password(username, new_password)
             print("successfully changed password")
-            return static_file('login.html', root='./templates')
+            return template('templates/changePassword.html', message="SUCCESS")
         else:
             print("Wrong credentials")
-            return static_file('login.html', root='./templates')
+            return template('templates/changePassword.html', message = "Wrong Credentials")
 
 
 if __name__ == '__main__':
