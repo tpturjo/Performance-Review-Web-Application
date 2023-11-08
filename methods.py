@@ -12,12 +12,14 @@ def format_list_for_public(list):
     new_list = []
     for element in list:
         new_tuple = []
-        myString1 = "Author: " + handle_none_variables(element[0])
-        myString2 = "Title: " + handle_none_variables(element[1])
-        myString3 = "Content: " + handle_none_variables(element[2])
+        myString1 = "Author: " + handle_none_variables(element[1])
+        myString2 = "Title: " + handle_none_variables(element[2])
+        myString3 = "Content: " + handle_none_variables(element[3])
+        myString4 = "Rating: " + handle_reviews(element[4])
         new_tuple.append(myString1)
         new_tuple.append(myString2)
         new_tuple.append(myString3)
+        new_tuple.append(myString4)
         new_list.append(new_tuple)
     return new_list
 
@@ -38,6 +40,25 @@ def handle_none_variables(element):
         return "none"
     else:
         return element
+
+def handle_reviews(element):
+    """
+    Handles None values by converting them to the string "none".
+    Helper function for format_list_for_public(list).
+
+    Args:
+        element: The value to handle.
+
+    Returns:
+        str: The converted value.
+
+    """
+    if element == None:
+        return "not rated ☆"
+    elif element == 1:
+        return "★"
+    elif element == 2:
+        return "★★"
 
 
 def average_ratings(ratings):
