@@ -42,7 +42,6 @@ def handle_none_variables(element):
 
 def average_ratings(ratings):
 
-
    if ratings:
        total_rating = sum(ratings[0] for i in ratings)
        average_rating = total_rating / len(ratings)

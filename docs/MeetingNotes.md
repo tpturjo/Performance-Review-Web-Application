@@ -256,6 +256,9 @@ set to be November 8.
 10) Update kanban board based on backlog and chosen features for implementation.
 
 
+
+
+
 ## Oct 30, 2023
 **Recorded by:** Daniel        
 **Scrum master:** Tanjet        
@@ -276,10 +279,13 @@ set to be November 8.
 
 **Code Review**  
 1) Daniels Code: Decoupled messy code from route.py and reformatted the public review page. Also optimized html and css code.
-- Comments:  
-  Caleb:Approved PR. Code worked properly.  
-  Tanjet: Naming could be better  
-  Turjo: css needs more work. It's pretty bland. Buttons can be stylized  
+- Caleb:Approved PR. Code worked properly.  
+- Tanjet: Naming could be better  
+- Turjo: css needs more work. It's pretty bland. Buttons can be stylized  
+
+
+
+
 
 ## Oct 31, 2023
 **Recorded by:** Turjo      
@@ -294,6 +300,10 @@ set to be November 8.
 **Decisions**
 1) We cleared the doubts regarding the architecture and UML diagram with the professor.
 2) We decided to focus on our assigned tasks.
+
+
+
+
 
 ## Nov 1, 2023
 **Recorded by:** Turjo      
@@ -311,6 +321,9 @@ features like review ratings.
 2) Turjo encountered an issue while testing the server with Postman. We attempted to resolve it
 but couldn't find a definitive solution. We agreed to consult the professor about it.
 
+**Difficulties**
+None
+
 **Code Review** 
 1) Daniel's raised a concern about the need for a review option for individuals without an ID 
 and whether the database can handle that scenario.
@@ -320,7 +333,7 @@ their posts.
 
 
 
-
+   
 
 ## Nov 4, 2023
 **Recorded by:** Daniel     
@@ -349,25 +362,30 @@ their posts.
 5) Daniel’s deadline set to Monday. Daniel must submit multisession and new CSS. Caleb’s new deadline by Monday. Must refine/finish implementing SQL and submit.  
 6) Tanjet’s pull request denied as it causes conflict with existing code. New deadline is by Monday.   
 
-**Code Review**  
-Reviewed Caleb’s code for changes in database.py  
-1) Daniel: new code save_draft() could be a little more descriptive. Such as save_draft_by_user_name(). Get_average_rating has code that needs decoupling and code separation.  
-2) Turjo: raised doubt if these new methods will cause entanglement or complications due to inconsistencies.
-Reviewed Caleb’s code for changes in SQL  
-1) Daniel: Currently SQL allows multiple drafts, but that might be a bad idea HTML side.
-Reviewed Turjo’s code. Turjo added Share-URL and Search-by-title and Search-by-author functionality.  
-1) Daniel: Both functions look great. Styling will be needed, which I will handle.  
-2) Turjo: Don’t know CSS, so will pass on the styling to Daniel.  
-
 **Difficulties**
 1) Daniel: having issues with multiple actions/submits in html/bottle. One submit overrides the other submit. Delays CSS/HTML delivery.    
 2) Caleb: Some SQL methods may have potential of entanglement. Will resolve by Monday.  
 3) Turjo: no issues. all code working  
 4) Tanjett: absent 
 
+**Code Review**  
+1) Reviewed Caleb’s code for changes in database.py  
+- Daniel: new code save_draft() could be a little more descriptive. Such as save_draft_by_user_name(). Get_average_rating has code that needs decoupling and code separation.  
+- Turjo: raised doubt if these new methods will cause entanglement or complications due to inconsistencies.
+
+2) Reviewed Caleb’s code for changes in SQL  
+- Daniel: Currently SQL allows multiple drafts, but that might be a bad idea HTML side.
+
+3) Reviewed Turjo’s code. Turjo added Share-URL and Search-by-title and Search-by-author functionality.  
+- Daniel: Both functions look great. Styling will be needed, which I will handle. Good to merge.
+- Turjo: Don’t know CSS, so will pass on the styling to Daniel.  
+- Caleb: Functions work properly. Good to merge.
 
 
-November 6 2024
+
+
+
+## November 6 2024
 **Recorded by:** Caleb
 **Scrum master:** Caleb
 **Venue:** CS Student Lab
@@ -377,6 +395,11 @@ November 6 2024
 **Professor's Suggestions & Topics To Discuss**
 1) Discuss content of the process and architecture documents for sprint 2
 2) Discuss progress on remaining feature tasks for sprint 2
+
+**Decision**
+1) Pull request extension for Caleb and Tanjet until Tuesday.
+2) Meeting tomorrow (1pm Tuesday Nov6) 
+3) Making slight edits to the architecture document based on changes discussed.
 
 **Progress Report**
 1) Daniel: Completed CSS / HTML and Multisession functionality. Waiting for code review. Pull request approved and no conflicts. Successfully merged. Deadline met.
@@ -393,8 +416,8 @@ file.
 
 **Code Review**
 1) Reviewed Daniel's code for route.py, CSS, HTML, and multisession. (pull request1)
-- Caleb Looked fine. Good to merge
-- Tanjet- Daniel’s code works fine.
+- Caleb: Looked fine. Good to merge
+- Tanjet: Daniel’s code works fine.
 
 2) Reviewed Daniel's code for public.HTML to work with turjo’s change to route.py. (pull request2)
 - Caleb: Looked fine. Good to merge
@@ -404,7 +427,82 @@ file.
 - Caleb: Code looked fine other than some inconsistent naming of parameters. 
 Fine to merge but should be changed in future updates.
 
-**Decision**
-1) Pull request extension for Caleb and Tanjet until Tuesday.
-2) Meeting tomorrow (1pm Tuesday Nov6) 
-3) Making slight edits to the architecture document based on changes discussed.
+
+
+
+
+## Date: 7 Nov 2023
+**Recorded by:** Tanjet
+**Scrum master:** Daniel
+**Venue:** Student CS Lab
+**Time:** 12:00 PM - 1:30 PM
+**Attendance:** Caleb, Daniel, Tanjet, Turjo
+
+**Professor’s suggestions and topics to discuss:**
+1) discuss content of the process and architecture documents for sprint 2; task out those documents
+
+**Decisions:**
+1) Daniel will do the HTML and routing part for the code Caleb provided.
+2) Turjo will continue working on POSTMAN.
+3) Caleb will edit our architecture document.
+
+**Progress report:**
+Caleb Pushed his code and waiting for code review. Deadline met.
+
+**Difficulties:**
+1) Daniel: None
+2) Turjo: None
+3) Tanjet: No difficulties.
+4) Caleb: After several difficulties with the .idea folder, finally was able to merge 
+my coding changes successfully.
+
+**Code review:**
+Reviewed Caleb’s code:
+- Tanjet: The code works fine. Good to Merge.
+- Daniel: Variables need to follow PEP standards. I think I will have to make buttons and reformat review-output because there 
+are new attributes in the SQL. Please shoot me a request. Other than that, looks like a step forward. Good to merge
+Turjo: need to redactor the ReviewFeed Template. And need to change some variable 
+names to meet pep guidelines. Good to merge.
+
+
+
+
+
+## Nov 8, 2023
+**Recorded by:** Caleb  
+**Scrum master:** Tanjet   
+**Venue:** CS Student Lab
+**Time:** 10:00 AM - 1:30 PM
+**Attendance:** Caleb, Daniel, Turjo, Tanjet
+
+**Professor's Suggestions & Topics To Discuss**
+1) Discuss changes to our UML diagram/program architecture.
+2) Discuss our process model analysis document.
+3) Discuss final implementations/requirements for Sprint 2, such as unit tests and readme file.
+
+**Decisions**
+1) Will work on the process model analysis document together to have
+completed by November 10. Since information about it was only just revealed recently, we need
+more time to review documentation and properly implement our document.
+2) Will have our full program architecture document completed by November 10.
+3) Will have our unit tests completed by November 9.
+4) Turjo will have his POSTMAN functionality completed by November 9.
+5) Caleb will complete README file by November 10.
+
+**Progress Report**
+1) Program is almost complete. Still needs functionality for rating on interface side,
+POSTMAN functionality, and draft functionality on interface side. Daniel and Turjo
+will be completing these.
+2) Caleb has completed his features and tasks, just needs to provide minor tweaking and
+more detailed docustrings.
+3) Tanjet finished most of his tasks.
+
+**Difficulties:**
+None
+
+**Code Review**
+1) Daniel’s Code:
+- Caleb: CSS and HTML code looks good, it works. Further tweaking needed on rating button functionality.
+- Turjo: For simplification, suggested Daniel remove star images representing review ratings, and
+instead just use integer/floating point values. Other than that, CSS and HTML code looks fine. good to merge.
+- Tanjet: Code looks good. Good to merge.
