@@ -408,3 +408,14 @@ Fine to merge but should be changed in future updates.
 1) Pull request extension for Caleb and Tanjet until Tuesday.
 2) Meeting tomorrow (1pm Tuesday Nov6) 
 3) Making slight edits to the architecture document based on changes discussed.
+
+
+## Nov 8, 2023 BRIEF online discussion
+**Recorded by:** Daniel  
+**Venue:** DISCORD  
+**Time:** 10:00 PM - 10:20 PM  
+**Attendance:** Caleb, Daniel, Turjo  
+Points of discussion/issues:
+1) Difficulty from Daniel. While looking through all the code, Daniel discovered that rating buttons aren’t working properly.     
+2) For the rating buttons to work, Daniel asked Caleb to re-implement the SQL, because currently, the some methods are missing. Deadline by tomorrow Nov 9.    
+3) Save draft user side feature is not implemented, Turjo volunteered to implement it. Deadline by tomorrow Nov 9.    
