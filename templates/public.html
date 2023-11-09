@@ -59,6 +59,8 @@
                 % for review in reviews:
                     <li class = "reviews_history">
                         <div class = "reviews">
+                            <!-- Adding a Share button -->
+                    <button class="share-button" data-title="{{ review[1] }}" data-content="{{ review[2] }}">Share</button>
                             <h5 id="title">{{ review[1] }}</h5>
                             <h5>{{ review[0] }}</h5>
                             <h5>{{ review[2] }}</h5>
@@ -78,6 +80,7 @@
                             </form>
                             <br>
                             <hr class="featurette-divider1">
+
                         </div>
                     </li>
                 % end
