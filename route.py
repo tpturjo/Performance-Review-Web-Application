@@ -151,6 +151,7 @@ def submit():
         database.publish_review(username, title, text)
         return static_file('review.html', root='./templates')
 
+
     elif action == 'LOGIN':
         # Logic for login
         username = request.forms.get('username')
