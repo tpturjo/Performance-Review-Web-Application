@@ -16,10 +16,12 @@ def format_list_for_public(list):
         myString2 = "Title: " + handle_none_variables(element[2])
         myString3 = "Content: " + handle_none_variables(element[3])
         myString4 = "Rating: " + handle_reviews(element[4])
+        myString5 = element[0]
         new_tuple.append(myString1)
         new_tuple.append(myString2)
         new_tuple.append(myString3)
         new_tuple.append(myString4)
+        new_tuple.append(myString5)
         new_list.append(new_tuple)
     return new_list
 
@@ -54,11 +56,17 @@ def handle_reviews(element):
 
     """
     if element == None:
-        return "not rated ☆"
+        return "not rated"
     elif element == 1:
         return "★"
     elif element == 2:
         return "★★"
+    elif element == 3:
+        return "★★★"
+    elif element == 4:
+        return "★★★★"
+    elif element == 5:
+        return "★★★★★"
 
 
 def average_ratings(ratings):
