@@ -46,6 +46,21 @@
 
         <div class = "save">
             <h1>Enter Review</h1>
+            % if draft_data:
+                % for draft in draft_data:
+                    <form action="/submit" method="post">
+                        <label for="title">Enter Title:</label>
+                        <div>
+                            <input type="text" id="title" name="title" placeholder="Enter Title" value="{{ draft[2] }}">
+                        </div>
+                        <textarea id="text" name="text">{{ draft[3] }}</textarea>
+                        <div class="button">
+                            <input type="submit" name="action" value="PUBLISH">
+                            <input type="submit" name="action" value="SAVE">
+                        </div>
+                    </form>
+                % end
+            % else:
             <form action="/submit" method="post">
                 <label for="title">Enter Title:</label>
                     <div>
@@ -54,6 +69,7 @@
                 <textarea id="text" name="text"></textarea>
                 <div class="button">
                     <input type="submit" name="action" value="PUBLISH">
+                    <input type="submit" name="action" value="SAVE">
                 </div>
             </form>
 

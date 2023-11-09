@@ -260,7 +260,7 @@ def save_draft(username, title, content):
 
 
    if current_draft > 0:
-       cursor.execute("UPDATE Drafts SET Title = ?, Content = ?, WHERE Username = ?", (title, content, username))
+       cursor.execute("UPDATE Drafts SET Title = ?, Content = ? WHERE Username = ?", (title, content, username))
 
 
    else:

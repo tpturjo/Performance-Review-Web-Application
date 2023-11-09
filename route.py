@@ -89,7 +89,9 @@ def review():
 
     """
     username = request.get_cookie('username')
-    return template('templates/review.html', username=username)
+    draft_data = database.get_drafts(username)
+
+    return template('templates/review.html', username=username, draft_data=draft_data)
 
 
 @app.route('/static/<filename>')
@@ -134,7 +136,13 @@ def submit():
     action = request.forms.get('action')
 
     if action == 'SAVE':
-        pass
+        username = request.get_cookie('username')
+        title = request.forms.get('title')
+        text = request.forms.get('text')
+        database.save_draft(username, title, text)
+        draft_data = database.get_drafts(username)
+        return template('templates/review.html', username=username, draft_data=draft_data,
+                        saved_message="Draft saved successfully")
 
     elif action == 'PUBLISH':
         username = request.get_cookie('username')
