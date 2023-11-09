@@ -522,7 +522,7 @@ Points of discussion/issues:
 1) Difficulty from Daniel. While looking through all the code, Daniel discovered that rating buttons aren’t working properly.     
 2) For the rating buttons to work, Daniel asked Caleb to re-implement the SQL, because currently, the some methods are missing. Deadline by tomorrow Nov 9.    
 3) Save draft user side feature is not implemented, Turjo volunteered to implement it. Deadline by tomorrow Nov 9.    
-
+4) Daniel will upload STUB for caleb to work with from the database side of ratings  
 
 ## Nov 9, 2023  
 **Recorded by:** Daniel     
