@@ -522,4 +522,17 @@ Points of discussion/issues:
 1) Difficulty from Daniel. While looking through all the code, Daniel discovered that rating buttons aren’t working properly.     
 2) For the rating buttons to work, Daniel asked Caleb to re-implement the SQL, because currently, the some methods are missing. Deadline by tomorrow Nov 9.    
 3) Save draft user side feature is not implemented, Turjo volunteered to implement it. Deadline by tomorrow Nov 9.    
+4) Daniel will upload STUB for caleb to work with from the database side of ratings  
 
+## Nov 9, 2023  
+**Recorded by:** Daniel     
+**Scrum master:** Caleb      
+**Venue:** CS Student Lab    
+**Time:** 1:00 PM - 3:50 PM    
+**Attendance:** Caleb, Daniel, Turjo, Tanjet      
+Decision:   
+- Caleb will delete Daniel’s stub and implemented a working rating feature. Wasn’t able to finish by meeting time, but will try to finish it before the end of the day.   
+- We will meet tomorrow and work on the UML, Readme, unit tests, and etc tomorrow.  
+- Turjo merged his code for the upgraded draft functionality. Turjo also merged his code  for “share” feature as Daniel accidentally  deleted it last week.   
+
+Difficulty: Everyone is having a difficulty because of accidental merge of duplicate lines of text from the merge from Turjo. (Immediate Solution: Turjo identified the solution and re-pushed.)  
