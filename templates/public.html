@@ -64,9 +64,18 @@
                             <h5>{{ review[2] }}</h5>
                             <h5>{{ review[3] }}</h5>
                             <br>
-                            <h6> RATE THIS REVIEW</h6>
-                            <h6>(feature coming soon..)</h6>
-                            <h3>☆☆☆☆☆</h3>
+
+                            <h6> CLICK to rate this review! </h6>
+                            <form action="/rate" method="post">
+                                    <input type="hidden" name="review_id" value="{{ review[4] }}">
+
+
+                                    <button class="star" value="1" name="rating" ></button>
+                                    <button class="star" value="2" name="rating" ></button>
+                                    <button class="star" value="3" name="rating" ></button>
+                                    <button class="star" value="4" name="rating"></button>
+                                    <button class="star" value="5" name="rating"></button>
+                            </form>
                             <br>
                             <hr class="featurette-divider1">
                         </div>
@@ -103,6 +112,33 @@
                 }
             });
         });
+
+
+        const stars = document.querySelectorAll('.star');
+
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseover', () => {
+                let i = 0;
+                if(index > 4){
+                    let temp = Math.floor(index/5);
+                    i = temp*5;
+                    for (i; i <= index; i++) {
+                        stars[i].classList.add('active');
+                    }
+                } else{
+                    for (i = 0; i <= index; i++) {
+                        stars[i].classList.add('active');
+                    }
+                }
+            });
+
+            star.addEventListener('mouseout', () => {
+                for (let i = index; i < stars.length; i++) {
+                    stars[i].classList.remove('active');
+                }
+            });
+        });
+
     </script>
 </body>
 </html>
