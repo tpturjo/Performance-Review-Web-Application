@@ -539,10 +539,10 @@ Difficulty: Everyone is having a difficulty because of accidental merge of dupli
 
 
 ## Nov 9, 2023
-**Recorded by:** Daniel       
+**Recorded by:** Caleb       
 **Venue:** DISCORD    
 **Time:** 9:30 PM - 9:45 PM    
 **Attendance:** Caleb, Daniel  
-- Reviewed Caleb's progress. Caleb has shifted the database a little, and the average rating calculation works beautifully.  
+- Daniel Reviewed Caleb's progress. Caleb has shifted the database a little, and the average rating calculation works without error.  
 - Caleb has a new deadline to upload rating function extended to tomorrow.   
 - Discovered bug from draft function. Bug fix task assigned to Turjo.  
