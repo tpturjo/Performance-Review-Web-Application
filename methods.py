@@ -45,11 +45,10 @@ def handle_none_variables(element):
 
 def handle_reviews(element):
     """
-    Handles None values by converting them to the string "none".
-    Helper function for format_list_for_public(list).
+    Handles the ratings of each review.
 
     Args:
-        element: The value to handle.
+        str: string representation of a rating.
 
     Returns:
         str: The converted value.
