@@ -28,8 +28,10 @@
 ## Attributions
 ## Turjo
 
-| Source       | Contribution                       | Location           |
-|--------------|------------------------------------|--------------------|
-| w3 Schools   | help with python Syntex and approch | https://www.w3schools.com/sql/default.asp |
-| bottlepy.org | For learning bottle frame work     | https://bottlepy.org/docs/dev/tutorial.html                   |
- |realpython.com | For learning unit test             | https://realpython.com/python-testing/ |
+| Source | Contribution                        | Location           |
+|-----|-------------------------------------|--------------------|
+| w3 Schools | help with python Syntex and approch | https://www.w3schools.com/sql/default.asp |
+| bottlepy.org | For learning bottle frame work      | https://bottlepy.org/docs/dev/tutorial.html                   |
+ | realpython.com | For learning unit test              | https://realpython.com/python-testing/ |
+| freeCodeCamp.org    | For learning postman                | https://www.youtube.com/watch?v=VywxIQ2ZXw4&t=2181s |
+| Programming with Mosh   | For learning java script            | https://www.youtube.com/watch?v=W6NZfCO5SIk |
