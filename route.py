@@ -48,11 +48,20 @@ def change_password():
 @app.route('/public')
 def public():
     """
-    Serves the public page that displays all published reviews.
+    Serve the public page displaying all published reviews.
+
+    This function retrieves all published reviews from the database. If a search query
+    is provided in the request, it filters the reviews based on this query. The reviews are
+    then formatted for display and the public page HTML is returned with the reviews data.
 
     Returns:
-        str: The public page HTML.
+        str: HTML content for the public page, including the list of reviews and the search query, if any.
 
+    Notes:
+        - The search query is case-insensitive and can match either the title or the content of the reviews.
+        - Reviews are retrieved from the database using 'database.get_published_reviews()' and formatted with
+          'methods.format_list_for_public()'.
+        - The template 'templates/public.html' is used to render the HTML content.
     """
     search_query = request.query.get('search')
     all_published = database.get_published_reviews()
