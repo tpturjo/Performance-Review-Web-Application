@@ -213,26 +213,20 @@ def rate():
     review_id = request.forms.get('review_id')
     rating = request.forms.get('rating')
 
-    # Stub implementation until database.py method is complete
     if rating == '1':
-        print(review_id)
-        pass
+        database.save_rating(review_id, 1)
         redirect('/public')
     elif rating == '2':
-        print(review_id)
-        pass
+        database.save_rating(review_id,2)
         redirect('/public')
     elif rating == '3':
-        print(review_id)
-        pass
+        database.save_rating(review_id, 3)
         redirect('/public')
     elif rating == '4':
-        print(review_id)
-        pass
+        database.save_rating(review_id, 4)
         redirect('/public')
     elif rating == '5':
-        print(review_id)
-        pass
+        database.save_rating(review_id, 5)
         redirect('/public')
 
 
