@@ -262,44 +262,44 @@ def get_drafts(username):
     return drafts_data
 
 
-def save_rating(submission_id, username, rating):
+def save_rating(submission_id, rating):
     """
-           Saves a review's rating score when a user rates a review.
+   Saves a rating for a specific review.
+
+   Args:
+       submission_id (int): The ID of the review.
+       rating (float): The rating to be saved.
+
+   Returns:
+       None
    """
-
     conn = sqlite3.connect(database_name)
     cursor = conn.cursor()
 
-    cursor.execute("INSERT INTO Ratings(Submission_ID, Username, Rating) VALUES (?, ?, ?)",
-                   (submission_id, username, rating))
+    # Check if the review already has ratings
+    cursor.execute("SELECT Accum_Ratings, Total_Ratings, Rating FROM Reviews WHERE Submission_ID = ?", (submission_id,))
+    existing_data = cursor.fetchone()
 
-    # Commits the changes to the database
+    if existing_data:
+        accum_ratings, total_ratings, current_rating = existing_data
+        accum_ratings = 0 if accum_ratings is None else accum_ratings  # Handle None case
+        total_ratings = 0 if total_ratings is None else total_ratings  # Handle None case
+        total_ratings += 1
+
+        if total_ratings != 0:
+            average_rating = (accum_ratings + int(rating)) // total_ratings
+        else:
+            average_rating = 0
+
+        cursor.execute("UPDATE Reviews SET Rating = ?, Accum_Ratings = ?, Total_Ratings = ? WHERE Submission_ID = ?",
+                       (average_rating, accum_ratings + int(rating), total_ratings, submission_id))
+    else:
+        # If no ratings exist, insert a new record
+        cursor.execute("INSERT INTO Reviews (Submission_ID, Rating, Accum_Ratings, Total_Ratings) VALUES (?, ?, ?, ?)",
+                       (submission_id, int(rating), int(rating), 1))
+
     conn.commit()
-    # Closes the connection
     conn.close()
-
-
-def get_average_rating(submission_id):
-    """
-       Calculates the average rating for a specific review.
-
-
-       Args:
-           Submission_ID INT - The ID of the review.
-
-
-       Returns:
-           The average of all ratings of a review.
-       """
-    conn = sqlite3.connect(database_name)
-    cursor = conn.cursor()
-
-    cursor.execute("SELECT Rating FROM Ratings WHERE Submission_ID = ?", (submission_id,))
-    allRatings = cursor.fetchall()
-
-    conn.close()
-
-    return average_ratings(allRatings)
 
 
 def change_password(username, new_password):
