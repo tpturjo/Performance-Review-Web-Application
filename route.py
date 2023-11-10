@@ -59,7 +59,8 @@ def public():
     if search_query:
         # Filter the reviews based on the search query
         filtered_reviews = [review for review in all_published if
-                            search_query.lower() in review[1].lower() or search_query.lower() in review[2].lower()]
+                            (review[1] is not None and search_query.lower() in review[1].lower()) or
+                            (review[2] is not None and search_query.lower() in review[2].lower())]
         all_published_reformatted = methods.format_list_for_public(filtered_reviews)
     else:
         all_published_reformatted = methods.format_list_for_public(all_published)
@@ -149,7 +150,10 @@ def submit():
         title = request.forms.get('title')
         text = request.forms.get('text')
         database.publish_review(username, title, text)
-        return static_file('review.html', root='./templates')
+        database.clear_drafts(username)
+        draft_data = None
+        return template('templates/review.html', username=username, draft_data=draft_data,
+                        saved_message="Review published successfully")
 
 
     elif action == 'LOGIN':

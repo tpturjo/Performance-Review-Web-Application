@@ -300,6 +300,18 @@ def get_drafts(username):
    return drafts_data
 
 
+def clear_drafts(username):
+   conn = sqlite3.connect(database_name)
+   cursor = conn.cursor()
+
+   cursor.execute("DELETE FROM Drafts WHERE Username = ?", (username,))
+
+   # Commits the changes to the database
+   conn.commit()
+   # Closes the connection
+   conn.close()
+
+
 def save_rating(submission_id, username, rating):
    """
            Saves a review's rating score when a user rates a review.
