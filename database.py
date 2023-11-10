@@ -2,10 +2,8 @@ from bottle import Bottle, request, run, template, static_file, redirect
 import sqlite3
 from methods import *
 
-
 # Change this if database name is changed
 database_name = 'userDatabase.db'
-
 
 """
 THIS PROGRAM HANDLES ALL SQL LOGIC AND TRAFFIC
@@ -13,7 +11,7 @@ THIS PROGRAM HANDLES ALL SQL LOGIC AND TRAFFIC
 
 
 def create_user(user):
-   """
+    """
    Creates a new user in the database.
 
 
@@ -26,30 +24,27 @@ def create_user(user):
 
 
    """
-   conn = sqlite3.connect(database_name)
-   cursor = conn.cursor()
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
 
+    # Check if the username already exists
+    cursor.execute("SELECT Username FROM Users WHERE Username = ?", (user.get_user_name(),))
+    existing_user = cursor.fetchone()
 
-   # Check if the username already exists
-   cursor.execute("SELECT Username FROM Users WHERE Username = ?", (user.get_user_name(),))
-   existing_user = cursor.fetchone()
-
-
-   if existing_user:
-       conn.close()
-       return False
-   else:
-       # Insert the new user into the 'Users' table
-       cursor.execute("INSERT INTO Users (Username, Password) VALUES (?, ?)", (user.get_user_name(), user.get_password()))
-       conn.commit()
-       conn.close()
-       return True
-
-
+    if existing_user:
+        conn.close()
+        return False
+    else:
+        # Insert the new user into the 'Users' table
+        cursor.execute("INSERT INTO Users (Username, Password) VALUES (?, ?)",
+                       (user.get_user_name(), user.get_password()))
+        conn.commit()
+        conn.close()
+        return True
 
 
 def check_credentials(user_name, user_password):
-   """
+    """
    Checks the credentials of a user.
 
 
@@ -63,31 +58,24 @@ def check_credentials(user_name, user_password):
 
 
    """
-   conn = sqlite3.connect(database_name)
-   cursor = conn.cursor()
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
 
+    # Execute the query to check the credentials
+    cursor.execute('SELECT * FROM Users WHERE Username=? AND password=?', (user_name, user_password))
+    result = cursor.fetchone()
 
-   # Execute the query to check the credentials
-   cursor.execute('SELECT * FROM Users WHERE Username=? AND password=?', (user_name, user_password))
-   result = cursor.fetchone()
+    # Close the connection
+    conn.close()
 
-
-   # Close the connection
-   conn.close()
-
-
-   if result is None:
-       return False
-   else:
-       return True
-
-
-
-
+    if result is None:
+        return False
+    else:
+        return True
 
 
 def get_user_data_by_username(user_name):
-   """
+    """
    Retrieves user data from the database by username.
 
 
@@ -100,20 +88,17 @@ def get_user_data_by_username(user_name):
 
 
    """
-   conn = sqlite3.connect(database_name)
-   cursor = conn.cursor()
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
 
+    # Execute the query to get user data
+    cursor.execute('SELECT * FROM Users WHERE username=?', (user_name,))
+    user_data = cursor.fetchone()
 
-   # Execute the query to get user data
-   cursor.execute('SELECT * FROM Users WHERE username=?', (user_name,))
-   user_data = cursor.fetchone()
+    # Close the connection
+    conn.close()
 
-
-   # Close the connection
-   conn.close()
-
-
-   return user_data if user_data else None
+    return user_data if user_data else None
 
 
 '''
@@ -149,7 +134,7 @@ def save_user_draft_by_username(username, title, text):
 
 
 def publish_review(username, title, content):
-   """
+    """
    Publishes a review by adding it to the 'Reviews' table in the database.
 
 
@@ -164,25 +149,20 @@ def publish_review(username, title, content):
 
 
    """
-   conn = sqlite3.connect(database_name)
-   cursor = conn.cursor()
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
 
+    cursor.execute("INSERT INTO Reviews (Username, Title, Content) VALUES (?, ?, ?)", (username, title, content))
 
-   cursor.execute("INSERT INTO Reviews (Username, Title, Content) VALUES (?, ?, ?)", (username, title, content))
+    # Commits the changes to the database
+    conn.commit()
 
-
-   # Commits the changes to the database
-   conn.commit()
-
-
-   # Closes the connection
-   conn.close()
-
-
+    # Closes the connection
+    conn.close()
 
 
 def get_published_reviews():
-   """
+    """
    Retrieves all published reviews from the 'Reviews' table in the database.
 
 
@@ -191,26 +171,21 @@ def get_published_reviews():
 
 
    """
-   conn = sqlite3.connect(database_name)
-   cursor = conn.cursor()
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
 
+    # Execute the query to get all reviews
+    cursor.execute('SELECT * FROM Reviews')
+    reviews_data = cursor.fetchall()
 
-   # Execute the query to get all reviews
-   cursor.execute('SELECT * FROM Reviews')
-   reviews_data = cursor.fetchall()
+    # Close the connection
+    conn.close()
 
-
-   # Close the connection
-   conn.close()
-
-
-   return reviews_data
-
-
+    return reviews_data
 
 
 def get_users_published_reviews(username):
-   """
+    """
        Retrieves the user's published reviews from the 'Reviews' table in the database.
 
 
@@ -219,21 +194,17 @@ def get_users_published_reviews(username):
 
 
        """
-   conn = sqlite3.connect(database_name)
-   cursor = conn.cursor()
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
 
+    # Execute the query to get all reviews
+    cursor.execute("SELECT * FROM Reviews WHERE Username = ?", (username,))
+    reviews_data = cursor.fetchall()
 
-   # Execute the query to get all reviews
-   cursor.execute("SELECT * FROM Reviews WHERE Username = ?", (username,))
-   reviews_data = cursor.fetchall()
-
-
-   # Close the connection
-   conn.close()
-   # Returns all of the user's reviews
-   return reviews_data
-
-
+    # Close the connection
+    conn.close()
+    # Returns all of the user's reviews
+    return reviews_data
 
 
 """
@@ -241,42 +212,35 @@ Draft Methods
 """
 
 
-
-
 def save_draft(username, title, content):
-   """
+    """
    Saves a draft review instead of publishing it publicly.
    Args:
        username: The username
        title: The title of the draft
        content: The content of the draft
    """
-   conn = sqlite3.connect(database_name)
-   cursor = conn.cursor()
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT COUNT(*) FROM Drafts WHERE Username = ?", (username,))
+    current_draft = cursor.fetchone()[0]
+
+    if current_draft > 0:
+        cursor.execute("UPDATE Drafts SET Title = ?, Content = ? WHERE Username = ?", (title, content, username))
 
 
-   cursor.execute("SELECT COUNT(*) FROM Drafts WHERE Username = ?", (username,))
-   current_draft = cursor.fetchone()[0]
+    else:
+        cursor.execute("INSERT INTO Drafts (Username, Title, Content) VALUES (?, ?, ?)", (username, title, content))
 
-
-   if current_draft > 0:
-       cursor.execute("UPDATE Drafts SET Title = ?, Content = ? WHERE Username = ?", (title, content, username))
-
-
-   else:
-       cursor.execute("INSERT INTO Drafts (Username, Title, Content) VALUES (?, ?, ?)", (username, title, content))
-
-
-   # Commits the changes to the database
-   conn.commit()
-   # Closes the connection
-   conn.close()
-
-
+    # Commits the changes to the database
+    conn.commit()
+    # Closes the connection
+    conn.close()
 
 
 def get_drafts(username):
-   """
+    """
        Retrieves the user's saved drafts from the 'Drafts' table in the database.
 
 
@@ -285,42 +249,38 @@ def get_drafts(username):
 
 
        """
-   conn = sqlite3.connect(database_name)
-   cursor = conn.cursor()
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
 
+    # Execute the query to get all saved drafts
+    cursor.execute('SELECT * FROM Drafts WHERE Username = ?', (username,))
+    drafts_data = cursor.fetchall()
 
-   # Execute the query to get all saved drafts
-   cursor.execute('SELECT * FROM Drafts WHERE Username = ?', (username,))
-   drafts_data = cursor.fetchall()
-
-
-   #Closes the connection
-   conn.close()
-   #Returns all of the user's drafts
-   return drafts_data
+    # Closes the connection
+    conn.close()
+    # Returns all of the user's drafts
+    return drafts_data
 
 
 def save_rating(submission_id, username, rating):
-   """
+    """
            Saves a review's rating score when a user rates a review.
    """
 
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
 
-   conn = sqlite3.connect(database_name)
-   cursor = conn.cursor()
+    cursor.execute("INSERT INTO Ratings(Submission_ID, Username, Rating) VALUES (?, ?, ?)",
+                   (submission_id, username, rating))
 
-
-   cursor.execute("INSERT INTO Ratings(Submission_ID, Username, Rating) VALUES (?, ?, ?)", (submission_id, username, rating))
-
-
-   # Commits the changes to the database
-   conn.commit()
-   # Closes the connection
-   conn.close()
+    # Commits the changes to the database
+    conn.commit()
+    # Closes the connection
+    conn.close()
 
 
 def get_average_rating(submission_id):
-   """
+    """
        Calculates the average rating for a specific review.
 
 
@@ -331,18 +291,15 @@ def get_average_rating(submission_id):
        Returns:
            The average of all ratings of a review.
        """
-   conn = sqlite3.connect(database_name)
-   cursor = conn.cursor()
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
 
+    cursor.execute("SELECT Rating FROM Ratings WHERE Submission_ID = ?", (submission_id,))
+    allRatings = cursor.fetchall()
 
-   cursor.execute("SELECT Rating FROM Ratings WHERE Submission_ID = ?", (submission_id,))
-   allRatings = cursor.fetchall()
+    conn.close()
 
-
-   conn.close()
-
-
-   return average_ratings(allRatings)
+    return average_ratings(allRatings)
 
 
 def change_password(username, new_password):
@@ -360,3 +317,15 @@ def change_password(username, new_password):
     cursor.execute('UPDATE Users SET Password=? WHERE Username=?', (new_password, username))
     conn.commit()
     conn.close()
+
+
+def change_username(username, new_username):
+    """
+    Func:
+    change_username: sets a new username (stub)
+   Args:
+      username: takes the old username
+      new_username: sets to the new username
+
+   """
+    pass
