@@ -71,33 +71,9 @@
                     <input type="submit" name="action" value="PUBLISH">
                     <input type="submit" name="action" value="SAVE">
                 </div>
-                <br>
-                <div class="button">
-                  <input type="submit" name="action" value="SAVE DRAFT">
-                </div>
             </form>
         </div>
     </div>
-
-
-    <br>
-    <br>
-    <br>
-        % for draft in load_draft:
-            <li class = "reviews_history">
-                <div class = "reviews">
-                    <h3 id="title"> Draft History </h3>
-                    <hr class="featurette-divider1">
-                    <h5 id="title">Copy And Paste Me</h5>
-                    <br>
-                    <h5 id="title">Title: {{ draft[2] }}</h5>
-                    <h5 id="title">Draft: {{ draft[3] }}</h5>
-                    <br>
-                    <br>
-                </div>
-            </li>
-        % end
-
 
 </body>
 </html>

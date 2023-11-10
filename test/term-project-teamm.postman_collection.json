@@ -70,37 +70,37 @@
 			]
 		},
 		{
-			"name": "login",
+			"name": "Get Account",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/",
+					"raw": "http://localhost:8080/createAccount",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						""
+						"createAccount"
 					]
 				}
 			},
 			"response": [
 				{
-					"name": "login",
+					"name": "Get Account",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/",
+							"raw": "http://localhost:8080/createAccount",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								""
+								"createAccount"
 							]
 						}
 					},
@@ -110,7 +110,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Wed, 01 Nov 2023 15:07:38 GMT"
+							"value": "Wed, 01 Nov 2023 15:06:06 GMT"
 						},
 						{
 							"key": "Server",
@@ -139,212 +139,36 @@
 			]
 		},
 		{
-			"name": "publicService",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/public",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"public"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "publicService",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/public",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"public"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "html",
-					"header": [
-						{
-							"key": "Date",
-							"value": "Wed, 01 Nov 2023 15:11:37 GMT"
-						},
-						{
-							"key": "Server",
-							"value": "WSGIServer/0.2 CPython/3.11.5"
-						},
-						{
-							"key": "Content-Length",
-							"value": "1261"
-						},
-						{
-							"key": "Content-Type",
-							"value": "text/html; charset=UTF-8"
-						}
-					],
-					"cookie": [],
-					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>public</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n\n    </head>\n    <body>\n        <div class = \"title\">\n            <h1>Performance Review</h1>\n        </div>\n        <div class = \"content\">\n            <ul class = \"reviews\">\n                <li class = \"reviews_history\">\n                    <div class = \"reviews\">\n                        <h5 id=\"title\">Title: hi</h5>\n                        <h5>Author: Daniel</h5>\n                        <h5>Content: testing comment 1</h5>\n                    </div>\n                </li>\n                <li class = \"reviews_history\">\n                    <div class = \"reviews\">\n                        <h5 id=\"title\">Title: bye</h5>\n                        <h5>Author: Daniel</h5>\n                        <h5>Content: testing comment 2</h5>\n                    </div>\n                </li>\n            </ul>\n        </div>\n        <div class=\"button\">\n            <form action=\"/\">\n                <button>\r\n                  Login to write a review\r\n                </button>\n            </form>\n        </div>\n    </body>\n</html>"
-				}
-			]
-		},
-		{
-			"name": "createAccount",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/createAccount",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"createAccount"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "createAccount",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/createAccount",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"createAccount"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "html",
-					"header": [
-						{
-							"key": "Date",
-							"value": "Wed, 01 Nov 2023 15:13:24 GMT"
-						},
-						{
-							"key": "Server",
-							"value": "WSGIServer/0.2 CPython/3.11.5"
-						},
-						{
-							"key": "Content-Type",
-							"value": "text/html; charset=UTF-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "2835"
-						},
-						{
-							"key": "Last-Modified",
-							"value": "Wed, 01 Nov 2023 14:16:15 GMT"
-						},
-						{
-							"key": "Accept-Ranges",
-							"value": "bytes"
-						}
-					],
-					"cookie": [],
-					"body": "<!DOCTYPE HTML>\n<html lang=\"en\" dir=\"ltr\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>createAccount</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\r\n\n    </head>\n    <body>\n        <h1>Create Account</h1>\n        <div class=\"createAccount\">\n            <div id = \"createAccount\">\n                <form action=\"/submit\" method=\"post\">\n                    <div>\n                        <label for=\"username\">Username:</label>\n                        <input type=\"text\" id=\"username\" name=\"username\">\r\n                    \n                    </div>\n                    <div>\n                        <label for=\"password\">Password:</label>\n                        <input type=\"text\" id=\"password\" name=\"password\">\r\n                    \n                    </div>\n                    <div class = \"button\">\n                        <input type=\"submit\" name=\"action\" value=\"CREATE\">\r\n                    \n                    </div>\n                </form>\n            </div>\n        </div>\n        <div class = \"button\">\n            <form action=\"/\">\n                <button>\r\n                Go Back\r\n            </button>\n            </form>\n        </div>\n        <div id=\"output_text\"></div>\n        <script>\r\n        document.querySelector('form').addEventListener('submit', function(event) {\r\n            event.preventDefault();  // Prevents the form from submitting in the traditional way\r\n\r\n            var username = document.querySelector('input[name=\"username\"]').value;\r\n            var password = document.querySelector('input[name=\"password\"]').value;\r\n\r\n            var xhr = new XMLHttpRequest();\r\n            xhr.open('POST', '/submit', true);\r\n            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');\r\n\r\n            xhr.onload = function() {\r\n                if (xhr.status === 200) {\r\n                    if (xhr.responseText === 'Failure') {\r\n                        // Prevents the form from submitting in the traditional way\r\n                        event.preventDefault();\r\n                        document.getElementById('output_text').innerHTML = 'Error: Username already taken. Please try again....';\r\n                        setTimeout(function() {\r\n                        // Remove the error message after 5 seconds (5000 milliseconds)\r\n                        document.getElementById('output_text').innerHTML = '';\r\n                        }, 5000);\r\n                    }\r\n                    else {\r\n                        document.getElementById('output_text').innerHTML = 'Successfully Created Account. Please press \"Go Back\"';\r\n\r\n                    }\r\n                }\r\n            }\r\n\r\n            xhr.send('action=CREATE&username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));\r\n        });\r\n    </script>\n    </body>\n</html>"
-				}
-			]
-		},
-		{
-			"name": "review",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/review",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"review"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "review",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/review",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"review"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "html",
-					"header": [
-						{
-							"key": "Date",
-							"value": "Wed, 01 Nov 2023 15:15:22 GMT"
-						},
-						{
-							"key": "Server",
-							"value": "WSGIServer/0.2 CPython/3.11.5"
-						},
-						{
-							"key": "Content-Length",
-							"value": "1079"
-						},
-						{
-							"key": "Content-Type",
-							"value": "text/html; charset=UTF-8"
-						}
-					],
-					"cookie": [],
-					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>review</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n\n    </head>\n    <body>\n        <div class = \"save\">\n            <h1>Enter Review</h1>\n            <form action=\"/submit\" method=\"post\">\n                <label for=\"title\">Enter Title:</label>\n                <div>\n                    <input type=\"text\" id=\"title\" name=\"title\">\r\n                \n                </div>\n                <textarea id=\"text\" name=\"text\"></textarea>\n                <div class=\"button\">\n                    <!--                not using save button because not implemented yet-->\n                    <!--                <input type=\"submit\" name=\"action\" value=\"SAVE\">-->\n                    <input type=\"submit\" name=\"action\" value=\"PUBLISH\">\r\n            \n                </div>\n            </form>\n        </div>\n        <div class = \"public\">\n            <a href=\"/public\">\n                <button>Go to Public Page</button>\n            </a>\n        </div>\n    </body>\n</html>"
-				}
-			]
-		},
-		{
-			"name": "submit",
+			"name": "Create Account with exited username",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
 				"body": {
-					"mode": "formdata",
-					"formdata": [
+					"mode": "urlencoded",
+					"urlencoded": [
 						{
-							"key": "SAVE",
-							"value": "pass",
+							"key": "username",
+							"value": "test",
+							"description": "giving the user name",
 							"type": "text"
 						},
 						{
-							"key": "PUBLISH",
-							"value": "",
+							"key": "password",
+							"value": "pass",
+							"description": "passing th parameter",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "CREATE",
+							"description": "spesifing the action",
 							"type": "text"
 						}
 					]
@@ -363,21 +187,36 @@
 			},
 			"response": [
 				{
-					"name": "submit",
+					"name": "Create Account with exited username",
 					"originalRequest": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
+							"mode": "urlencoded",
+							"urlencoded": [
 								{
-									"key": "SAVE",
-									"value": "pass",
+									"key": "username",
+									"value": "test",
+									"description": "giving the user name",
 									"type": "text"
 								},
 								{
-									"key": "PUBLISH",
-									"value": "",
+									"key": "password",
+									"value": "pass",
+									"description": "passing th parameter",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "CREATE",
+									"description": "spesifing the action",
 									"type": "text"
 								}
 							]
@@ -400,7 +239,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Wed, 01 Nov 2023 15:19:54 GMT"
+							"value": "Fri, 10 Nov 2023 04:38:56 GMT"
 						},
 						{
 							"key": "Server",
@@ -408,7 +247,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "0"
+							"value": "7"
 						},
 						{
 							"key": "Content-Type",
@@ -416,7 +255,1099 @@
 						}
 					],
 					"cookie": [],
-					"body": null
+					"body": "Failure"
+				}
+			]
+		},
+		{
+			"name": "Create Account with new username",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "new",
+							"description": "giving the user name",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pas",
+							"description": "passing th parameter",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "CREATE",
+							"description": "spesifing the action",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Account with new username",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "new",
+									"description": "giving the user name",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "pas",
+									"description": "passing th parameter",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "CREATE",
+									"description": "spesifing the action",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/submit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 04:50:58 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3067"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Wed, 08 Nov 2023 23:51:56 GMT"
+						},
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE HTML>\n<html lang=\"en\" dir=\"ltr\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>login</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link rel=\"stylesheet\" href=\"styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n\n    </head>\n    <body>\n        <header class=\"p-3 text-bg-dark\">\n            <div class=\"container\">\n                <div class=\"d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start\">\n                    <img src=\"static_img/teamM.png\" class = \"logo\">\n                    <ul class=\"nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0\">\n                        <li>\n                            <a href=\"#\" class=\"nav-link px-2 text-secondary\">Home</a>\n                        </li>\n                        <li>\n                            <a href=\"/public\" class=\"nav-link px-2 text-white\">Reviews</a>\n                        </li>\n                    </ul>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <a href=\"/createAccount\">\n                                <button class=\"get-account-button\">Get Account</button>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </header>\n    <div class=\"main-content-div\">\n        <div class=\"login-cluster\">\n            <h4 class=\"mb-3\">LOGIN</h4>\n            <form action=\"/submit\" method=\"post\" onsubmit=\"return handleFormSubmission(event);\">\n                <div class=\"row g-3\">\n                    <div class=\"input-group has-validation\">\n                        <span class=\"input-group-text\">🎅</span>\n                        <input type=\"text\" class=\"form-control\" id=\"username\" placeholder=\"Username\" name=\"username\">\r\n                \n                    </div>\n                    <div class=\"input-group has-validation\">\n                        <span class=\"input-group-text\">🔒</span>\n                        <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\" name=\"password\">\r\n                \n                    </div>\n                    <div class = \"button-group1 mt-3\">\n                        <div id=\"output-text\" class = \"error-message\"></div>\n                        <div class = \"button-div\">\n                            <input id=\"log-button\" class=\"button\" type=\"submit\" name=\"action\" value=\"LOGIN\">\r\n                    \n                        </div>\n                    </div>\n                </div>\n            </form>\n        </div>\n    </div>\n    <!--  var myDiv = document.getElementById('myDiv');-->\n    <!--  myDiv.classList.toggle('hidden');-->\n    <script>\r\n    window.onload = function() {\r\n        var errorMessage = \"{{ message }}\";\r\n        if (errorMessage && errorMessage !== 'None') {\r\n            var errorMessageDiv = document.querySelector('#output-text');\r\n            errorMessageDiv.textContent = errorMessage;\r\n            errorMessageDiv.style.display = 'block';\r\n            setTimeout(function() {\r\n                errorMessageDiv.classList.toggle('hidden');\r\n            }, 3000);\r\n        }\r\n    };\r\n</script>\n</body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Log in with false username",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "new12",
+							"description": "giving the user name",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pas",
+							"description": "passing th parameter",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "LOGIN",
+							"description": "spesifing the action",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Log in with false username",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "new12",
+									"description": "giving the user name",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "pas",
+									"description": "passing th parameter",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "LOGIN",
+									"description": "spesifing the action",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/submit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 04:57:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3084"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE HTML>\n<html lang=\"en\" dir=\"ltr\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>login</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link rel=\"stylesheet\" href=\"styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n\n    </head>\n    <body>\n        <header class=\"p-3 text-bg-dark\">\n            <div class=\"container\">\n                <div class=\"d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start\">\n                    <img src=\"static_img/teamM.png\" class = \"logo\">\n                    <ul class=\"nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0\">\n                        <li>\n                            <a href=\"#\" class=\"nav-link px-2 text-secondary\">Home</a>\n                        </li>\n                        <li>\n                            <a href=\"/public\" class=\"nav-link px-2 text-white\">Reviews</a>\n                        </li>\n                    </ul>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <a href=\"/createAccount\">\n                                <button class=\"get-account-button\">Get Account</button>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </header>\n    <div class=\"main-content-div\">\n        <div class=\"login-cluster\">\n            <h4 class=\"mb-3\">LOGIN</h4>\n            <form action=\"/submit\" method=\"post\" onsubmit=\"return handleFormSubmission(event);\">\n                <div class=\"row g-3\">\n                    <div class=\"input-group has-validation\">\n                        <span class=\"input-group-text\">🎅</span>\n                        <input type=\"text\" class=\"form-control\" id=\"username\" placeholder=\"Username\" name=\"username\">\r\n                \n                    </div>\n                    <div class=\"input-group has-validation\">\n                        <span class=\"input-group-text\">🔒</span>\n                        <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\" name=\"password\">\r\n                \n                    </div>\n                    <div class = \"button-group1 mt-3\">\n                        <div id=\"output-text\" class = \"error-message\"></div>\n                        <div class = \"button-div\">\n                            <input id=\"log-button\" class=\"button\" type=\"submit\" name=\"action\" value=\"LOGIN\">\r\n                    \n                        </div>\n                    </div>\n                </div>\n            </form>\n        </div>\n    </div>\n    <!--  var myDiv = document.getElementById('myDiv');-->\n    <!--  myDiv.classList.toggle('hidden');-->\n    <script>\r\n    window.onload = function() {\r\n        var errorMessage = \"Incorrect username or password\";\r\n        if (errorMessage && errorMessage !== 'None') {\r\n            var errorMessageDiv = document.querySelector('#output-text');\r\n            errorMessageDiv.textContent = errorMessage;\r\n            errorMessageDiv.style.display = 'block';\r\n            setTimeout(function() {\r\n                errorMessageDiv.classList.toggle('hidden');\r\n            }, 3000);\r\n        }\r\n    };\r\n</script>\n</body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Log in with correct user name Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "new",
+							"description": "giving the user name",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pas",
+							"description": "passing th parameter",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "LOGIN",
+							"description": "spesifing the action",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Log in with false username Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "new",
+									"description": "giving the user name",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "pas",
+									"description": "passing th parameter",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "LOGIN",
+									"description": "spesifing the action",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/submit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 05:01:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2398"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>review</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link rel=\"stylesheet\" href=\"styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n\n    </head>\n    <body>\n        <header class=\"p-3 text-bg-dark\">\n            <div class=\"container\">\n                <div class=\"d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start\">\n                    <img src=\"static_img/teamM.png\" class = \"logo\">\n                    <ul class=\"nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0\">\n                        <li>\n                            <a href=\"/\" class=\"nav-link px-2 text-secondary\">Home</a>\n                        </li>\n                        <li>\n                            <a href=\"/public\" class=\"nav-link px-2 text-white\">View Reviews</a>\n                        </li>\n                    </ul>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <a href=\"/changePassword\">\n                                <button class=\"change-pw-button\">ChangePW</button>\n                            </a>\n                        </div>\n                    </div>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <form action=\"/submit\" method=\"post\">\n                                <a href=\"/public\">\n                                    <button class=\"log-out-button\" type=\"submit\" name=\"action\" value=\"LOGOUT\">Logout</button>\n                                </a>\n                            </form>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </header>\n    <div class=\"main-content-div\">\n        <div class = \"save\">\n            <h1>Enter Review</h1>\n            <form action=\"/submit\" method=\"post\">\n                <label for=\"title\">Enter Title:</label>\n                <div>\n                    <input type=\"text\" id=\"title\" name=\"title\" placeholder=\"Enter Title\">\r\n                    \n                </div>\n                <textarea id=\"text\" name=\"text\"></textarea>\n                <div class=\"button\">\n                    <input type=\"submit\" name=\"action\" value=\"PUBLISH\">\n                    <input type=\"submit\" name=\"action\" value=\"SAVE\">\r\n                \n                </div>\n            </form>\n        </div>\n    </div>\n</body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Publish Review",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "postman",
+							"description": "giving the title",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "checking",
+							"description": "passing the review",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "PUBLISH",
+							"description": "spesifing the action",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Publish Review",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "postman",
+									"description": "giving the title",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "checking",
+									"description": "passing the review",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "PUBLISH",
+									"description": "spesifing the action",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/submit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 05:05:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2398"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>review</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link rel=\"stylesheet\" href=\"styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n\n    </head>\n    <body>\n        <header class=\"p-3 text-bg-dark\">\n            <div class=\"container\">\n                <div class=\"d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start\">\n                    <img src=\"static_img/teamM.png\" class = \"logo\">\n                    <ul class=\"nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0\">\n                        <li>\n                            <a href=\"/\" class=\"nav-link px-2 text-secondary\">Home</a>\n                        </li>\n                        <li>\n                            <a href=\"/public\" class=\"nav-link px-2 text-white\">View Reviews</a>\n                        </li>\n                    </ul>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <a href=\"/changePassword\">\n                                <button class=\"change-pw-button\">ChangePW</button>\n                            </a>\n                        </div>\n                    </div>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <form action=\"/submit\" method=\"post\">\n                                <a href=\"/public\">\n                                    <button class=\"log-out-button\" type=\"submit\" name=\"action\" value=\"LOGOUT\">Logout</button>\n                                </a>\n                            </form>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </header>\n    <div class=\"main-content-div\">\n        <div class = \"save\">\n            <h1>Enter Review</h1>\n            <form action=\"/submit\" method=\"post\">\n                <label for=\"title\">Enter Title:</label>\n                <div>\n                    <input type=\"text\" id=\"title\" name=\"title\" placeholder=\"Enter Title\">\r\n                    \n                </div>\n                <textarea id=\"text\" name=\"text\"></textarea>\n                <div class=\"button\">\n                    <input type=\"submit\" name=\"action\" value=\"PUBLISH\">\n                    <input type=\"submit\" name=\"action\" value=\"SAVE\">\r\n                \n                </div>\n            </form>\n        </div>\n    </div>\n</body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Save Draft",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "postman",
+							"description": "giving the title",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "checking",
+							"description": "passing the review",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "PUBLISH",
+							"description": "spesifing the action",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Save Draft",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "postman",
+									"description": "giving the title",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "checking",
+									"description": "passing the review",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "SAVE",
+									"description": "spesifing the action",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/submit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 05:09:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2452"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>review</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link rel=\"stylesheet\" href=\"styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n\n    </head>\n    <body>\n        <header class=\"p-3 text-bg-dark\">\n            <div class=\"container\">\n                <div class=\"d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start\">\n                    <img src=\"static_img/teamM.png\" class = \"logo\">\n                    <ul class=\"nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0\">\n                        <li>\n                            <a href=\"/\" class=\"nav-link px-2 text-secondary\">Home</a>\n                        </li>\n                        <li>\n                            <a href=\"/public\" class=\"nav-link px-2 text-white\">View Reviews</a>\n                        </li>\n                    </ul>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <a href=\"/changePassword\">\n                                <button class=\"change-pw-button\">ChangePW</button>\n                            </a>\n                        </div>\n                    </div>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <form action=\"/submit\" method=\"post\">\n                                <a href=\"/public\">\n                                    <button class=\"log-out-button\" type=\"submit\" name=\"action\" value=\"LOGOUT\">Logout</button>\n                                </a>\n                            </form>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </header>\n    <div class=\"main-content-div\">\n        <div class = \"save\">\n            <h1>Enter Review</h1>\n            <form action=\"/submit\" method=\"post\">\n                <label for=\"title\">Enter Title:</label>\n                <div>\n                    <input type=\"text\" id=\"title\" name=\"title\" placeholder=\"Enter Title\" value=\"postman\">\r\n                        \n                </div>\n                <textarea id=\"text\" name=\"text\">checking</textarea>\n                <div class=\"button\">\n                    <input type=\"submit\" name=\"action\" value=\"PUBLISH\">\n                    <input type=\"submit\" name=\"action\" value=\"SAVE\">\r\n                        \n                </div>\n            </form>"
+				}
+			]
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "action",
+							"value": "Change",
+							"description": "giving the title",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "new",
+							"description": "passing the review",
+							"type": "text"
+						},
+						{
+							"key": "current-password",
+							"value": "pas",
+							"description": "spesifing the action",
+							"type": "text"
+						},
+						{
+							"key": "new-password",
+							"value": "newpas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/change_password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"change_password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Change Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "action",
+									"value": "Change",
+									"description": "giving the title",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "new",
+									"description": "passing the review",
+									"type": "text"
+								},
+								{
+									"key": "current-password",
+									"value": "pas",
+									"description": "spesifing the action",
+									"type": "text"
+								},
+								{
+									"key": "new-password",
+									"value": "newpas",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/change_password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"change_password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 05:18:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3468"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE HTML>\n<html lang=\"en\" dir=\"ltr\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Change Password</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link rel=\"stylesheet\" href=\"./styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n\n    </head>\n    <body>\n        <header class=\"p-3 text-bg-dark\">\n            <div class=\"container\">\n                <div class=\"d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start\">\n                    <img src=\"static_img/teamM.png\" class = \"logo\">\n                    <ul class=\"nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0\">\n                        <li>\n                            <a href=\"/login\" class=\"nav-link px-2 text-secondary\">Home</a>\n                        </li>\n                        <li>\n                            <a href=\"/public\" class=\"nav-link px-2 text-white\">Reviews</a>\n                        </li>\n                    </ul>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <a href=\"/\">\n                                <button class=\"go-back-button\">GO BACK</button>\n                            </a>\n                        </div>\n                    </div>\n                    <div class=\"text-end\">\r\n        </div>\n                </div>\n            </div>\n        </header>\n        <div class=\"main-content-div\">\n            <div class=\"login-cluster\">\n                <h4 class=\"mb-3\">CHANGE PASSWORD</h4>\n                <form action=\"/change_password\" method=\"post\">\n                    <div class=\"row g-3\">\n                        <div class=\"input-group has-validation\">\n                            <span class=\"input-group-text\">🎅</span>\n                            <input type=\"text\" class=\"form-control\" id=\"username\" placeholder=\"username\" name=\"username\">\r\n                        \n                        </div>\n                        <div class=\"input-group has-validation\">\n                            <span class=\"input-group-text\">🔒</span>\n                            <input type=\"password\" class=\"form-control\" id=\"current-password\" placeholder=\"current password\" name=\"current-password\">\r\n                        \n                        </div>\n                        <div class=\"input-group has-validation\">\n                            <span class=\"input-group-text\">🔒</span>\n                            <input type=\"password\" class=\"form-control\" id=\"new-password\" placeholder=\"new password\" name=\"new-password\">\r\n                        \n                        </div>\n                        <div class = \"button-group1 mt-3\">\n                            <div id=\"output-text\" class = \"error-message\"></div>\n                            <div class=\"button-div\">\n                                <input id=\"log-button\" class=\"button\" type=\"submit\" name=\"action\" value=\"Change\">\r\n                            \n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n        <script>\r\n    window.onload = function() {\r\n        var errorMessage = \"SUCCESS\";\r\n        if (errorMessage && errorMessage !== 'None') {\r\n            var errorMessageDiv = document.querySelector('#output-text');\r\n            errorMessageDiv.textContent = errorMessage;\r\n            errorMessageDiv.style.display = 'block';\r\n            setTimeout(function() {\r\n                errorMessageDiv.classList.toggle('hidden');\r\n            }, 3000);\r\n        }\r\n    };\r\n</script>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Log Out",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "action",
+							"value": "LOGOUT",
+							"description": "spesifing the action",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Log Out",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "action",
+									"value": "LOGOUT",
+									"description": "spesifing the action",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/submit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 05:22:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3058"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "username=\"\"; expires=Thu, 01 Jan 1970 00:00:00 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE HTML>\n<html lang=\"en\" dir=\"ltr\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>login</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link rel=\"stylesheet\" href=\"styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n\n    </head>\n    <body>\n        <header class=\"p-3 text-bg-dark\">\n            <div class=\"container\">\n                <div class=\"d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start\">\n                    <img src=\"static_img/teamM.png\" class = \"logo\">\n                    <ul class=\"nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0\">\n                        <li>\n                            <a href=\"#\" class=\"nav-link px-2 text-secondary\">Home</a>\n                        </li>\n                        <li>\n                            <a href=\"/public\" class=\"nav-link px-2 text-white\">Reviews</a>\n                        </li>\n                    </ul>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <a href=\"/createAccount\">\n                                <button class=\"get-account-button\">Get Account</button>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </header>\n    <div class=\"main-content-div\">\n        <div class=\"login-cluster\">\n            <h4 class=\"mb-3\">LOGIN</h4>\n            <form action=\"/submit\" method=\"post\" onsubmit=\"return handleFormSubmission(event);\">\n                <div class=\"row g-3\">\n                    <div class=\"input-group has-validation\">\n                        <span class=\"input-group-text\">🎅</span>\n                        <input type=\"text\" class=\"form-control\" id=\"username\" placeholder=\"Username\" name=\"username\">\r\n                \n                    </div>\n                    <div class=\"input-group has-validation\">\n                        <span class=\"input-group-text\">🔒</span>\n                        <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\" name=\"password\">\r\n                \n                    </div>\n                    <div class = \"button-group1 mt-3\">\n                        <div id=\"output-text\" class = \"error-message\"></div>\n                        <div class = \"button-div\">\n                            <input id=\"log-button\" class=\"button\" type=\"submit\" name=\"action\" value=\"LOGIN\">\r\n                    \n                        </div>\n                    </div>\n                </div>\n            </form>\n        </div>\n    </div>\n    <!--  var myDiv = document.getElementById('myDiv');-->\n    <!--  myDiv.classList.toggle('hidden');-->\n    <script>\r\n    window.onload = function() {\r\n        var errorMessage = \"None\";\r\n        if (errorMessage && errorMessage !== 'None') {\r\n            var errorMessageDiv = document.querySelector('#output-text');\r\n            errorMessageDiv.textContent = errorMessage;\r\n            errorMessageDiv.style.display = 'block';\r\n            setTimeout(function() {\r\n                errorMessageDiv.classList.toggle('hidden');\r\n            }, 3000);\r\n        }\r\n    };\r\n</script>\n</body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Log ing with new pass and Draft checking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "new",
+							"description": "giving the user name",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "newpas",
+							"description": "passing th parameter",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "LOGIN",
+							"description": "spesifing the action",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Log in with new pass and Draft checking",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "new",
+									"description": "giving the user name",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "newpas",
+									"description": "passing th parameter",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "LOGIN",
+									"description": "spesifing the action",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/submit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 05:58:09 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2452"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>review</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link rel=\"stylesheet\" href=\"styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n\n    </head>\n    <body>\n        <header class=\"p-3 text-bg-dark\">\n            <div class=\"container\">\n                <div class=\"d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start\">\n                    <img src=\"static_img/teamM.png\" class = \"logo\">\n                    <ul class=\"nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0\">\n                        <li>\n                            <a href=\"/\" class=\"nav-link px-2 text-secondary\">Home</a>\n                        </li>\n                        <li>\n                            <a href=\"/public\" class=\"nav-link px-2 text-white\">View Reviews</a>\n                        </li>\n                    </ul>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <a href=\"/changePassword\">\n                                <button class=\"change-pw-button\">ChangePW</button>\n                            </a>\n                        </div>\n                    </div>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <form action=\"/submit\" method=\"post\">\n                                <a href=\"/public\">\n                                    <button class=\"log-out-button\" type=\"submit\" name=\"action\" value=\"LOGOUT\">Logout</button>\n                                </a>\n                            </form>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </header>\n    <div class=\"main-content-div\">\n        <div class = \"save\">\n            <h1>Enter Review</h1>\n            <form action=\"/submit\" method=\"post\">\n                <label for=\"title\">Enter Title:</label>\n                <div>\n                    <input type=\"text\" id=\"title\" name=\"title\" placeholder=\"Enter Title\" value=\"postman\">\r\n                        \n                </div>\n                <textarea id=\"text\" name=\"text\">checking</textarea>\n                <div class=\"button\">\n                    <input type=\"submit\" name=\"action\" value=\"PUBLISH\">\n                    <input type=\"submit\" name=\"action\" value=\"SAVE\">\r\n                        \n                </div>\n            </form>"
+				}
+			]
+		},
+		{
+			"name": "Public Review Feed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/public",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"public"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Public Review Feed",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/public",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"public"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 05:30:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37843"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>public</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link rel=\"stylesheet\" href=\"styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n\n    </head>\n    <body class = \"background-public-page\">\n        <header class=\"p-3 text-bg-dark\">\n            <div class=\"container\">\n                <div class=\"d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start\">\n                    <img src=\"static_img/teamM.png\" class = \"logo\">\n                    <ul class=\"nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0\">\n                        <li>\n                            <a href=\"/\" class=\"nav-link px-2 text-secondary\">Home</a>\n                        </li>\n                        <li>\n                            <a href=\"/review\" class=\"nav-link px-2 text-white\">Write a review</a>\n                        </li>\n                    </ul>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <!--                <a href=\"/createAccount\"><button class=\"log-out-button\">Logout</button></a>-->\n                            <!--                  This button will be implemented in the near future. It's a placeholder for now-->\n                            <!--                  <button class = \"dummy\">BOING</button>-->\r\n\r\n              \n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </header>\n    <div class = \"top-layer\"></div>\n    <div class=\"main-content-div-public\">\n        <div class=\"content-cluster\">\n            <div class = \"title\">\n                <h1>Performance Review</h1>\n                <br>\r\n            \n            </div>\n            <!-- Adding the search input -->\n            <div class=\"search\">\n                <form action=\"/public\" method=\"get\">\n                    <input type=\"text\" name=\"search\" placeholder=\"Search by author or title\" value=\"None\">\n                    <input type=\"submit\" value=\"Search\">\r\n            \n                </form>\n            </div>\n            <br>\n            <br>\n            <div class = \"content\">\n                <ul class = \"reviews\">\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: 123123\" data-content=\"Content: 2\">Share</button>\n                            <h5 id=\"title\">Title: 123123</h5>\n                            <h5>Author: dan</h5>\n                            <h5>Content: 2</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"1\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: Review of team M\" data-content=\"Content: Team M has been working hard to implement multisession, UML, postman, and etc. I think we are making great progress!\">Share</button>\n                            <h5 id=\"title\">Title: Review of team M</h5>\n                            <h5>Author: dan</h5>\n                            <h5>Content: Team M has been working hard to implement multisession, UML, postman, and etc. I think we are making great progress!</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"2\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: Pencil\" data-content=\"Content: This pencil is very premium. It would be better if there was an apple to go with it...\">Share</button>\n                            <h5 id=\"title\">Title: Pencil</h5>\n                            <h5>Author: dan</h5>\n                            <h5>Content: This pencil is very premium. It would be better if there was an apple to go with it...</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"3\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: uml\" data-content=\"Content: This UML program is great. You just have to download the UML standalone project and the eclipse plugin. It&#039;s a game changer 10/10.\">Share</button>\n                            <h5 id=\"title\">Title: uml</h5>\n                            <h5>Author: caleb</h5>\n                            <h5>Content: This UML program is great. You just have to download the UML standalone project and the eclipse plugin. It&#039;s a game changer 10/10.</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"4\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: Laptop purchase\" data-content=\"Content: I bought this laptop for my husband and he loves it. 10/10.\r\nThis was not written by a bot. Real authentic review!\">Share</button>\n                            <h5 id=\"title\">Title: Laptop purchase</h5>\n                            <h5>Author: notabot</h5>\n                            <h5>Content: I bought this laptop for my husband and he loves it. 10/10.\r\nThis was not written by a bot. Real authentic review!</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"5\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: draft\" data-content=\"Content: test1\">Share</button>\n                            <h5 id=\"title\">Title: draft</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: test1</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"6\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: draft\" data-content=\"Content: test1\">Share</button>\n                            <h5 id=\"title\">Title: draft</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: test1</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"7\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: draft\" data-content=\"Content: test2\">Share</button>\n                            <h5 id=\"title\">Title: draft</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: test2</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"8\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: draft\" data-content=\"Content: test2\">Share</button>\n                            <h5 id=\"title\">Title: draft</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: test2</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"9\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: draft\" data-content=\"Content: test2\">Share</button>\n                            <h5 id=\"title\">Title: draft</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: test2</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"10\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: draft\" data-content=\"Content: test2\">Share</button>\n                            <h5 id=\"title\">Title: draft</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: test2</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"11\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: none\" data-content=\"Content: none\">Share</button>\n                            <h5 id=\"title\">Title: none</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: none</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"12\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: draft\" data-content=\"Content: test2\">Share</button>\n                            <h5 id=\"title\">Title: draft</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: test2</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"13\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: draft\" data-content=\"Content: test2\">Share</button>\n                            <h5 id=\"title\">Title: draft</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: test2</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"14\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: draft\" data-content=\"Content: test2\">Share</button>\n                            <h5 id=\"title\">Title: draft</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: test2</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"15\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: draft\" data-content=\"Content: test2\">Share</button>\n                            <h5 id=\"title\">Title: draft</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: test2</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"16\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: draft\" data-content=\"Content: test2\">Share</button>\n                            <h5 id=\"title\">Title: draft</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: test2</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"17\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: draft\" data-content=\"Content: test2\">Share</button>\n                            <h5 id=\"title\">Title: draft</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: test2</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"18\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: df\" data-content=\"Content: sdf\">Share</button>\n                            <h5 id=\"title\">Title: df</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: sdf</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"19\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: asd\" data-content=\"Content: asd\">Share</button>\n                            <h5 id=\"title\">Title: asd</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: asd</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"20\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: test draft\" data-content=\"Content: successful?\">Share</button>\n                            <h5 id=\"title\">Title: test draft</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: successful?</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"21\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: hi\" data-content=\"Content: hello\">Share</button>\n                            <h5 id=\"title\">Title: hi</h5>\n                            <h5>Author: turjo</h5>\n                            <h5>Content: hello</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"22\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: postman\" data-content=\"Content: checking\">Share</button>\n                            <h5 id=\"title\">Title: postman</h5>\n                            <h5>Author: new</h5>\n                            <h5>Content: checking</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"23\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n    <script>\r\n        // JavaScript code to handle the Share button click event\r\n        const shareButtons = document.querySelectorAll('.share-button');\r\n\r\n        shareButtons.forEach(button => {\r\n            button.addEventListener('click', function () {\r\n                const title = this.getAttribute('data-title');\r\n                const content = this.getAttribute('data-content');\r\n                const shareText = `Check out this review: ${title} - ${content}`;\r\n\r\n\r\n                const shareUrl = 'http://localhost:8080/public?';\r\n\r\n                if (navigator.share) {\r\n                    navigator.share({\r\n                        title: title,\r\n                        text: shareText,\r\n                        url: shareUrl,\r\n                    })\r\n                        .then(() => console.log('Shared successfully'))\r\n                        .catch(error => console.error('Error sharing:', error));\r\n                } else {\r\n                    alert('Sharing is not supported on this device or browser.');\r\n                }\r\n            });\r\n        });\r\n\r\n\r\n        const stars = document.querySelectorAll('.star');\r\n\r\n        stars.forEach((star, index) => {\r\n            star.addEventListener('mouseover', () => {\r\n                let i = 0;\r\n                if(index > 4){\r\n                    let temp = Math.floor(index/5);\r\n                    i = temp*5;\r\n                    for (i; i <= index; i++) {\r\n                        stars[i].classList.add('active');\r\n                    }\r\n                } else{\r\n                    for (i = 0; i <= index; i++) {\r\n                        stars[i].classList.add('active');\r\n                    }\r\n                }\r\n            });\r\n\r\n            star.addEventListener('mouseout', () => {\r\n                for (let i = index; i < stars.length; i++) {\r\n                    stars[i].classList.remove('active');\r\n                }\r\n            });\r\n        });\r\n\r\n    \n    </script>\n</body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Search Function of Public Page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/public",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"public"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search Function of Public Page",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/public?search=postman",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"public"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "postman"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 05:40:17 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5707"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>public</title>\n        <link rel=\"stylesheet\" href=\"static/styles.css\">\n        <link rel=\"stylesheet\" href=\"styles.css\">\n        <link href=\"https://fonts.googleapis.com/css?family=Arvo\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n\n    </head>\n    <body class = \"background-public-page\">\n        <header class=\"p-3 text-bg-dark\">\n            <div class=\"container\">\n                <div class=\"d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start\">\n                    <img src=\"static_img/teamM.png\" class = \"logo\">\n                    <ul class=\"nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0\">\n                        <li>\n                            <a href=\"/\" class=\"nav-link px-2 text-secondary\">Home</a>\n                        </li>\n                        <li>\n                            <a href=\"/review\" class=\"nav-link px-2 text-white\">Write a review</a>\n                        </li>\n                    </ul>\n                    <div class=\"big-button-div\">\n                        <div class = \"public\">\n                            <!--                <a href=\"/createAccount\"><button class=\"log-out-button\">Logout</button></a>-->\n                            <!--                  This button will be implemented in the near future. It's a placeholder for now-->\n                            <!--                  <button class = \"dummy\">BOING</button>-->\r\n\r\n              \n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </header>\n    <div class = \"top-layer\"></div>\n    <div class=\"main-content-div-public\">\n        <div class=\"content-cluster\">\n            <div class = \"title\">\n                <h1>Performance Review</h1>\n                <br>\r\n            \n            </div>\n            <!-- Adding the search input -->\n            <div class=\"search\">\n                <form action=\"/public\" method=\"get\">\n                    <input type=\"text\" name=\"search\" placeholder=\"Search by author or title\" value=\"postman\">\n                    <input type=\"submit\" value=\"Search\">\r\n            \n                </form>\n            </div>\n            <br>\n            <br>\n            <div class = \"content\">\n                <ul class = \"reviews\">\n                    <li class = \"reviews_history\">\n                        <div class = \"reviews\">\n                            <!-- Adding a Share button -->\n                            <button class=\"share-button\" data-title=\"Title: postman\" data-content=\"Content: checking\">Share</button>\n                            <h5 id=\"title\">Title: postman</h5>\n                            <h5>Author: new</h5>\n                            <h5>Content: checking</h5>\n                            <h5>Rating: not rated</h5>\n                            <br>\n                            <h6> CLICK to rate this review! </h6>\n                            <form action=\"/rate\" method=\"post\">\n                                <input type=\"hidden\" name=\"review_id\" value=\"23\">\n                                <button class=\"star\" value=\"1\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"2\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"3\" name=\"rating\" ></button>\n                                <button class=\"star\" value=\"4\" name=\"rating\"></button>\n                                <button class=\"star\" value=\"5\" name=\"rating\"></button>\n                            </form>\n                            <br>\n                            <hr class=\"featurette-divider1\">\r\n\r\n                        \n                        </div>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n    <script>\r\n        // JavaScript code to handle the Share button click event\r\n        const shareButtons = document.querySelectorAll('.share-button');\r\n\r\n        shareButtons.forEach(button => {\r\n            button.addEventListener('click', function () {\r\n                const title = this.getAttribute('data-title');\r\n                const content = this.getAttribute('data-content');\r\n                const shareText = `Check out this review: ${title} - ${content}`;\r\n\r\n\r\n                const shareUrl = 'http://localhost:8080/public?';\r\n\r\n                if (navigator.share) {\r\n                    navigator.share({\r\n                        title: title,\r\n                        text: shareText,\r\n                        url: shareUrl,\r\n                    })\r\n                        .then(() => console.log('Shared successfully'))\r\n                        .catch(error => console.error('Error sharing:', error));\r\n                } else {\r\n                    alert('Sharing is not supported on this device or browser.');\r\n                }\r\n            });\r\n        });\r\n\r\n\r\n        const stars = document.querySelectorAll('.star');\r\n\r\n        stars.forEach((star, index) => {\r\n            star.addEventListener('mouseover', () => {\r\n                let i = 0;\r\n                if(index > 4){\r\n                    let temp = Math.floor(index/5);\r\n                    i = temp*5;\r\n                    for (i; i <= index; i++) {\r\n                        stars[i].classList.add('active');\r\n                    }\r\n                } else{\r\n                    for (i = 0; i <= index; i++) {\r\n                        stars[i].classList.add('active');\r\n                    }\r\n                }\r\n            });\r\n\r\n            star.addEventListener('mouseout', () => {\r\n                for (let i = index; i < stars.length; i++) {\r\n                    stars[i].classList.remove('active');\r\n                }\r\n            });\r\n        });\r\n\r\n    \n    </script>\n</body>\n</html>"
 				}
 			]
 		}

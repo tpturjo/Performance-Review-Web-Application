@@ -1,10 +1,8 @@
 import unittest
-import sqlite3
-from database import create_user, check_credentials
-from user import User
-from database import get_user_data_by_username , get_published_reviews
-from database import publish_review
 
+from user import User
+
+from database import *
 
 def remove_test_user(user):
     """
@@ -32,9 +30,10 @@ class TestDatabaseMethods(unittest.TestCase):
         """
         Set up the test environment before each test.
         """
-        self.conn = sqlite3.connect('userDatabase.db')
+        self.conn = sqlite3.connect(':memory:')  # Use an in-memory database for testing
         self.cursor = self.conn.cursor()
 
+        # Create tables required for the tests
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS Users (
                 ID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -42,7 +41,6 @@ class TestDatabaseMethods(unittest.TestCase):
                 Password TEXT
             )
         ''')
-
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS Reviews (
                 ID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -51,10 +49,27 @@ class TestDatabaseMethods(unittest.TestCase):
                 Content TEXT
             )
         ''')
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS Drafts (
+                ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                Username TEXT,
+                Title TEXT,
+                Content TEXT
+            )
+        ''')
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS Ratings (
+                Submission_ID INTEGER,
+                Username TEXT,
+                Rating INTEGER
+            )
+        ''')
 
         self.conn.commit()
 
+        # Create a test user
         self.test_user = User('test_user', 'password')
+        create_user(self.test_user)
 
 
     def tearDown(self):
@@ -69,12 +84,11 @@ class TestDatabaseMethods(unittest.TestCase):
         self.conn.close()
 
     def test_create_user(self):
-        """
-        Test creating a new user.
-        """
-        user = User('test_user', 'password')
-        user_created = create_user(user)
-        self.assertTrue(user_created)
+        test_user = User("testuser", "testpassword")
+        self.assertTrue(create_user(test_user))
+        remove_test_user(test_user)
+
+
 
     def test_get_user_data_by_username(self):
         """
@@ -85,6 +99,16 @@ class TestDatabaseMethods(unittest.TestCase):
         user_data = get_user_data_by_username('test_user')
         self.assertIsNotNone(user_data)
         remove_test_user(user)
+
+    def test_get_user_data_by_nonexistent_username(self):
+        user_data = get_user_data_by_username('nonexistent_user')
+        self.assertIsNone(user_data)
+
+    def test_duplicate_user_creation(self):
+        test_user = User("testuser", "testpassword")
+        create_user(test_user)
+        self.assertFalse(create_user(test_user))
+        remove_test_user(test_user)
 
     def test_check_credentials(self):
         """
@@ -98,6 +122,13 @@ class TestDatabaseMethods(unittest.TestCase):
         self.assertTrue(valid_credentials)
         self.assertFalse(invalid_credentials)
         remove_test_user(self.test_user)
+
+    def test_check_wrong_credentials(self):
+        user = User('test_user', 'password')
+        create_user(user)
+        invalid_credentials = self.check_credentials('test_user', 'wrong_password')
+        self.assertFalse(invalid_credentials)
+        remove_test_user(user)
 
     def check_credentials(self, user_name, user_password):
         """
@@ -143,6 +174,8 @@ class TestDatabaseMethods(unittest.TestCase):
 
         remove_test_user(self.test_user)
 
+
+
     def test_get_published_reviews(self):
         """
         Test the retrieval of published reviews.
@@ -158,6 +191,13 @@ class TestDatabaseMethods(unittest.TestCase):
         self.assertIsNotNone(published_reviews)
         remove_test_user(self.test_user)
 
+    def test_change_password(self):
+        """
+        Test changing a user's password.
+        """
+        change_password('test_user', 'new_password')
+        valid = check_credentials('test_user', 'new_password')
+        self.assertTrue(valid)
 
 if __name__ == '__main__':
     unittest.main()
