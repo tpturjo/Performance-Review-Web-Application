@@ -313,7 +313,7 @@ def clear_drafts(username):
    conn.close()
 
 
-def save_rating(submission_id, username, rating):
+def save_rating(submission_id, rating):
 
    """
    Saves a rating for a specific review.
