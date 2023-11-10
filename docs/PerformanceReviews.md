@@ -65,3 +65,14 @@ rely on him to find a solution. Turjo acted as a great scrum master by keeping u
 
 Tanjet did a great job implementing the tasks he was assigned and providing support. While he wasn't as vocal or present 
 as the rest of the group members, he would always provide assistance when he could and implement his tasks in a timely manner.
+
+
+## Sprint cycle 2 
+## Performance review by Tanjet
+Our team has shown a significant amount of progress, which is evident when looking at our code and design. 
+Daniel did a great job formatting our website. He has been a valuable team player, always available when the team needed him.
+He provided assistance in formatting my HTML page, and I'm grateful for his help. Daniel consistently offered feedback and suggestions whenever needed.
+
+Turjo was also a good team player, providing feedback to enhance our project and sharing helpful ideas.
+
+Caleb has been a reliable team member, consistently completing his tasks on time. He regularly reported issues and difficulties, seeking help when needed. Caleb contributed to improving our database and assisted in implementing methods and features.
