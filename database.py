@@ -302,6 +302,22 @@ def get_drafts(username):
 
 
 def clear_drafts(username):
+   """
+      Remove draft entrie for a specified user from the database.
+
+      This function connects to the SQLite database, delete records in the 'Drafts'
+      table where the 'Username' matches the provided username, and then commits these changes.
+
+      Parameters:
+      username (str): The username for which  draft entries will be deleted.
+
+      Returns:
+      None: This function does not return anything.
+
+      Note:
+      This function will directly modify the 'Drafts' table in the database associated with the
+      given 'database_name' global variable.
+      """
    conn = sqlite3.connect(database_name)
    cursor = conn.cursor()
 
