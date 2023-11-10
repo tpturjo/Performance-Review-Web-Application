@@ -35,7 +35,6 @@ deadlines are maintained.
 help us understand the entire project better as well as provide necessary assistance if a group member is struggling.
 
 
-
 ## Oct 4, 2023
 
 **Recorded by:** Daniel  
