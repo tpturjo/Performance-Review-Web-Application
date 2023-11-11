@@ -67,6 +67,7 @@ rely on him to find a solution. Turjo acted as a great scrum master by keeping u
 Tanjet did a great job implementing the tasks he was assigned and providing support. While he wasn't as vocal or present 
 as the rest of the group members, he would always provide assistance when he could and implement his tasks in a timely manner.
 
+
 # Sprint 2
 ## Performance review by Tridib Paul Turjo
 Overview 
