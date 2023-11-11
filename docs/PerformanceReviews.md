@@ -127,7 +127,7 @@ I am confident that we are well-positioned to excel in our final sprint and deli
 
 
 
-##performance reiew by Daniel Cho
+## performance reiew by Daniel Cho
 I feel like I know my teammates more, and it’s great to see my teammates and me learning how to cooperate with each other. Overall, I think it was a successful sprint.  
 
 Caleb was easily accessible, and he came to every meething I can think of. When I needed restructuring of the Database, he would deliever the product in a prompt manner.  He is reliable and diligent. He showed lots of qualities of a leader by taking the initiative to learn the new requirements that popped up each class. He was swift to learn the UML and other documentation tasks that were required.  Caleb is a responsible teammate.   
