@@ -8,6 +8,12 @@ app = Bottle()
 
 
 def require_login(func):
+    """
+    Flow control. Blocks the use of any service if a cookie is not present.
+
+    Returns:
+        str: If no cookies present returns the login page HTML. Else proceed with flow.
+    """
     def wrapper(*args, **kwargs):
         if request.get_cookie('username'):
             return func(*args, **kwargs)
@@ -18,8 +24,6 @@ def require_login(func):
 """
 Services: File address reference for each HTML file  
 """
-
-
 @app.route('/')
 def login():
     """
@@ -219,6 +223,17 @@ def change():
 
 @app.route('/rate', method='POST')
 def rate():
+    """
+    Handles the form submission of rate.
+    NOTE: This was taken out of submit() due to too many if statements.
+
+
+    Returns:
+        link: Route to an HTML service.
+
+    """
+
+    # Logic for updating review.
     review_id = request.forms.get('review_id')
     rating = request.forms.get('rating')
 
