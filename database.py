@@ -389,3 +389,15 @@ def hide_rating(submission_id, rating):
    Stub function for future implementation to allow for hidden ratings
    '''
    pass
+
+
+def change_username(username, new_username):
+   """
+   Func:
+   change_username: sets a new username (stub)
+  Args:
+     username: takes the old username
+     new_username: sets to the new username
+
+  """
+   pass
