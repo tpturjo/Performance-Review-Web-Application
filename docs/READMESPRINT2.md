@@ -91,9 +91,11 @@ Code reviews were also made as comments on pull requests as we merged them toget
 - The component architecture diagram can be found in Path docs/Component_Architecture_Document.svg
 - The component architecture text document contains more detailed information of our architecture. It can be found in Path docs/Component_Architecture_Text_Document.md
 
-#Process Model Analysis Document
+# Process Model Analysis Document
 
+- The Process Model Analysis can be found in Path docs/Process Model Analysis Document.md
 - The component architecture diagram can be found in Path docs/Component_Architecture_Document.svg
+
 
 # Performance Reviews
 
