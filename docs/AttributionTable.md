@@ -3,9 +3,11 @@
 ## Attributions
 ## Tanjet 
 
-| Source     | Contribution                          | Location                         |
-|------------|---------------------------------------|----------------------------------|
-| w3s school | Helped me learning the data structure | `https://www.w3schools.com/python/python_ref_set.asp`                       |
+| Source     | Contribution                                  | Location                         |
+|------------|-----------------------------------------------|----------------------------------|
+| w3s school | Helped me learning the data structure         | `https://www.w3schools.com/python/python_ref_set.asp`                       |
+| W3S school | HTML tutorial helped me learn html components |https://www.w3schools.com/html/|
+
 
 ## Attributions
 ## Daniel
