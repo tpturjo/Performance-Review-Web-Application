@@ -29,6 +29,9 @@ class TestDatabaseMethods(unittest.TestCase):
     def setUp(self):
         """
         Set up the test environment before each test.
+
+        This method initializes an in-memory SQLite database and creates necessary tables.
+        It also creates a test user for conducting the tests.
         """
         self.conn = sqlite3.connect(':memory:')  # Use an in-memory database for testing
         self.cursor = self.conn.cursor()
@@ -75,6 +78,8 @@ class TestDatabaseMethods(unittest.TestCase):
     def tearDown(self):
         """
         Clean up the test environment after each test.
+
+        This method attempts to remove the test user from the database and closes the database connection.
         """
         try:
             remove_test_user(self.test_user)
@@ -84,6 +89,13 @@ class TestDatabaseMethods(unittest.TestCase):
         self.conn.close()
 
     def test_create_user(self):
+        """
+        Test the user creation functionality.
+
+        This test ensures that a user can be successfully created in the database.
+        It asserts that the creation returns True and then removes the test user.
+        """
+
         test_user = User("testuser", "testpassword")
         self.assertTrue(create_user(test_user))
         remove_test_user(test_user)
@@ -92,8 +104,12 @@ class TestDatabaseMethods(unittest.TestCase):
 
     def test_get_user_data_by_username(self):
         """
-        Test the 'get_user_data_by_username' method
+        Test retrieving user data by username.
+
+        This test checks whether the 'get_user_data_by_username' function correctly retrieves
+        user data for an existing user. It asserts that the retrieved data is not None.
         """
+
         user = User('test_user', 'password')
         user_created = create_user(user)
         user_data = get_user_data_by_username('test_user')
@@ -101,10 +117,22 @@ class TestDatabaseMethods(unittest.TestCase):
         remove_test_user(user)
 
     def test_get_user_data_by_nonexistent_username(self):
+        """
+        Test retrieving user data for a nonexistent username.
+
+        This test ensures that querying a nonexistent username returns None.
+        """
+
         user_data = get_user_data_by_username('nonexistent_user')
         self.assertIsNone(user_data)
 
     def test_duplicate_user_creation(self):
+        """
+        Test the creation of a duplicate user.
+
+        This test checks that trying to create a user with a username that already exists in the
+        database returns False, indicating the user was not created.
+        """
         test_user = User("testuser", "testpassword")
         create_user(test_user)
         self.assertFalse(create_user(test_user))
@@ -112,8 +140,12 @@ class TestDatabaseMethods(unittest.TestCase):
 
     def test_check_credentials(self):
         """
-        Test checking user credentials.
+        Test the user credential checking functionality.
+
+        This test verifies that valid credentials return True and invalid credentials
+        (both incorrect username and password) return False.
         """
+
         user = User('test_user', 'password')
         user_created = create_user(user)
         valid_credentials = self.check_credentials('test_user', 'password')
@@ -124,6 +156,13 @@ class TestDatabaseMethods(unittest.TestCase):
         remove_test_user(self.test_user)
 
     def test_check_wrong_credentials(self):
+        """
+        Test checking invalid credentials for an existing user.
+
+        This test ensures that providing a wrong password for an existing user's username
+        results in False, indicating invalid credentials.
+        """
+
         user = User('test_user', 'password')
         create_user(user)
         invalid_credentials = self.check_credentials('test_user', 'wrong_password')
@@ -159,9 +198,12 @@ class TestDatabaseMethods(unittest.TestCase):
 
     def test_publish_review(self):
         """
-        Test publishing a review and checking its existence in the retrieved reviews.
+        Test the retrieval of published reviews.
 
+        This test checks whether the 'get_published_reviews' function correctly retrieves
+        all published reviews from the database.
         """
+
         user = User('test_user', 'password')
         user_created = create_user(user)
         username = 'test_user'
@@ -193,7 +235,10 @@ class TestDatabaseMethods(unittest.TestCase):
 
     def test_change_password(self):
         """
-        Test changing a user's password.
+        Test the password changing functionality for a user.
+
+        This test changes the password of an existing user and then checks if the new password
+        is valid and correctly updated in the database.
         """
         change_password('test_user', 'new_password')
         valid = check_credentials('test_user', 'new_password')

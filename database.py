@@ -235,17 +235,13 @@ def get_users_published_reviews(username):
 
 
 
-
-"""
-Draft Methods
-"""
-
-
+#Draft Methods
 
 
 def save_draft(username, title, content):
    """
    Saves a draft review instead of publishing it publicly.
+
    Args:
        username: The username
        title: The title of the draft
@@ -366,7 +362,9 @@ def save_rating(submission_id, rating):
       cursor.execute("INSERT INTO Reviews (Submission_ID, Rating, Accum_Ratings, Total_Ratings) VALUES (?, ?, ?, ?)",
                      (submission_id, int(rating), int(rating), 1))
 
+   # Commits the changes to the database
    conn.commit()
+   # Closes the connection
    conn.close()
 
 
@@ -386,14 +384,8 @@ def change_password(username, new_password):
     conn.commit()
     conn.close()
 
-
-def change_username(username, new_username):
-    """
-    Func:
-    change_username: sets a new username (stub)
-   Args:
-      username: takes the old username
-      new_username: sets to the new username
-
-   """
-    pass
+def hide_rating(submission_id, rating):
+   '''
+   Stub function for future implementation to allow for hidden ratings
+   '''
+   pass
