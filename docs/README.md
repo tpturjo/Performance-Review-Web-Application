@@ -65,30 +65,9 @@ penalized for our documentation of them due to the confusion we had until later 
 # Unit Tests
 Path docs/test
 
-Our unit testing setup for the term project is divided into two distinct parts, each focusing on a different aspect of the project:
-
-Testing for Route.py Using Postman:
-
-We have dedicated a set of unit tests specifically for our route.py file.
-These tests are designed in accordance with the guidelines provided by our professor.
-We utilize Postman, a popular API testing tool, to conduct these tests. This approach allows for a comprehensive evaluation of our routing logic.
-The test suite is encapsulated in a file named term-project-teamm.postman_collection.
-To demonstrate adherence to the professor's instructions, we've exported this Postman collection file. This export serves as proof of our methodical and structured testing process.
-Testing for Database.py Using PyCharm:
-
-The second part of our testing focuses on the database.py file.
-This segment aims to validate the functionality and reliability of our database interactions.
-The tests are designed to be run through PyCharm, an Integrated Development Environment (IDE), making the process straightforward and efficient.
-To execute these tests, one simply needs to navigate to the testdatabase.py program in PyCharm and run the main function.
-The outcome of these tests is immediately visible upon execution, providing instant feedback on the database's performance.
-This test suite comprises 9 individual tests, all of which have been successfully passed, indicating robust database functionality.
-
-In summary, our unit testing framework is bifurcated into two main sections: one for routing using Postman and the other for database functionality using PyCharm. Both sections have been rigorously tested and have met all required standards, ensuring the reliability and efficiency of our project components.
-
-
-- The user.py file did not require unit tests since it only contains setter and getter methods for the data in the
-userDatabase.db file.
-
+- Unit tests are broken up into two files under the test folder. 
+Manuel Server Module Testing.pdf contains unit testing instructions for the route.py file.
+testdatabase.py contains unit tests for the database.py file.
 
 # Meeting Notes
 - Meeting notes can be found in the MeetingNotes.md file.
