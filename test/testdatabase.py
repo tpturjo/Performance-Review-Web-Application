@@ -33,7 +33,7 @@ class TestDatabaseMethods(unittest.TestCase):
         This method initializes an in-memory SQLite database and creates necessary tables.
         It also creates a test user for conducting the tests.
         """
-        self.conn = sqlite3.connect(':memory:')  # Use an in-memory database for testing
+        self.conn = sqlite3.connect('userDatabase.db')
         self.cursor = self.conn.cursor()
 
         # Create tables required for the tests
@@ -67,6 +67,7 @@ class TestDatabaseMethods(unittest.TestCase):
                 Rating INTEGER
             )
         ''')
+
 
         self.conn.commit()
 
@@ -243,6 +244,7 @@ class TestDatabaseMethods(unittest.TestCase):
         change_password('test_user', 'new_password')
         valid = check_credentials('test_user', 'new_password')
         self.assertTrue(valid)
+
 
 if __name__ == '__main__':
     unittest.main()
