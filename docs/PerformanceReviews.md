@@ -1,3 +1,4 @@
+# Sprint 1
 ## Performance review by Tridib Paul Turjo
 I'm delighted that we managed to meet the professor's requirements in the first sprint cycle. Initially, I had concerns 
 about our project's progress, especially when everyone had plans during the midterm break, making it difficult to coordinate. 
@@ -65,3 +66,35 @@ rely on him to find a solution. Turjo acted as a great scrum master by keeping u
 
 Tanjet did a great job implementing the tasks he was assigned and providing support. While he wasn't as vocal or present 
 as the rest of the group members, he would always provide assistance when he could and implement his tasks in a timely manner.
+
+# Sprint 2
+## Performance review by Tridib Paul Turjo
+Overview 
+
+Our second sprint was marked by significant growth and the inevitable challenges that come with scaling a project. Despite facing 
+issues with code maintenance and meeting coordination, our team successfully met the sprint goals within the set timeframe, showcasing 
+our resilience and adaptability.
+
+Team Member Contributions
+
+Daniel: Daniel's contribution remained integral to our progress. His skills in HTML development and session management were crucial in 
+keeping the project on track. However, a communication gap led to some duplicated efforts, which we addressed and rectified. This incident
+underscored the importance of clear and frequent communication within the team.
+
+Caleb: Caleb continued to impress with his dedication to the project's database development. His initiative to restructure the entire database 
+for better efficiency and performance was a significant undertaking that paid off. His efforts not only improved our project but also kept the
+team aligned with our goals.
+
+Tanjeet: Tanjeet maintained his consistent performance, meeting all his deadlines. However, his engagement in team meetings could be more proactive. 
+Increased participation would likely bring more diverse ideas and strengthen our project further.
+
+Challenges and Approaches
+Managing Code Complexity: As our project expanded, we faced difficulties in managing an increasingly complex codebase. We spent considerable time decoupling
+and ensuring that every feature worked seamlessly.
+
+Improving Meeting Efficiency: Our meetings, though productive, were lengthy. Going forward, we plan to implement more structured agendas to make our meetings 
+shorter and more efficient.
+
+Conclusion
+Overall, our team has demonstrated commendable dedication and skill in navigating the challenges of this sprint. With a focus on improving communication and meeting 
+efficiency, I am confident that we are well-positioned to excel in our final sprint and deliver a successful project.
