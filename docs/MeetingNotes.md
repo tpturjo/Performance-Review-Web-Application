@@ -70,7 +70,7 @@ Framework must be able to echo inputted info.
 1) Setting up the Kanban board.
 2) Draft the software process for the project.
 3) Discuss potential features we would like to implement during first sprint.
-4) Review member's current skills and progress.
+4) Review(review) member's current skills and progress.
 5) Discuss pull requests.
 
 **Decisions**
@@ -124,7 +124,7 @@ not meetings.
 
 **Professor's Suggestions & Topics To Discuss**
 1) Expectations going forward.
-2) Review of current progress
+2) Review(review) of current progress
 3) Test our code for functionality.
 
 **Decisions**
@@ -213,7 +213,7 @@ of our application's code for the first sprint.
 
 **Professor's Suggestions & Topics To Discuss**
 1) Final submission steps.
-2) Review of progress.
+2) Review (review) of progress.
 3) Discuss final formatting.
 
 **Decisions** 
@@ -246,7 +246,7 @@ each group member will research and start implementation if possible.
 2) Each group member will choose their second feature for next meeting (Monday Oct 26).
 3) Caleb will implement review items for reviews. 
 4) Daniel will implement session management.
-5) Daniel will decouple some of our code from sprint 1 to adhere to SOLID.
+5) Daniel will decouple some of our code from sprint 1 to adhere to SOLID (solid).
 6) Turjo will implement the search function, and learn postman. 
 7) Tanjet will implement a feature to allow users to publish reviews anonymously.
 8) Tanjet will make a list of all variable and method names as well as conform to PEP guidelines.
@@ -276,7 +276,7 @@ set to be November 8.
 4) Daniel will implement a save draft feature for the application  
 5) Caleb will implement a comment section for reviews in the application.  
 
-**Code Review**  
+**Code Review (review) **  
 1) Daniels Code: Decoupled messy code from route.py and reformatted the public review page. Also optimized html and css code.
 - Caleb:Approved PR. Code worked properly.  
 - Tanjet: Naming could be better  
@@ -294,7 +294,7 @@ set to be November 8.
 **Attendance:** Daniel, Turjo 
 
 **Professor's Suggestions & Topics To Discuss**
-1) Review contributions to the architecture document.
+1) Review (review) contributions to the architecture document.
 
 **Decisions**
 1) We cleared the doubts regarding the architecture and UML diagram with the professor.
@@ -320,10 +320,10 @@ features like review ratings.
 2) Turjo encountered an issue while testing the server with Postman. We attempted to resolve it
 but couldn't find a definitive solution. We agreed to consult the professor about it.
 
-**Difficulties**
+**Difficulties (difficult)**
 None
 
-**Code Review** 
+**Code Review (review)** 
 1) Daniel's raised a concern about the need for a review option for individuals without an ID 
 and whether the database can handle that scenario.
 2) Turjo's contradicted Daniel, highlighting the need for an ID to have control over anonymous 
@@ -341,7 +341,7 @@ their posts.
 **Time:** 10:30 AM - 1:30 PM  
 **Attendance:** Caleb, Daniel, Turjo,
 
-**Progress Since Last Meeting**  
+**Progress (progress) Since Last Meeting**  
 1) Daniel has almost finished setting up multi-session. Just need to be able to destroy cookies to end sessions.  
 2) Daniel has almost finished CSS code.  
 3) Caleb rehauled the userDatabase.db file to add a user, review, draft, and rating table. Added code for the draft functionality for draft and saving. Added code for saving ratings and retrieving. Calculation of avg. rating for each review functionality added.  
@@ -361,13 +361,13 @@ their posts.
 5) Daniel’s deadline set to Monday. Daniel must submit multisession and new CSS. Caleb’s new deadline by Monday. Must refine/finish implementing SQL and submit.  
 6) Tanjet’s pull request denied as it causes conflict with existing code. New deadline is by Monday.   
 
-**Difficulties**
+**Difficulties (difficult)**
 1) Daniel: having issues with multiple actions/submits in html/bottle. One submit overrides the other submit. Delays CSS/HTML delivery.    
 2) Caleb: Some SQL methods may have potential of entanglement. Will resolve by Monday.  
 3) Turjo: no issues. all code working  
 4) Tanjett: absent 
 
-**Code Review**  
+**Code Review (review)**  
 1) Reviewed Caleb’s code for changes in database.py  
 - Daniel: new code save_draft() could be a little more descriptive. Such as save_draft_by_user_name(). Get_average_rating has code that needs decoupling and code separation.  
 - Turjo: raised doubt if these new methods will cause entanglement or complications due to inconsistencies.
@@ -400,29 +400,29 @@ their posts.
 2) Meeting tomorrow (1pm Tuesday Nov6) 
 3) Making slight edits to the architecture document based on changes discussed.
 
-**Progress Report**
+**Progress (progress) Report**
 1) Daniel: Completed CSS / HTML and Multisession functionality. Waiting for code review. Pull request approved and no conflicts. Successfully merged. Deadline met.
 2) Caleb: Completed code (SQL) from previous meeting based on code review. Had difficulty merging. Issues with the idea
 file.
 3) Tanjet: Completed change password on HTML and Route.py. Need code review. Pull request approved by team members.Merged successfully. Deadline met.
 4) Turjo: For last two days studied POSTMAN for unit-test. Still in progress. 
 
-**Difficulties**
+**Difficulties (difficult)**
 1) Caleb: difficulty merging pull request due to .idea file
 2) Daniel : none
 3) Turjo: none
 4) Tanjet: difficulty merging pull request due to .idea file. Requested Daniel for the styling part.
 
-**Code Review**
-1) Reviewed Daniel's code for route.py, CSS, HTML, and multisession. (pull request1)
+**Code Review (review)**
+1) Reviewed (review) Daniel's code for route.py, CSS, HTML, and multisession. (pull request1)
 - Caleb: Looked fine. Good to merge
 - Tanjet: Daniel’s code works fine.
 
-2) Reviewed Daniel's code for public.HTML to work with turjo’s change to route.py. (pull request2)
+2) Reviewed (review) Daniel's code for public.HTML to work with turjo’s change to route.py. (pull request2)
 - Caleb: Looked fine. Good to merge
 - Tanjet: Looks fine. Good to merge.
 
-3) Reviewed Tanjet’s code for change password feature
+3) Reviewed (review) Tanjet’s code for change password feature
 - Caleb: Code looked fine other than some inconsistent naming of parameters. 
 Fine to merge but should be changed in future updates.
 
@@ -443,10 +443,10 @@ Fine to merge but should be changed in future updates.
 2) Turjo will continue working on POSTMAN.
 3) Caleb will edit our architecture document.
 
-**Progress report:**
+**Progress (progress) report:**
 Caleb Pushed his code and waiting for code review. Deadline met.
 
-**Difficulties:**
+**Difficulties (difficult):**
 1) Daniel: None
 2) Turjo: None
 3) Tanjet: No difficulties.
@@ -486,7 +486,7 @@ more time to review documentation and properly implement our document.
 4) Turjo will have his POSTMAN functionality completed by November 9.
 5) Caleb will complete README file by November 10.
 
-**Progress Report**
+**Progress (progress) Report**
 1) Program is almost complete. Still needs functionality for rating on interface side,
 POSTMAN functionality, and draft functionality on interface side. Daniel and Turjo
 will be completing these.
@@ -494,10 +494,10 @@ will be completing these.
 more detailed docustrings.
 3) Tanjet finished most of his tasks.
 
-**Difficulties:**
+**Difficulties (difficult):**
 None
 
-**Code Review**
+**Code Review (review)**
 1) Daniel’s Code:
 - Caleb: CSS and HTML code looks good, it works. Further tweaking needed on rating button functionality.
 - Turjo: For simplification, suggested Daniel remove star images representing review ratings, and
@@ -542,7 +542,7 @@ Difficulty: Everyone is having a difficulty because of accidental merge of dupli
 **Venue:** DISCORD    
 **Time:** 9:30 PM - 9:45 PM    
 **Attendance:** Caleb, Daniel  
-- Daniel Reviewed Caleb's progress. Caleb has shifted the database a little, and the average rating calculation works without error.  
+- Daniel Reviewed (review) Caleb's progress. Caleb has shifted the database a little, and the average rating calculation works without error.  
 - Caleb has a new deadline to upload rating function extended to tomorrow.   
 - Discovered bug from draft function. Bug fix task assigned to Turjo.  
 
@@ -556,7 +556,7 @@ Meeting Nov 10
 **Time:** 10:40 AM - 12:30 PM      
 **Attendance:** Caleb, Daniel, Turjo, Tanjett    
 **Details/Decisions:**  
-- In this meeting we discussed the issues of decoupling and SOLID. Caleb said that any calculation methods we have should be decoupled out of any feature functions we have, encapsulated in a “helper” class. Daniel explained to teammates that the submit() method in routes.py has potential of decoupling as it goes over 20 lines. We will work on that in the beginning of the third cycle.    
+- In this meeting we discussed the issues of decoupling and SOLID/solid. Caleb said that any calculation methods we have should be decoupled out of any feature functions we have, encapsulated in a “helper” class. Daniel explained to teammates that the submit() method in routes.py has potential of decoupling as it goes over 20 lines. We will work on that in the beginning of the third cycle.    
 - During the meeting, we worked on the process model, Unit test, UML, Doc String, Readme, model analysis  and Comments together.  We used GoogleDrive to merge our parts of the collaborative tasks. To avoid merge conflicts each person will push the different component from our google Drive.    
   These people will push the following:    
     -* Unit Test: Turjo     

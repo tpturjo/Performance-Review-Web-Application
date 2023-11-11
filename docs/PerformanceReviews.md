@@ -97,4 +97,11 @@ Turjo was also a good team player, providing feedback to enhance our project and
 
 Caleb has been a reliable team member, consistently completing his tasks on time. He regularly reported issues and difficulties, seeking help when needed. Caleb contributed to improving our database and assisted in implementing methods and features.
 
+##performance reiew by Daniel Cho
+I feel like I know my teammates more, and it’s great to see my teammates and me learning how to cooperate with each other. Overall, I think it was a successful sprint.  
 
+Caleb was easily accessible, and he came to every meething I can think of. When I needed restructuring of the Database, he would deliever the product in a prompt manner.  He is reliable and diligent. He showed lots of qualities of a leader by taking the initiative to learn the new requirements that popped up each class. He was swift to learn the UML and other documentation tasks that were required.  Caleb is a responsible teammate.   
+
+Turjo was easily accessible, and he showed a keen interest in learning new technologies. Turjo worked with me with the application logic and HTML. For one of the features (save draft), he was able to implement a functionality that I gave up on. Turjo shows grit and determination as a programmer. Turjo also took the initiative to ask the professor concerning difficulties the team had. He is always looking out for the team.  
+
+Tanjett was cooperative, and showed up to almost all the meetings which was a big improvement from sprint1. Tanjett is a good listener. During our sprint, he demonstrated a diverse coding ability by implementing the “change password” in HTML, bottle, and database methods.   
