@@ -52,3 +52,40 @@ As we progress into the next sprint, our focus is on enhancing the database to m
 introduce the ability for users to save multiple drafts, adding more features to the public review page, and improving 
 the overall user-friendliness of the web app. With the successful completion of the foundational sprint, we're well-prepared 
 to tackle these more advanced tasks and create a robust, feature-rich application.
+
+**Recorded by:** Turjo  
+**Date:** 10 November 2023
+
+# Project Progress and Approach:
+The second sprint of our Performance Review web-based app has seen remarkable advancements, pushing our project closer to a refined and feature-rich state. This sprint was marked by significant enhancements to the database, making it more sophisticated and capable of handling complex functionalities.
+
+Key Achievements:
+
+Multisession Capability: We have successfully implemented multisession functionality, allowing users to maintain multiple sessions simultaneously. This feature enhances user experience and operational flexibility.
+
+Enhanced Database Functionality: Our database now supports more complex operations, enabling better data management and efficiency.
+
+New Features Added:
+
+Drafts: Users can now save multiple drafts of their reviews, providing flexibility in content creation and management.
+
+Rating System: We introduced a rating system for reviews, allowing users to rate each other's contributions, fostering a community-driven approach.
+
+Share Review Functionality: Users have the option to share their reviews, increasing engagement and interactivity within the app.
+
+Change Password Feature: Enhancing security, we have added a change password feature, allowing users to update their credentials easily.
+
+Each of these features was developed with a focus on robustness, user-friendliness, and security. Our team worked collaboratively, ensuring each component was integrated seamlessly with the existing infrastructure.
+
+Throughout the sprint, we maintained our commitment to the SOLID principles and code de-coupling, ensuring our codebase remains maintainable and scalable. Every code contribution underwent a rigorous review process, and all team members actively participated in the development and review process.
+
+# Future Plans:
+For our final sprint in this course project, we're focusing on refining and enhancing our Performance Review web app:
+
+Codebase Optimization: Streamlining the code for better performance and stability.
+
+Final Feature Additions: Implementing user-centric features for improved interaction and security.
+
+User Experience Enhancement: Polishing the user interface to ensure an intuitive and engaging user experience.
+
+Our team is excited to wrap up with a high-quality, user-friendly application that showcases our skills and meets project goals.
