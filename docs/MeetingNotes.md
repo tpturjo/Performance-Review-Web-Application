@@ -521,7 +521,7 @@ Points of discussion/issues:
 1) Difficulty from Daniel. While looking through all the code, Daniel discovered that rating buttons aren’t working properly.     
 2) For the rating buttons to work, Daniel asked Caleb to re-implement the SQL, because currently, the some methods are missing. Deadline by tomorrow Nov 9.    
 3) Save draft user side feature is not implemented, Turjo volunteered to implement it. Deadline by tomorrow Nov 9.    
-4) Daniel will upload STUB for caleb to work with from the database side of ratings  
+4) STUB: Daniel and Caleb discussed and produced STUB for rating feature. Pushed by Daniel. 
 
 ## Nov 9, 2023  
 **Recorded by:** Daniel     
@@ -545,3 +545,28 @@ Difficulty: Everyone is having a difficulty because of accidental merge of dupli
 - Daniel Reviewed Caleb's progress. Caleb has shifted the database a little, and the average rating calculation works without error.  
 - Caleb has a new deadline to upload rating function extended to tomorrow.   
 - Discovered bug from draft function. Bug fix task assigned to Turjo.  
+
+
+
+Meeting Nov 10
+## Nov 10, 2023
+**Recorded by:** Daniel  
+**Scrum master:** Daniel         
+**Venue:** DISCORD      
+**Time:** 10:40 AM - 12:30 PM      
+**Attendance:** Caleb, Daniel, Turjo, Tanjett    
+**Details/Decisions:**  
+- In this meeting we discussed the issues of decoupling and SOLID. Caleb said that any calculation methods we have should be decoupled out of any feature functions we have, encapsulated in a “helper” class. Daniel explained to teammates that the submit() method in routes.py has potential of decoupling as it goes over 20 lines. We will work on that in the beginning of the third cycle.    
+- During the meeting, we worked on the process model, Unit test, UML, Doc String, Readme, model analysis  and Comments together.  We used GoogleDrive to merge our parts of the collaborative tasks. To avoid merge conflicts each person will push the different component from our google Drive.    
+  These people will push the following:    
+    -* Unit Test: Turjo     
+    -* UML: Caleb   
+    -* Component Architecture Document: Caleb    
+    -* Readme: Caleb    
+    -* Model Analysis: Tanjet    
+    -* DocStrings: individually pushed.    
+
+- DIFFICULTY: our meetings average to about 2-3 hours each time. Last week one meeting went 4 hours. Too many things to discuss due to too many, detailed marking scheme.   
+- Add to Kanban that our meetings take too long.  
+- Tanjett and Calebl decided to add stubs for future implementations.  
+- Performance review deadline set to Nov 10 by the end of the day.  
