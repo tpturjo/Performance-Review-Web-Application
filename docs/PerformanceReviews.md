@@ -68,7 +68,29 @@ Tanjet did a great job implementing the tasks he was assigned and providing supp
 as the rest of the group members, he would always provide assistance when he could and implement his tasks in a timely manner.
 
 
-# Sprint 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Performance review by Tridib Paul Turjo
 Overview 
 
