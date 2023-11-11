@@ -1,3 +1,4 @@
+# Sprint 1
 ## Performance review by Tridib Paul Turjo
 I'm delighted that we managed to meet the professor's requirements in the first sprint cycle. Initially, I had concerns 
 about our project's progress, especially when everyone had plans during the midterm break, making it difficult to coordinate. 
@@ -65,6 +66,8 @@ rely on him to find a solution. Turjo acted as a great scrum master by keeping u
 
 Tanjet did a great job implementing the tasks he was assigned and providing support. While he wasn't as vocal or present 
 as the rest of the group members, he would always provide assistance when he could and implement his tasks in a timely manner.
+
+
 
 
 

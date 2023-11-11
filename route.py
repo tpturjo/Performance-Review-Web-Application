@@ -252,7 +252,18 @@ def rate():
     elif rating == '5':
         database.save_rating(review_id, 5)
         redirect('/public')
-
+@app.route('/edit_post/<post_id>')
+@require_login
+def edit_post(post_id):
+    """
+    Serves the edit post page.
+    Args:
+        post_id (str): The ID of the post to edit.
+    Returns:
+        str: The edit post page HTML.
+    """
+    # will implement in final sprint
+    pass
 
 if __name__ == '__main__':
     HOST_NAME = 'localhost'
