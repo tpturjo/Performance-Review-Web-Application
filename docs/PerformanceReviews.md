@@ -87,5 +87,14 @@ side of the project well and within a suitable time frame.
 Tanjet effectively completed the tasks he was assigned in a timely manner. He still was not as vocal in meetings as the other
 group members, but he was very cooperative and he was more present in our meetings than last sprint.
 
+## Sprint cycle 2 
+## Performance review by Tanjet
+Our team has shown a significant amount of progress, which is evident when looking at our code and design. 
+Daniel did a great job formatting our website. He has been a valuable team player, always available when the team needed him.
+He provided assistance in formatting my HTML page, and I'm grateful for his help. Daniel consistently offered feedback and suggestions whenever needed.
+
+Turjo was also a good team player, providing feedback to enhance our project and sharing helpful ideas.
+
+Caleb has been a reliable team member, consistently completing his tasks on time. He regularly reported issues and difficulties, seeking help when needed. Caleb contributed to improving our database and assisted in implementing methods and features.
 
 

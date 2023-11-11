@@ -207,6 +207,15 @@ def submit():
 
 @app.route('/change_password', method='POST')
 def change():
+    """
+        Handles the change password page.
+
+
+
+        Returns:
+            link: to the login page and changed password successfully or wrong credeentials according to user's response.
+
+        """
     action = request.forms.get('action')
     if action == 'Change' or action == 'Change+':
         username = request.forms.get('username')
