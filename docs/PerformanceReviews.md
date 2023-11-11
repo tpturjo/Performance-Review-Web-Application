@@ -65,3 +65,24 @@ rely on him to find a solution. Turjo acted as a great scrum master by keeping u
 
 Tanjet did a great job implementing the tasks he was assigned and providing support. While he wasn't as vocal or present 
 as the rest of the group members, he would always provide assistance when he could and implement his tasks in a timely manner.
+
+
+
+## SPRINT 2
+
+
+## Performance review by Caleb Doupe
+Sprint 2 has progressed much better than sprint 1 for our team. During this sprint, the process felt smoother. This isn't
+to say we didn't run into issues, but that it was a more comfortable experience.
+
+Daniel continued to help do a great job keeping us on track and organized throughout the sprint. He provided a lot of help
+and support when he was asked. He was patient and effective when implementing his code.
+
+Turjo provided a lot of support throughout the sprint, and also kept us organized throughout. He handled the routing and POSTMAN
+side of the project well and within a suitable time frame. 
+
+Tanjet effectively completed the tasks he was assigned in a timely manner. He still was not as vocal in meetings as the other
+group members, but he was very cooperative and he was more present in our meetings than last sprint.
+
+
+
