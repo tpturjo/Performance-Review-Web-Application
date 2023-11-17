@@ -20,19 +20,18 @@ application also reads and writes to an sqlite database file named userDatabase.
 
 
 - The database.py file contains functions that interact with the userDatabase.db file to store, manipulate and 
-retrieve data from the sqlite tables in the database. The functions in the database.py file allow route.py to 
-retrieve/store data, such as user name, draft, and written reviews.
+retrieve data from the sqlite tables in the database. The functions in the database.py file allow a user to be able
+to create an account, retrieve user data, store user written drafts, and store/retrieve written reviews.
 
 
-- The user.py is a datastructure. This file contains a User class and Draft class. Each of the classes contains 
-setter and getter methods. It handles raw data handed from the webpage and conforms to the appropriate data structure, 
-so it can be used by the database. 
+- The user.py file contains a User class and Draft class. Each of the classes contains setter and getter methods 
+to set and retrieve the data from the sqlite database.
 
 
 - The route.py file contains the mapping functionality for the user as well as the method call to start the 
 performance review application through the use of the Bottle web framework. It establishes the various routes for 
-the application's web page and buttons. It calls user.py to package user data for when it calls database.py. 
-It calls functions from the database.py file to manipulate the data from the user.   
+the application's web page and buttons. It also calls functions from the database.py file to manipulate the data 
+from the user. 
 
 
 - The application can be run using the "if __name__ == '__main__':" line of code at the bottom of the file.
@@ -63,11 +62,14 @@ penalized for our documentation of them due to the confusion we had until later 
 
 
 # Unit Tests
-Path docs/test
-
 - Unit tests are broken up into two files under the test folder. 
 Manuel Server Module Testing.pdf contains unit testing instructions for the route.py file.
 testdatabase.py contains unit tests for the database.py file.
+
+
+- The user.py file did not require unit tests since it only contains setter and getter methods for the data in the
+userDatabase.db file.
+
 
 # Meeting Notes
 - Meeting notes can be found in the MeetingNotes.md file.
