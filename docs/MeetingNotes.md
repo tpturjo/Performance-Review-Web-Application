@@ -80,3 +80,6 @@ edits, and implementations during the next meeting.
 
   6) **Code Review:**
   - Stubs work fine.
+
+  7) **Next Meeting:**
+  - tonight around 10pm via discord  
