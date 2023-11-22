@@ -14,16 +14,21 @@ def require_login(func):
     Returns:
         str: If no cookies present returns the login page HTML. Else proceed with flow.
     """
+
     def wrapper(*args, **kwargs):
         if request.get_cookie('username'):
             return func(*args, **kwargs)
         else:
             return redirect('/')  # Redirect to login page if not logged in
+
     return wrapper
+
 
 """
 Services: File address reference for each HTML file  
 """
+
+
 @app.route('/')
 def login():
     """
@@ -34,7 +39,6 @@ def login():
 
     """
     return template('templates/login.html', message=None)
-
 
 
 @app.route('/changePassword')
@@ -108,6 +112,7 @@ def review():
 
     return template('templates/review.html', username=username, draft_data=draft_data)
 
+
 @app.route('/profile')
 def profile():
     """
@@ -124,6 +129,7 @@ def profile():
     profile_data = [("BobRoss12", "Bob", "Ross", "BobRoss@bobrossmail.com", "Heaven")]
     return template('templates/profile.html', username=username, profile_data=profile_data)
 
+
 @app.route('/static/<filename>')
 def serve_static(filename):
     """
@@ -137,6 +143,7 @@ def serve_static(filename):
 
     """
     return static_file(filename, root='./templates')
+
 
 @app.route('/static_img/<filename>')
 def serve_static_img(filename):
@@ -194,7 +201,7 @@ def submit():
             response.set_cookie('username', username)
             return redirect(f'/review?username={username}')
         else:
-            return template('templates/login.html', message = "Incorrect username or password")
+            return template('templates/login.html', message="Incorrect username or password")
 
     elif action == 'CREATE':
         username = request.forms.get('username')
@@ -221,10 +228,13 @@ def submit():
         print("cookie destroyed")
         return template('templates/login.html', message=None)
 
+
+
     elif action == 'ANONYMOUS':
         username = 'Anonymous'
         draft_data = None
         pass
+
 
 
 @app.route('/change_password', method='POST')
@@ -250,7 +260,24 @@ def change():
             return template('templates/changePassword.html', message="SUCCESS")
         else:
             print("Wrong credentials")
-            return template('templates/changePassword.html', message = "Wrong Credentials")
+            return template('templates/changePassword.html', message="Wrong Credentials")
+        
+
+@app.route('/comment_review', method='POST')
+def comment():
+    """
+    Handles the comment to a review page
+
+    Returns:
+        link: to the page with a comment on the selected review
+
+    """
+    action = request.forms.get('action')
+    if action == 'comment':
+        pass
+
+    pass
+
 
 @app.route('/rate', method='POST')
 def rate():
@@ -272,7 +299,7 @@ def rate():
         database.save_rating(review_id, 1)
         redirect('/public')
     elif rating == '2':
-        database.save_rating(review_id,2)
+        database.save_rating(review_id, 2)
         redirect('/public')
     elif rating == '3':
         database.save_rating(review_id, 3)
@@ -283,6 +310,8 @@ def rate():
     elif rating == '5':
         database.save_rating(review_id, 5)
         redirect('/public')
+
+
 @app.route('/edit_post/<post_id>')
 @require_login
 def edit_post(post_id):
@@ -295,6 +324,7 @@ def edit_post(post_id):
     """
     # will implement in final sprint
     pass
+
 
 if __name__ == '__main__':
     HOST_NAME = 'localhost'
