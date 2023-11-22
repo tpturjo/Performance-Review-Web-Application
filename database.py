@@ -368,6 +368,28 @@ def save_rating(submission_id, rating):
    conn.close()
 
 
+#Profile Table Methods
+
+def get_First_Name(first_name):
+   conn = sqlite3.connect(database_name)
+   cursor = conn.cursor()
+
+   # Execute the query to get all saved drafts
+   cursor.execute('SELECT * FROM Profiles WHERE First_Name = ?', (first_name,))
+   users_first_name = cursor.fetchall()
+
+   # Closes the connection
+   conn.close()
+   # Returns all of the user's drafts
+   return users_first_name
+
+def set_First_Name():
+   pass
+
+
+
+
+
 def change_password(username, new_password):
     """
     Processes the change password form and updates the user's password.
