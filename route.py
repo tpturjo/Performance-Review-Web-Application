@@ -252,9 +252,8 @@ def change():
             return template('templates/changePassword.html', message="SUCCESS")
         else:
             print("Wrong credentials")
-            return template('templates/changePassword.html', message="Wrong Credentials") @ app.route('/comment_review',
-                                                                                                      method='POST')
-
+            return template('templates/changePassword.html', message="Wrong Credentials")
+        
 
 @app.route('/comment_review', method='POST')
 def comment():
