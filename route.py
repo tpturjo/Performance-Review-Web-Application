@@ -205,6 +205,12 @@ def submit():
         print("cookie destroyed")
         return template('templates/login.html', message=None)
 
+    elif action == 'ANONYMOUS':
+        username = 'Anonymous'
+        draft_data = None
+        pass
+
+
 @app.route('/change_password', method='POST')
 def change():
     """
