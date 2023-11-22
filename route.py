@@ -35,21 +35,7 @@ def login():
     """
     return template('templates/login.html', message=None)
 
-@app.route('/profile')
-def profile():
-    """
-    Serves the profileEdit page.
 
-    Returns:
-        str: The review page HTML.
-
-    """
-    username = request.get_cookie('username')
-    ## This is a sample
-    # profile_data = database.get_profile(username)
-    ## This is a stub
-    profile_data = [("BobRoss12", "Bob", "Ross", "BobRoss@bobrossmail.com", "Heaven")]
-    return template('templates/profile.html', username=username, profile_data=profile_data)
 
 @app.route('/changePassword')
 @require_login
@@ -122,6 +108,21 @@ def review():
 
     return template('templates/review.html', username=username, draft_data=draft_data)
 
+@app.route('/profile')
+def profile():
+    """
+    Serves the profileEdit page.
+
+    Returns:
+        str: The review page HTML.
+
+    """
+    username = request.get_cookie('username')
+    ## This is a sample
+    # profile_data = database.get_profile(username)
+    ## This is a stub
+    profile_data = [("BobRoss12", "Bob", "Ross", "BobRoss@bobrossmail.com", "Heaven")]
+    return template('templates/profile.html', username=username, profile_data=profile_data)
 
 @app.route('/static/<filename>')
 def serve_static(filename):
