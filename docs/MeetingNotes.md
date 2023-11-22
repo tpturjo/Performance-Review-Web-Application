@@ -124,6 +124,50 @@ edits, and implementations during the next meeting.
 - Pull request extension for Caleb and Tanjet until tomorrow (Wednesday).  
 - Meeting tomorrow at 2:00 PM on Wednesday.  
 
+## Nov 22 2023
+**Recorded by:** Turjo  
+**Scrum master:** Caleb  
+**Venue:** Discord  
+**Time:** 2:00 PM - 3:00PM  
+**Attendance:** Caleb, Daniel, Turjo, Tanjet  
+
+**Professor's Suggestions & Topics To Discuss:**  
+
+- Current progress and future code to implement.  
+- code review of new pull requests.  
+
+**Progress Report:**  
+- Caleb completed the anonymous route.py stub and the new database table for the profile, meeting the deadline.   
+- Tanjeet finished working on the comment on the review route.py stub, meeting the deadline.  
+
+
+**Difficulties:**  
+- None
+
+**Decoupling/Solid:**  
+ - Still working on decoupling for route.py file for further optimization and simplification.
+
+**Code Review:**  
+
+*Caleb’s Code:*  
+
+ - Turjo: The changes appear seamless and conflict-free. It looks good and is ready for merging.
+ - Daniel: Thanks for updating the DB. It follows the attributes, exactly as we discussed in our meetings.
+
+*Tanjett’s Code:*  
+- Daniel: Looks good no conflicts found. Cleaning up the code is great. I think cleaning up code is better near the end of the cycle.
+- Caleb: stub implementation looks good. He made some spacing changes in the code, but nothing dysfunctional. 
+- Turjo: While there are just a few added lines, I suggest creating a separate commit and pull request to clean things up and align with our guidelines. This way, our changes will be more organized, and we can have confidence that the existing code remains intact. As it stands, everything looks great—the stub isn't introducing any inconsistencies. Ready for merging!
+
+
+**Decisions:**
+- Caleb's and Tanjet's pull request mergerd.
+- The deadline for decoupling route.py will be November 29.
+- Turjo: Will continue to work on route.py Stub for profile.
+- Tanjett: Will continue  to work on Comment on review route.py stub
+- Next meeting is on November 23 at 1:00PM.
+
+
 
 
 
