@@ -49,7 +49,7 @@
         <div class="search">
             <form action="/public" method="get">
                 <input type="text" name="search" placeholder="Search by author or title" value="{{search_query}}">
-                <input type="submit" value="Search">
+                <input class = "generic-button" type="submit" value="Search">
             </form>
         </div>
             <br>
@@ -59,18 +59,18 @@
                 % for review in reviews:
                     <li class = "reviews_history">
                         <div class = "reviews">
-                            <!-- Adding a Share button -->
-                    <button class="share-button" data-title="{{ review[1] }}" data-content="{{ review[2] }}">Share</button>
+                            <br>
+
                             <h5 id="title">{{ review[1] }}</h5>
                             <h5>{{ review[0] }}</h5>
                             <h5>{{ review[2] }}</h5>
                             <h5>{{ review[3] }}</h5>
                             <br>
-
+                            <br>
+                            <br>
                             <h6> CLICK to rate this review! </h6>
                             <form action="/rate" method="post">
                                     <input type="hidden" name="review_id" value="{{ review[4] }}">
-
 
                                     <button class="star" value="1" name="rating" ></button>
                                     <button class="star" value="2" name="rating" ></button>
@@ -78,6 +78,10 @@
                                     <button class="star" value="4" name="rating"></button>
                                     <button class="star" value="5" name="rating"></button>
                             </form>
+                            <div class="button-cluster">
+                                <button class ="comment-button"><img src="static_img/comment.png" class = "comment-img"></button>
+                                <button class="share-button" data-title="{{ review[1] }}" data-content="{{ review[2] }}">Share</button>
+                            </div>
                             <br>
                             <hr class="featurette-divider1">
 

@@ -276,7 +276,33 @@ h5{
   margin-top: 5px;
 }
 
+.login-button{
+    border-radius: 5px;
+    background-color: greenyellow;
+    outline: none;
+    border: none;
+    width: 130px;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    justify-content: right;
+    align-content: right;
+}
 
+.get-account-button2{
+    border-radius: 5px;
+    background-color: darkgray;
+    outline: none;
+    border: none;
+    width: 130px;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    justify-content: right;
+    align-content: right;
+}
 
 .background-public-page{
     background-color: #FBFBFB;
@@ -308,4 +334,48 @@ ul{
 
 .star.active {
   background-color: gold;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.home *, ::after, ::before{
+    box-sizing: border-box;
+
+}
+.headline{
+    justify-content: center !important;
+}
+
+.sample-review1{
+    max-width: 800px;
+    z-index: 1 !important;
+    color: black;
+    padding: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.sample-review2{
+    max-width: 800px;
+    z-index: 1 !important;
+    color: white;
+    padding: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.form-label{
+    color: black !important;
+}
+.comment-button{
+    background-color: transparent;
+    border:1.5px solid black;
+    border-radius: 13%;
+    padding: 3px;
+}
+.comment-img{
+    height: 20px;
+    width: 29px;
+}
+.share-button{
+}
+.button-cluster{
+    text-align: left;
 }
