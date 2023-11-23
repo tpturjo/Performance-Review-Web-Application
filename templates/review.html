@@ -18,15 +18,16 @@
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <img src="static_img/teamM.png" class = "logo">
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
-              <li><a href="/public" class="nav-link px-2 text-white">View Reviews</a></li>
+                <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
+                <li><a href="/public" class="nav-link px-2 text-white">View Reviews</a></li>
+                <li><a href="/profile" class="nav-link px-2 text-white">Profile</a></li>
             </ul>
 
-            <div class="big-button-div">
-              <div class = "public">
-                    <a href="/changePassword"><button class="change-pw-button">ChangePW</button></a>
-              </div>
-            </div>
+<!--            <div class="big-button-div">-->
+<!--                <div class = "public">-->
+<!--                    <a href="/profile"><button class="change-pw-button" type="submit" name="action" value="PROFILE">Profile</button></a>-->
+<!--                </div>-->
+<!--            </div>-->
 
             <div class="big-button-div">
               <div class = "public">
@@ -55,8 +56,9 @@
                         </div>
                         <textarea id="text" name="text">{{ draft[3] }}</textarea>
                         <div class="button">
-                            <input type="submit" name="action" value="PUBLISH">
-                            <input type="submit" name="action" value="SAVE">
+                            <button class="generic-button" type="submit" name="action" value="SAVE">DRAFT</button>
+                            <button  class="generic-button" type="submit" name="action" value="PUBLISH">PUBLISH</button>
+                            <button class="generic-button" type="submit" name="action" value="ANONYMOUS">🤫 PUBLISH</button>
                         </div>
                     </form>
                 % end
@@ -68,8 +70,9 @@
                     </div>
                 <textarea id="text" name="text"></textarea>
                 <div class="button">
-                    <input type="submit" name="action" value="PUBLISH">
-                    <input type="submit" name="action" value="SAVE">
+                    <button class="generic-button" type="submit" name="action" value="SAVE">DRAFT</button>
+                    <button  class="generic-button" type="submit" name="action" value="PUBLISH">PUBLISH</button>
+                    <button class="generic-button" type="submit" name="action" value="ANONYMOUS">🤫 PUBLISH</button>
                 </div>
             </form>
         </div>
