@@ -406,20 +406,27 @@ def change_password(username, new_password):
     conn.commit()
     conn.close()
 
-def hide_rating(submission_id, rating):
-   '''
-   Stub function for future implementation to allow for hidden ratings
-   '''
-   pass
 
 
-def change_username(username, new_username):
-   """
-   Func:
-   change_username: sets a new username (stub)
-  Args:
-     username: takes the old username
-     new_username: sets to the new username
 
-  """
-   pass
+def get_profile_data_by_username(username):
+   conn = sqlite3.connect(database_name)
+   cursor = conn.cursor()
+
+   # Execute the query to get all saved drafts
+   cursor.execute('SELECT * FROM Profiles WHERE Username = ?', (username,))
+   profile_data = cursor.fetchall()
+
+   #Closes the connection
+   conn.close()
+   #Returns all of the user's drafts
+   return profile_data
+
+def edit_profile(username, profile):
+   conn = sqlite3.connect(database_name)
+   cursor = conn.cursor()
+   # Update the user's password in the database
+   cursor.execute('UPDATE Profiles SET First_Name=?, Last_Name=?, Email=?, Address=?  WHERE Username=?',
+                  (profile.get_first_name(), profile.get_last_name(), profile.get_email(), profile.get_address(), username))
+   conn.commit()
+   conn.close()
