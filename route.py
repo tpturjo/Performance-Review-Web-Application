@@ -2,6 +2,7 @@ from bottle import Bottle, request, run, template, static_file, redirect, respon
 import sqlite3
 import methods
 import user
+import profile
 import database
 
 app = Bottle()
