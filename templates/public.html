@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>public</title>
     <link rel="stylesheet" href="static/styles.css">
-    <link rel="stylesheet" href="styles.css">
+<!--    <link rel="stylesheet" href="styles.css">-->
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -22,9 +22,6 @@
             <div class="big-button-div">
               <div class = "public">
 
-<!--                <a href="/createAccount"><button class="log-out-button">Logout</button></a>-->
-<!--                  This button will be implemented in the near future. It's a placeholder for now-->
-<!--                  <button class = "dummy">BOING</button>-->
 
               </div>
             </div>
@@ -60,7 +57,6 @@
                     <li class = "reviews_history">
                         <div class = "reviews">
                             <br>
-
                             <h5 id="title">{{ review[1] }}</h5>
                             <h5>{{ review[0] }}</h5>
                             <h5>{{ review[2] }}</h5>
@@ -71,7 +67,6 @@
                             <h6> CLICK to rate this review! </h6>
                             <form action="/rate" method="post">
                                     <input type="hidden" name="review_id" value="{{ review[4] }}">
-
                                     <button class="star" value="1" name="rating" ></button>
                                     <button class="star" value="2" name="rating" ></button>
                                     <button class="star" value="3" name="rating" ></button>
@@ -79,13 +74,34 @@
                                     <button class="star" value="5" name="rating"></button>
                             </form>
                             <div class="button-cluster">
-                                <button class ="comment-button"><img src="static_img/comment.png" class = "comment-img"></button>
-                                <button class="share-button" data-title="{{ review[1] }}" data-content="{{ review[2] }}">Share</button>
+                                <button class="comment-button" id="comment-button-{{ review[4] }}" onclick="toggleDiv('{{ review[4] }}')"><img src="static_img/comment.png" class="comment-img"></button>
+                                <button class="share-button" data-title="{{ review[1] }}" data-content="{{ review[2] }}"><img src="static_img/share.png" class = "share-img"></button>
+                                <br>
+                                <br>
                             </div>
-                            <br>
-                            <hr class="featurette-divider1">
+
+                            <div class="comment-history" id="comment-history-{{ review[4] }}" style="display:none;">
+<!--                                        % for comment in review[5]:-->
+<!--                                            empty code for now
+
+<!--                                        % end-->
+                                        <br>
+
+                                        <form action="/submit" method="post">
+                                            <input type="hidden" value="{{ review[4] }}" name = "submission_id">
+                                            <div class = "comment-box">
+                                                <input id = "comment-input" placeholder="write a comment" name="comment">
+                                                <button class = "generic-button" type="submit" name="action" value="COMMENT">submit</button>
+                                            </div>
+                                        </form>
+                                        <br>
+                                </div>
 
                         </div>
+                        <br>
+                        <hr class="featurette-divider1">
+
+
                     </li>
                 % end
                 </ul>
@@ -93,7 +109,20 @@
 
         </div>
     </div>
+</body>
 <script>
+
+        function toggleDiv(reviewId) {
+            var commentHistoryDiv = document.getElementById("comment-history-" + reviewId);
+            if (commentHistoryDiv.style.display === "none" || commentHistoryDiv.style.display === "") {
+                commentHistoryDiv.style.display = "block";
+            } else {
+                commentHistoryDiv.style.display = "none";
+            }
+        }
+
+
+
         // JavaScript code to handle the Share button click event
         const shareButtons = document.querySelectorAll('.share-button');
 
@@ -146,6 +175,16 @@
             });
         });
 
+        // Function to open the dialog
+        function openDialog() {
+          document.getElementById('overlay').style.display = 'flex';
+        }
+
+        // Function to close the dialog
+        function closeDialog() {
+          document.getElementById('overlay').style.display = 'none';
+        }
+
+
     </script>
-</body>
 </html>
