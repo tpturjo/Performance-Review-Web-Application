@@ -192,6 +192,15 @@ def submit():
         return template('templates/review.html', username=username, draft_data=draft_data,
                         saved_message="Review published successfully")
 
+    elif action == 'COMMENT':
+        submission_id = request.forms.get('submission_id')
+        username = request.get_cookie('username')
+        comment = request.forms.get('comment')
+        print(submission_id)
+        print(username)
+        print(comment)
+        database.save_comment(submission_id, username, comment)
+        redirect('/public')
 
     elif action == 'LOGIN':
         # Logic for login
@@ -261,22 +270,6 @@ def change():
         else:
             print("Wrong credentials")
             return template('templates/changePassword.html', message="Wrong Credentials")
-
-
-@app.route('/comment_review', method='POST')
-def comment():
-    """
-    Handles the comment to a review page
-
-    Returns:
-        link: to the page with a comment on the selected review
-
-    """
-    action = request.forms.get('action')
-    if action == 'comment':
-        pass
-
-    pass
 
 
 @app.route('/rate', method='POST')
