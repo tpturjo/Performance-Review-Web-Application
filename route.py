@@ -24,6 +24,21 @@ def require_login(func):
 
     return wrapper
 
+def require_logout(func):
+    """
+    Flow control. Blocks the use of LOGIN page when already logged in.
+
+    Returns:
+        str: If cookie is present, block the access of LOGIN page.
+    """
+    def wrapper(*args, **kwargs):
+        mysring = request.get_cookie('username')
+        print(mysring)
+        if request.get_cookie('username') == None:
+            return func(*args, **kwargs)
+        else:
+            return redirect('/')
+    return wrapper
 
 """
 Services: File address reference for each HTML file  
@@ -31,6 +46,19 @@ Services: File address reference for each HTML file
 
 
 @app.route('/')
+def home():
+    """
+    Serves the login page.
+
+    Returns:
+        str: The login page HTML.
+
+    """
+    username = request.get_cookie('username')
+    return template('templates/home.html', username=username)
+
+@app.route('/login')
+@require_logout
 def login():
     """
     Serves the login page.
