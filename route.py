@@ -114,8 +114,8 @@ def review():
     return template('templates/review.html', username=username, draft_data=draft_data)
 
 
-@app.route('/profile')
-def profile():
+@app.route('/profileEdit')
+def profileEdit():
     """
     Serves the profileEdit page.
 
@@ -127,7 +127,25 @@ def profile():
     ## This is a sample
     # profile_data = database.get_profile(username)
     ## This is a stub
-    profile_data = [("BobRoss12", "Bob", "Ross", "BobRoss@bobrossmail.com", "Heaven")]
+    profile_data = database.get_profile_data_by_username(username)
+    # profile_data = [("BobRoss12", "Bob", "Ross", "BobRoss@bobrossmail.com", "Heaven")]
+    return template('templates/profile_edit.html', username=username, profile_data=profile_data)
+
+@app.route('/profile')
+def profilePage():
+    """
+    Serves the profileEdit page.
+
+    Returns:
+        str: The review page HTML.
+
+    """
+    username = request.get_cookie('username')
+    ## This is a sample
+    # profile_data = database.get_profile(username)
+    ## This is a stub
+    profile_data = database.get_profile_data_by_username(username)
+    # profile_data = [("BobRoss12", "Bob", "Ross", "BobRoss@bobrossmail.com", "Heaven")]
     return template('templates/profile.html', username=username, profile_data=profile_data)
 
 
