@@ -274,6 +274,16 @@ def submit():
             print("ERROR: username already taken. Try again")
             return "Failure"  # This message will be received by JavaScript
 
+    elif action == 'EDIT_PROFILE':
+        username = request.get_cookie('username')
+        my_profile = profile.Profile(username)
+        my_profile.set_first_name(request.forms.get('first_name'))
+        my_profile.set_last_name(request.forms.get('last_name'))
+        my_profile.set_email(request.forms.get('email'))
+        my_profile.set_address(request.forms.get('address'))
+        database.edit_profile(username, my_profile)
+        redirect('/profile')
+
     elif action == 'LOGOUT':
         print("attept to destroy cookie")
         username = request.get_cookie('username')
