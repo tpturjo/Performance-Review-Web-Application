@@ -16,12 +16,43 @@ def format_list_for_public(list):
         myString2 = "Title: " + handle_none_variables(element[2])
         myString3 = "Content: " + handle_none_variables(element[3])
         myString4 = "Rating: " + handle_reviews(element[4])
+        # element[0] is the submission id
         myString5 = element[0]
         new_tuple.append(myString1)
         new_tuple.append(myString2)
         new_tuple.append(myString3)
         new_tuple.append(myString4)
         new_tuple.append(myString5)
+        new_list.append(new_tuple)
+    return new_list
+
+def format_list_with_comments_for_public(list):
+    """
+    Formats the list of published reviews for the public page.
+
+    Args:
+        lst (list): The list of published reviews.
+
+    Returns:
+        list: The formatted list of reviews.
+
+    """
+    new_list = []
+    for element in list:
+        new_tuple = []
+        myString1 = "Author: " + handle_none_variables(element[1])
+        myString2 = "Title: " + handle_none_variables(element[2])
+        myString3 = "Content: " + handle_none_variables(element[3])
+        myString4 = "Rating: " + handle_reviews(element[4])
+        # element[0] is the submission id
+        myString5 = element[0]
+        comments = handle_none_variables(element[5])
+        new_tuple.append(myString1)
+        new_tuple.append(myString2)
+        new_tuple.append(myString3)
+        new_tuple.append(myString4)
+        new_tuple.append(myString5)
+        new_tuple.append(comments)
         new_list.append(new_tuple)
     return new_list
 
