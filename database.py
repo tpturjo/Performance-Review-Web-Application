@@ -380,7 +380,7 @@ def get_First_Name(first_name):
 
    # Closes the connection
    conn.close()
-   # Returns all of the user's drafts
+   # Returns all of a user's drafts
    return users_first_name
 
 def set_First_Name():
@@ -388,6 +388,50 @@ def set_First_Name():
 
 
 
+#Comments Table Methods
+def save_comment(submission_id, username, content):
+   """
+     Saves a user's comment for a specific review.
+
+     Args:
+         submission_id (int): The ID of the comment.
+         username (text): The user's username.
+         content (text): The text content of the comment.
+     Returns:
+         None
+     """
+   conn = sqlite3.connect(database_name)
+   cursor = conn.cursor()
+
+   cursor.execute("INSERT INTO comments (submission_id, username, comment) VALUES (?, ?, ?)", (submission_id, username, content))
+
+   # Commits the changes to the database
+   conn.commit()
+   # Closes the connection
+   conn.close()
+
+def get_comments(submission_id):
+   """
+      Retrieves a comment for a specific review.
+
+      Args:
+         submission_id (int): The ID of the comment.
+         username (text): The user's username.
+         content (text): The text content of the comment.
+      Returns:
+         the comment for a review
+      """
+   conn = sqlite3.connect(database_name)
+   cursor = conn.cursor()
+
+   # Execute the query to get all reviews
+   cursor.execute("SELECT * FROM comments WHERE submission_id = ?", (submission_id,))
+   review_comment = cursor.fetchall()
+
+   # Closes the connection
+   conn.close()
+   # Returns all of a user's reviews
+   return review_comment
 
 
 def change_password(username, new_password):
