@@ -167,6 +167,56 @@ edits, and implementations during the next meeting.
 - Tanjett: Will continue  to work on Comment on review route.py stub
 - Next meeting is on November 23 at 1:00PM.
 
+## Nov 23, 2023
+**Recorded by:** Daniel 
+
+**Scrum master:** Caleb  
+**Venue:** Discord  
+**Time:** 2:00 PM - 3:00PM  
+**Attendance:** Caleb, Daniel, Turjo, Tanjet 
+
+**Professor's Suggestions & Topics To Discuss:**  
+
+- Current progress and future code to implement.  
+- code review of new pull requests.  
+
+**Difficulties:**  
+- None
+
+**Decoupling/Solid:**  
+ - Still working on decoupling for route.py file for further optimization and simplification.
+
+**Progress Report:**
+ - Daniel has pushed his HTML pages to accomodate new profile page 
+ - Caleb has implemented the profiles and comments tables to the database.
+ - Tanjet's stub for comment on review pushed and merged. New data structure created for profiles. 
+ -Turjo's stub for profile pushed and merged. Updated database method for profiles.
+**Code review:**
+*Turjo's code*
+ - Caleb:Code looks good. Also it was necessary to remove the change_username method, as that was a method we likely were not going to implement. Good to merge
+ - Daniel:Looks good. Don't see any errors
+ - Tanjet: Method works fine for the profile
+*Tanjet' code*
+ - Caleb: Methods looks good, code looks good to merge
+ - Daniel: Getter and setters will be very useful in handling data with many moving comps. Nice.
+ - Turjo:This basic user representation is a well-defined constructor and has accessor/mutator methods for username, first name, last name, email, and address, ensuring a clear and organized structure. Can be merged.
+
+**Decisions:**
+- Tanjet, Turjo and Caleb's pull request merged and closed. Deadline met.
+- Daniel will push his methods.py, route.py update before next meeting
+- Caleb will keep working onpost request handling for anonymous functionality (route.py)
+- Next meeting Nov 24
+
+
+
+**New features/code**
+- Caleb: post request handling for anonymous functionality (route.py)
+- Daniel: update methods.py & database.py for data output to html. Add routing for home.html require_login routing function. (route.py)
+- Tanjet: post request handling for ‘comment’ functionality (route.py) 
+- Turjo: profile_edit.html and profile.html routing (route.py)
+
+*Deadlines:**
+Everyone to push by Nov 24(sat)
 
 
 
