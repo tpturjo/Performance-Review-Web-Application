@@ -81,10 +81,10 @@
                             </div>
 
                             <div class="comment-history" id="comment-history-{{ review[4] }}" style="display:none;">
-<!--                                        % for comment in review[5]:-->
-<!--                                            empty code for now
-
-<!--                                        % end-->
+                                        % for comment in review[5]:
+                                            <p>{{ comment[2] }}: {{ comment[3] }}</p>
+                                            <div class = "line"></div>
+                                        % end
                                         <br>
 
                                         <form action="/submit" method="post">

@@ -102,15 +102,15 @@ def public():
         - The template 'templates/public.html' is used to render the HTML content.
     """
     search_query = request.query.get('search')
-    all_published = database.get_published_reviews()
+    all_published = database.get_published_reviews_and_comments()
     if search_query:
         # Filter the reviews based on the search query
         filtered_reviews = [review for review in all_published if
                             (review[1] is not None and search_query.lower() in review[1].lower()) or
                             (review[2] is not None and search_query.lower() in review[2].lower())]
-        all_published_reformatted = methods.format_list_for_public(filtered_reviews)
+        all_published_reformatted = methods.format_list_with_comments_for_public(filtered_reviews)
     else:
-        all_published_reformatted = methods.format_list_for_public(all_published)
+        all_published_reformatted = methods.format_list_with_comments_for_public(all_published)
     return template('templates/public.html', reviews=all_published_reformatted, search_query=search_query)
 
 
