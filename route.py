@@ -294,13 +294,19 @@ def submit():
         print("cookie destroyed")
         return template('templates/login.html', message=None)
 
-
-
     elif action == 'ANONYMOUS':
         username = 'Anonymous'
-        draft_data = None
-        pass
+        title = request.forms.get('title')
+        text = request.forms.get('text')
 
+        # Saves the review using an anonymous username
+        database.publish_review(username, title, text)
+
+        # Clears drafts
+        database.clear_drafts(username)
+
+        # Redirects to public
+        return redirect('/public')
 
 @app.route('/change_password', method='POST')
 def change():
