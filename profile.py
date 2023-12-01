@@ -11,7 +11,6 @@ class Profile:
             username (str): The username of the user.
             password (str): The password of the user.
         """
-        print("in constructor")
         self.username = username
         self.first_name = "null"
         self.last_name = "null"
