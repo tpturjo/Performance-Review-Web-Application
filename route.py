@@ -367,18 +367,26 @@ def rate():
         redirect('/public')
 
 
-@app.route('/edit_post/<post_id>')
+@app.route('/my_posts')
+@require_login
+def my_posts():
+    username = request.get_cookie('username')
+    user_reviews = database.get_users_published_reviews(username)
+    return template('templates/my_posts.html', reviews=user_reviews, username=username)
+
+@app.route('/edit_post/<post_id>', method='POST')
 @require_login
 def edit_post(post_id):
-    """
-    Serves the edit post page.
-    Args:
-        post_id (str): The ID of the post to edit.
-    Returns:
-        str: The edit post page HTML.
-    """
-    # will implement in final sprint
-    pass
+    username = request.get_cookie('username')
+    post = database.get_post_by_id(post_id)
+    if post and post[1] == username:
+        title = request.forms.get('title')
+        content = request.forms.get('content')
+        database.update_post(post_id, title, content)
+        return redirect('/my_posts')
+    else:
+        return "Unauthorized access"
+
 
 
 if __name__ == '__main__':
