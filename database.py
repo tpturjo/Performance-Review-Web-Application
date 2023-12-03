@@ -485,3 +485,20 @@ def edit_profile(username, profile):
                   (profile.get_first_name(), profile.get_last_name(), profile.get_email(), profile.get_address(), username))
    conn.commit()
    conn.close()
+
+
+def get_post_by_id(post_id):
+   conn = sqlite3.connect(database_name)
+   cursor = conn.cursor()
+   cursor.execute('SELECT * FROM Reviews WHERE Submission_ID = ?', (post_id,))
+   post = cursor.fetchone()
+   conn.close()
+   return post
+
+
+def update_post(post_id, title, content):
+   conn = sqlite3.connect(database_name)
+   cursor = conn.cursor()
+   cursor.execute('UPDATE Reviews SET Title = ?, Content = ? WHERE Submission_ID = ?', (title, content, post_id))
+   conn.commit()
+   conn.close()
