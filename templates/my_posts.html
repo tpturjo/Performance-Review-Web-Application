@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Posts</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Ensure your styles.css is properly linked and contains the styles used on the other pages -->
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body class="background-public-page">
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <img src="static_img/teamM.png" class="logo">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
+                    <li><a href="/public" class="nav-link px-2 text-white">View Reviews</a></li>
+                    <li><a href="/profile" class="nav-link px-2 text-white">Profile</a></li>
+                    <li><a href="/my_posts" class="nav-link px-2 text-white">My Posts</a></li>
+                </ul>
+
+                <div class="big-button-div">
+                    <form action="/submit" method="post">
+                        <button class="log-out-button" type="submit" name="action" value="LOGOUT">Logout</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">My Posts</h1>
+        % for review in reviews:
+            <div class="card mb-3">
+                <div class="card-body">
+                    <form action="/edit_post/{{review[0]}}" method="post" class="post-form">
+                        <div class="mb-3">
+                            <label for="title-{{review[0]}}" class="form-label">Title:</label>
+                            <input type="text" class="form-control" id="title-{{review[0]}}" name="title" value="{{review[2]}}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="content-{{review[0]}}" class="form-label">Content:</label>
+                            <textarea class="form-control" id="content-{{review[0]}}" name="content">{{review[3]}}</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                </div>
+            </div>
+        % end
+    </div>
+
+    <script src="static/scripts.js"></script> <!-- If you have any custom JavaScript -->
+</body>
+</html>
