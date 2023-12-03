@@ -176,6 +176,12 @@ def get_published_reviews():
 
 
 def get_published_reviews_and_comments():
+   """
+       Retrieves all published reviews along with their associated comments from the database.
+
+       Returns:
+           list: A list of reviews, each extended with its associated comments.
+   """
    reviews_data = get_published_reviews()
    list_2d = [list(row) for row in reviews_data]
 
@@ -197,7 +203,7 @@ def get_users_published_reviews(username):
            list: List of reviews (tuples) if successful.
 
 
-       """
+   """
    conn = sqlite3.connect(database_name)
    cursor = conn.cursor()
 
@@ -259,7 +265,7 @@ def get_drafts(username):
            list: List of drafts (tuples) if successful.
 
 
-       """
+   """
    conn = sqlite3.connect(database_name)
    cursor = conn.cursor()
 
@@ -292,7 +298,7 @@ def clear_drafts(username):
       Note:
       This function will directly modify the 'Drafts' table in the database associated with the
       given 'database_name' global variable.
-      """
+   """
    conn = sqlite3.connect(database_name)
    cursor = conn.cursor()
 
@@ -350,6 +356,15 @@ def save_rating(submission_id, rating):
 #Profile Table Methods
 
 def get_First_Name(first_name):
+   """
+       Retrieves users from the Profiles table whose first name matches the given name.
+
+       Args:
+           first_name (str): The first name to search for.
+
+       Returns:
+           list: A list of users matching the given first name.
+   """
    conn = sqlite3.connect(database_name)
    cursor = conn.cursor()
 
@@ -363,6 +378,12 @@ def get_First_Name(first_name):
    return users_first_name
 
 def set_First_Name():
+   """
+       Placeholder for a function to set the first name of a user. Currently unimplemented.
+
+       Returns:
+           None
+   """
    pass
 
 
@@ -433,6 +454,15 @@ def change_password(username, new_password):
 
 
 def get_profile_data_by_username(username):
+   """
+       Retrieves profile data for a specific user from the Profiles table.
+
+       Args:
+           username (str): The username whose profile data is to be retrieved.
+
+       Returns:
+           list: A list containing the profile data of the user.
+   """
    conn = sqlite3.connect(database_name)
    cursor = conn.cursor()
 
@@ -446,6 +476,16 @@ def get_profile_data_by_username(username):
    return profile_data
 
 def edit_profile(username, profile):
+   """
+       Updates the profile information of a user in the Profiles table.
+
+       Args:
+           username (str): The username of the user whose profile is to be updated.
+           profile (Profile): A profile object containing the updated profile information.
+
+       Returns:
+           None
+   """
    conn = sqlite3.connect(database_name)
    cursor = conn.cursor()
    # Update the user's password in the database
@@ -456,6 +496,15 @@ def edit_profile(username, profile):
 
 
 def get_post_by_id(post_id):
+   """
+       Retrieves a specific post from the Reviews table by its ID.
+
+       Args:
+           post_id (int): The ID of the post to retrieve.
+
+       Returns:
+           tuple: A tuple containing the post data, or None if no post is found.
+   """
    conn = sqlite3.connect(database_name)
    cursor = conn.cursor()
    cursor.execute('SELECT * FROM Reviews WHERE Submission_ID = ?', (post_id,))
@@ -465,6 +514,17 @@ def get_post_by_id(post_id):
 
 
 def update_post(post_id, title, content):
+   """
+       Updates the title and content of a specific post in the Reviews table.
+
+       Args:
+           post_id (int): The ID of the post to be updated.
+           title (str): The new title for the post.
+           content (str): The new content for the post.
+
+       Returns:
+           None
+   """
    conn = sqlite3.connect(database_name)
    cursor = conn.cursor()
    cursor.execute('UPDATE Reviews SET Title = ?, Content = ? WHERE Submission_ID = ?', (title, content, post_id))

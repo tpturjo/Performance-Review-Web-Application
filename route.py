@@ -144,18 +144,15 @@ def review():
 @app.route('/profileEdit')
 def profileEdit():
     """
-    Serves the profileEdit page.
+    Serves the profile edit page.
+
+    This page allows users to view and edit their profile information.
 
     Returns:
-        str: The review page HTML.
-
+        str: The rendered profile edit page template with the user's profile data.
     """
     username = request.get_cookie('username')
-    ## This is a sample
-    # profile_data = database.get_profile(username)
-    ## This is a stub
     profile_data = database.get_profile_data_by_username(username)
-    # profile_data = [("BobRoss12", "Bob", "Ross", "BobRoss@bobrossmail.com", "Heaven")]
     return template('templates/profile_edit.html', username=username, profile_data=profile_data)
 
 @app.route('/profile')
@@ -168,11 +165,7 @@ def profilePage():
 
     """
     username = request.get_cookie('username')
-    ## This is a sample
-    # profile_data = database.get_profile(username)
-    ## This is a stub
     profile_data = database.get_profile_data_by_username(username)
-    # profile_data = [("BobRoss12", "Bob", "Ross", "BobRoss@bobrossmail.com", "Heaven")]
     return template('templates/profile.html', username=username, profile_data=profile_data)
 
 
@@ -360,6 +353,14 @@ def rate():
 @app.route('/my_posts')
 @require_login
 def my_posts():
+    """
+        Serves the page displaying all posts made by the logged-in user.
+
+        Retrieves and displays all reviews published by the user.
+
+        Returns:
+            str: The rendered template displaying the user's posts.
+    """
     username = request.get_cookie('username')
     user_reviews = database.get_users_published_reviews(username)
     return template('templates/my_posts.html', reviews=user_reviews, username=username)
@@ -367,6 +368,17 @@ def my_posts():
 @app.route('/edit_post/<post_id>', method='POST')
 @require_login
 def edit_post(post_id):
+    """
+        Handles the editing of an existing post.
+
+        Allows users to update the title and content of their posts. Unauthorized access attempts are blocked.
+
+        Args:
+            post_id (str): The ID of the post to be edited.
+
+        Returns:
+            Redirect or str: A redirect to the 'my_posts' page after successful editing, or a failure message.
+    """
     username = request.get_cookie('username')
     post = database.get_post_by_id(post_id)
     if post and post[1] == username:
