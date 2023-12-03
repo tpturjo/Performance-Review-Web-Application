@@ -33,7 +33,6 @@ def require_logout(func):
     """
     def wrapper(*args, **kwargs):
         mysring = request.get_cookie('username')
-        print(mysring)
         if request.get_cookie('username') == None:
             return func(*args, **kwargs)
         else:
@@ -242,9 +241,6 @@ def submit():
         submission_id = request.forms.get('submission_id')
         username = request.get_cookie('username')
         comment = request.forms.get('comment')
-        print(submission_id)
-        print(username)
-        print(comment)
         database.save_comment(submission_id, username, comment)
         redirect('/public')
 
@@ -262,8 +258,6 @@ def submit():
     elif action == 'CREATE':
         username = request.forms.get('username')
         password = request.forms.get('password')
-        print("hi I'm in create")
-
         new_user = user.User(username, password)
         success = database.create_user(new_user)
 
@@ -271,7 +265,7 @@ def submit():
             print("Successfully created user")
             return static_file('login.html', root='./templates')
         else:
-            print("ERROR: username already taken. Try again")
+            print("Username already taken. Try again")
             return "Failure"  # This message will be received by JavaScript
 
     elif action == 'EDIT_PROFILE':
@@ -285,13 +279,9 @@ def submit():
         redirect('/profile')
 
     elif action == 'LOGOUT':
-        print("attept to destroy cookie")
         username = request.get_cookie('username')
-        print("attept to destroy cookie", username)
         # response.delete_cookie(username)
         response.set_cookie("username", '', expires=0)
-
-        print("cookie destroyed")
         return template('templates/login.html', message=None)
 
     elif action == 'ANONYMOUS':

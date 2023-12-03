@@ -116,38 +116,6 @@ def get_user_data_by_username(user_name):
    return user_data if user_data else None
 
 
-'''
-def save_user_draft_by_username(username, title, text):
-   """
-   Saves a user draft in the database.
-
-
-   Args:
-       username (str): The username.
-       title (str): The draft title.
-       text (str): The draft content.
-
-
-   Returns:
-       None
-
-
-   """
-   conn = sqlite3.connect(database_name)
-   cursor = conn.cursor()
-
-
-   cursor.execute("SELECT Username FROM Drafts WHERE Username = ?", (username,))
-   existing_user = cursor.fetchone()
-
-
-   # Insert the new draft into the 'Users' table
-   cursor.execute("INSERT INTO Users (Title, Draft) VALUES (?, ?)", (title, text))
-   conn.commit()
-   conn.close()
-'''
-
-
 def publish_review(username, title, content):
    """
    Publishes a review by adding it to the 'Reviews' table in the database.
