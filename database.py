@@ -187,7 +187,6 @@ def get_published_reviews_and_comments():
 
    for i in range(len(reviews_data)):
       comments = get_comments(reviews_data[i][0])
-      print(comments)
       list_2d[i][5] = comments
 
    return list_2d
