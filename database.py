@@ -41,10 +41,10 @@ def create_user(user):
    else:
        # Insert the new user into the 'Users' table
        cursor.execute("INSERT INTO Users (Username, Password) VALUES (?, ?)", (user.get_user_name(), user.get_password()))
+       cursor.execute("INSERT INTO Profiles(Username) VALUES (?)", (user.get_user_name(),))
        conn.commit()
        conn.close()
        return True
-
 
 
 
