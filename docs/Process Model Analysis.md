@@ -11,7 +11,7 @@ model, and propose future improvements.
 - Ideas and areas of improvement
 
 ## Process Model Diagram
-<img src="E:\fall 2023(sep 9)\Como2005\final process model diagram.jpeg"/>
+![Process Mode; Analysis (Team M)1 ](https://github.com/CS2005F23/term-project-teamm/blob/4bf2ce5531edf60c0509b1c15ea8eab38ef32b21/docs/Asset/final%20process%20model%20diagram.jpeg?raw=true)
 
 ## Elements of Process
 
