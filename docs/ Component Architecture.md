@@ -6,7 +6,7 @@ and communicates with the database, which is structured to store users, profiles
 simplifies the process of testing and development by isolating individual components.
 
 # UML Diagram:
-![UML Diagram (Team M)1 ](https://raw.githubusercontent.com/CS2005F23/term-project-teamm/4bf2ce5531edf60c0509b1c15ea8eab38ef32b21/docs/Asset/Final%20UML%20diagram.jpeg?token=GHSAT0AAAAAACHOCD3DOECTPUMA22Y3LDFMZLVVUCA)
+![UML Diagram (Team M)1 ](https://raw.githubusercontent.com/CS2005F23/term-project-teamm/4364c595cbbd324bd0b2fc809c83590f998ffdb8/docs/Asset/Final%20UML%20diagram.jpeg?token=BCQB53J6MIE6OC5DHG2KQCTFOWXY2)
 
 ## Components:
 
