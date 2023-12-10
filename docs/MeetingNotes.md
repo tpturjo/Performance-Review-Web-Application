@@ -7,7 +7,7 @@
 **Recorded by:** Daniel  
 **Scrum master:** Turjo  
 **Venue:** DISCORD      
-**Time:** 12:00PM - 1:16PM  
+**Time:** 12:00 PM - 1:16 PM  
 **Attendance:** Caleb, Daniel, Turjo, Tanjett
 
   1) **Point of discussion**
@@ -49,7 +49,7 @@
 **Recorded by:** Caleb 
 **Scrum master:** Daniel  
 **Venue:** Student CS Lab     
-**Time:** 1:00PM - 2:00PM  
+**Time:** 1:00 PM - 2:00 PM  
 **Attendance:** Caleb, Daniel, Turjo
 
 **Point of discussion**
@@ -89,7 +89,7 @@ edits, and implementations during the next meeting.
 **Recorded by:** Tanjet  
 **Scrum master:** Turjo  
 **Venue:** Discord  
-**Time:* 10:00 P.M - 11:20 P.M  
+**Time:* 10:00 PM - 11:20 PM  
 **Attendance:** Caleb, Daniel, Turjo, Tanjet
 
 **Professor's Suggestions & Topics To Discuss:**
@@ -133,7 +133,7 @@ edits, and implementations during the next meeting.
 **Recorded by:** Turjo  
 **Scrum master:** Caleb  
 **Venue:** Discord  
-**Time:** 2:00 PM - 3:40PM  
+**Time:** 2:00 PM - 3:40 PM  
 **Attendance:** Caleb, Daniel, Turjo, Tanjet  
 
 **Professor's Suggestions & Topics To Discuss:**  
@@ -180,7 +180,7 @@ edits, and implementations during the next meeting.
 **Recorded by:** Daniel
 **Scrum master:** Caleb  
 **Venue:** Student CS Lab  
-**Time:** 1:00 PM - 2:20PM  
+**Time:** 1:00 PM - 2:20 PM  
 **Attendance:** Caleb, Daniel, Turjo, Tanjet 
 
 **Professor's Suggestions & Topics To Discuss:**
@@ -230,7 +230,7 @@ first name, last name, email, and address, ensuring a clear and organized struct
 **Recorded by:** Tanjet
 **Scrum master:** Turjo  
 **Venue:** Discord  
-**Time:** 2:00 PM - 3:00PM  
+**Time:** 2:00 PM - 3:00 PM  
 **Attendance:** Caleb, Daniel, Turjo, Tanjet 
 
 **Professor's Suggestions & Topics To Discuss:**
@@ -277,7 +277,7 @@ routing, and interface enhancements.
 **Recorded by:** Caleb
 **Scrum master:** Tanjet 
 **Venue:** Discord  
-**Time:** 2:00 PM - 2:45PM  
+**Time:** 2:00 PM - 2:45 PM  
 **Attendance:** Caleb, Daniel, Turjo, Tanjet 
 
 **Professor's Suggestions & Topics To Discuss:**
@@ -298,7 +298,8 @@ routing, and interface enhancements.
 - Tanjet: Good to merge.
 
 **Decisions:**
-- STILL NEED TO FILL THIS IN ######### FOR THE TESTING CODE REVIEW ################################################
+- Decided not to add anything extra regarding our code review to the document. We have not changed anything from our methods
+used in sprint 2. We decided our method is efficient for our team and it wouldn't make sense to alter it at this time.
 - We will put more time into decoupling and cleaning up portions of the code in our files where needed.
 
 
@@ -309,7 +310,7 @@ routing, and interface enhancements.
 **Recorded by:** Daniel
 **Scrum master:** Caleb  
 **Venue:** Discord  
-**Time:** 2:00 PM - 2:20PM  
+**Time:** 2:00 PM - 2:20 PM  
 **Attendance:** Caleb, Daniel, Turjo, Tanjet 
 
 **Professor's Suggestions & Topics To Discuss:**
@@ -338,7 +339,7 @@ December 1.
 **Recorded by:** Turjo
 **Scrum master:** Daniel 
 **Venue:** Student CS Lab  
-**Time:** 1:00 PM - 1:40PM  
+**Time:** 1:00 PM - 1:40 PM  
 **Attendance:** Caleb, Daniel, Turjo, Tanjet 
 
 **Professor's Suggestions & Topics To Discuss:**
@@ -369,7 +370,7 @@ Other than that it works well with no errors.
 
 **Decisions:**
 - Caleb will make sure external package installs are correctly represented in the repository. His deadline is for
-December 3, 2023
+December 3.
 - Tanjet will update code to meet pep standards by the end of sprint 3. His deadline is for December 3
 - Turjo will update and implement the edit post stub, and fill in any missing doc strings. Deadline is for December 3.
 - Our application is nearly finished for the sprint. Some small edits and tweaks will be made going forward.
@@ -382,12 +383,13 @@ December 3, 2023
 **Recorded by:** Tanjet
 **Scrum master:** Turjo  
 **Venue:** Discord  
-**Time:** 3:00 PM - 3:50PM  
+**Time:** 3:00 PM - 3:50 PM  
 **Attendance:** Caleb, Daniel, Turjo, Tanjet 
 
 **Professor's Suggestions & Topics To Discuss:**
 - Discuss current progress and merge pull requests.
 - Discuss any further possible decoupling of code.
+- Discuss Deadlines
 
 **Difficulties:**  
 - Struggled to find more ways to decouple our code. At the application's current state, it may due more harm than good.
@@ -413,7 +415,7 @@ pieces of code in the .py files.
 **Decisions:**
 - Tanjet and Turjo will work on our microservices architecture document. Deadline is for December 3.
 - Caleb will work on the requirements.txt list and instructions. Deadline is now for December 3.
-- Caleb and Daniel will edit the UML and architecture document. Deadline is for December 3.
+- Caleb and Daniel will edit the UML and architecture document/architecture document. Deadline is for December 3.
 - Performance reviews deadline will be for December 4.
 - We will all work on the README file for sprint 3. Deadline is for December 4.
 
@@ -456,12 +458,13 @@ pieces of code in the .py files.
 **Recorded by:** Daniel
 **Scrum master:** Tanjet 
 **Venue:** Discord  
-**Time:** 2:00 PM - 2:40PM  
+**Time:** 2:00 PM - 2:40 PM  
 **Attendance:** Caleb, Daniel, Turjo, Tanjet 
 
 **Professor's Suggestions & Topics To Discuss:**
 - Current progress and future code to implement.
 - Code review and merge pull requests.
+- Re-discuss deadlines
 
 **Difficulties:**  
 - Nothing to report
@@ -484,16 +487,109 @@ Most ideally, we need a side bar or a drop down menu to access this.
 
 **Decisions:**
 - Several deadlines have been moved due to the change in sprint 3's deadline.
+- Turjo and Caleb will now be working together on the UML architecture document/process document.
+- Tanjet and Daniel will now be working together on the microservice document.
 
 **Deadlines:**
 - Due to the change in the due date of sprint 3 and preparation of exams, the following deadlines will be adjusted:
 
-- Caleb and Daniel's deadline for UML and architecture document will be moved to December 9.
+- Caleb and Turjo's deadline for UML and architecture document will be moved to December 9.
 - Caleb's deadline for requirements.txt list and instructions will be moved to December 9.
-- Tanjet and Turjo's deadline for our microservices architecture document will be moved to December 9.
+- Tanjet and Daniel's deadline for our microservices architecture document will be moved to December 9.
 - Tanjet's Pep standardized code deadline will be moved to December 9.
 - The performance reviews deadline will be moved to December 10.
 - The README file deadline will be moved to December 10.
+
+
+
+
+
+## Dec 5, 2023
+**Recorded by:** Caleb
+**Scrum master:** Daniel 
+**Venue:** Student CS Lab  
+**Time:** 1:00 PM - 2:10 PM  
+**Attendance:** Caleb, Daniel, Turjo, Tanjet 
+
+**Professor's Suggestions & Topics To Discuss:**
+- Work on unit tests.
+
+**Difficulties:**  
+- Nothing to report.
+
+**Progress Report:**
+- We've completed almost all unit tests for our code.
+
+**Code Review:**
+- Nothing to report.
+
+**Decisions:**
+- We've completed almost all unit tests for our code. We will each make final tweaks before submitting into a document 
+for Turjo to format them together and push to our remote repo.
+
+
+
+
+
+## Dec 7, 2023
+**Recorded by:** Tanjet
+**Scrum master:** Turjo
+**Venue:** Discord  
+**Time:** 11:40 PM - 12:05 AM  
+**Attendance:** Caleb, Daniel, Turjo, Tanjet 
+
+**Professor's Suggestions & Topics To Discuss:**
+- Discuss current progress and merge pull requests.
+- Re-discuss deadlines due to change in
+
+**Difficulties:**  
+- Nothing to report.
+
+**Progress Report:**
+- Turjo: Has pushed our unit tests. Unit tests have now been implemented.
+- Tanjet: Has pushed the microservice architecture document that he and Daniel were working on.
+
+**Code Review:**
+- Nothing to report.
+
+**Decisions:**
+- Due to the change in the due date of sprint 3 and preparation of exams, the following deadlines will be adjusted:
+
+- Caleb's deadline for requirements.txt list and instructions will be moved to December 11.
+- Caleb and Turjo's deadline for UML and architecture document will be moved to December 11.
+- Tanjet will update code to meet pep standards by the end of sprint 3. His deadline is for December 11.
+- The performance reviews deadline will be moved to December 12.
+- The README file deadline will be moved to December 12.
+
+- Hypotheticals file will be implemented based on feedback from sprint 2 by each team member. Deadline will be for 
+December 14.
+
+
+
+
+
+## Dec 10, 2023
+**Recorded by:** Turjo
+**Scrum master:** Caleb 
+**Venue:** Discord  
+**Time:** 3:30 PM - 3:55 PM  
+**Attendance:** Caleb, Daniel, Turjo, Tanjet 
+
+**Professor's Suggestions & Topics To Discuss:**
+- Discuss current progress and merge pull requests.
+
+**Difficulties:**  
+- Nothing to report.
+
+**Progress Report:**
+- Turjo: Has pushed the UML diagram and architecture document that he and Caleb were working on.
+- Caleb: Has pushed our meeting notes that we had recorded in an ongoing document.
+
+**Code Review:**
+- Nothing to report.
+
+**Decisions:**
+- Nothing to report.
 
 
 
