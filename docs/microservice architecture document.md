@@ -14,7 +14,8 @@ The document explains the microservice architecture for the software process
 
 
 
-This architecture represents a web application built using the Bottle microframework. It provides several microservices that work together to provide a solution for a web-based review system.
+This architecture represents a web application built using the Bottle microframework. It provides several microservices that work together to provide a solution for a web-based review 
+system.
 
 Here is an overview of the microservices and how they work together:
 
@@ -46,10 +47,40 @@ Here is an overview of the microservices and how they work together:
 
 14. edit_post: Handles the editing of an existing post by the logged-in user.
 
-The microservices interact with each other to provide the complete functionality of the web application. For example, the login and create account services interact with the database to check credentials and create new user accounts. The review and profile services retrieve and update data from the database related to reviews and user profiles.
+The microservices interact with each other to provide the complete functionality of the web application. For example, the login and create account services interact with the database 
+to check credentials and create new user accounts. The review and profile services retrieve and update data from the database related to reviews and user profiles.
 # Comparison to existing architecture:
-Overall, these microservices work together. Microservice Architecture Document ether to create a web-based review system where users can log in, create accounts, write and publish reviews, add comments, rate reviews, and manage their profiles. 
-Existing diagrams such as UML diagram provide a visual representation of the system's structure and components, while a microservice architecture document outlines the different microservices, their responsibilities, communication protocols, and deployment details.
-Moreover, the microservice architecture document outlines the design and structure of a system based on a microservice architecture approach. It provides details about the different microservices, their responsibilities, deployment strategies, communication protocols, and more. Without the microservice architecture document, it is difficult to directly compare the code to it. We can, however, analyze the code based on microservice architecture principles and patterns. For example, if the code is structured in a modular way with separate components responsible for specific functionalities, if it uses a distributed communication mechanism like REST APIs, or if it exhibits loose coupling between different parts of the system, then it aligns with some microservice architecture principles.
+In a components-based architecture, the web-based review system might start with a more straightforward management approach, with a single codebase housing all functionalities such as user login, account creation, 
+review posting, commenting, rating, and profile management. However, as the system grows, the high coupling of components could make it challenging to scale or update parts of the application without affecting others. 
+Additionally, resilience is a concern since the failure of a single component could jeopardize the entire application.
+
+On the other hand, if the same system were built using a microservices architecture, each part of the system (login, account management, review handling, etc.) would be developed as a separate microservice, with its own 
+codebase and deployment process. This would reduce coupling, allowing for individual parts of the system to be updated or scaled without impacting others. Communication between services, potentially through REST APIs, 
+would be designed for loose coupling and resilience, so that a failure in one microservice (such as the review posting service) would not take down the entire system. A microservice architecture document would be essential in this case, detailing the responsibilities, communication protocols, and deployment strategies of each microservice, providing a clear blueprint for the system's structure and facilitating comparison with the existing components-based structure.
+
+Thus, the shift from a components-based architecture to a microservices architecture for your web-based review system project involves a transition to a more decentralized, resilient, and scalable system design, which, 
+while potentially more complex to manage initially, offers greater flexibility and fault tolerance as the system evolves.
+
+
 # Discussion of impact on team software process:
-With microservices, our team can work on different services concurrently. This parallel development approach allows for faster feature development and enables teams to overcome any bottlenecks or dependencies. Additionally, microservices can be deployed independently, allowing for more frequent deployments and quicker time-to-market. The TSP can benefit from these streamlined development and deployment practices by facilitating efficient coordination between teams and their respective services. Microservice architecture inherently supports scalability and resilience. Each service can be independently scaled based on demand, enabling the TSP to effectively handle varying workloads. Teams can monitor and optimize the performance of their specific services, ensuring that the system remains responsive and resilient even under heavy usage. TSP can incorporate these scalability and resilience considerations as part of its performance and testing activities.
+In our current components-based setup, we face certain challenges due to the shared codebase. Our team has experienced merge conflicts and workflow bottlenecks, which slows down our 
+feature development and complicates our deployment process. Moreover, when we need to scale, we're forced to scale the entire application, which is not always the best use of our 
+resources.
+
+With microservices, we anticipate significant improvements:
+
+- Team Collaboration: Our developers will be able to work on different services concurrently. This parallel development approach is expected to lead to faster feature development, 
+as team members will be less likely to be blocked by each other's work. This agility will enable us to overcome current bottlenecks and dependencies, fostering a more productive and
+collaborative environment.
+
+- Deployment: With microservices, we can adopt CI/CD practices, which will allow individual teams to deploy their updates independently. This means we can introduce new features and
+fixes more frequently and with reduced risk, thus improving our time-to-market.
+
+- Scaling: Each service in the microservices architecture can be scaled independently according to its specific demand. This targeted scaling is a more efficient use of resources and 
+allows our team to better manage workload variations. 
+
+- Monitoring and Logging: The move to microservices will also enhance our monitoring and logging capabilities. Each team will be able to closely monitor their respective services, 
+providing us with fine-grained insights into our system's performance. This level of detail will help us maintain high availability and quickly address any issues that arise.
+
+By embracing a microservices architecture, we're not just changing our technology stack; we're evolving our entire software development lifecycle. This will empower our teams to be
+more autonomous, enable our services to be more resilient, and ultimately lead to delivering a better application.
