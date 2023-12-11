@@ -76,8 +76,21 @@ Overall, the way we set up our work process has helped guide our team, making ho
 
 
 ## Ideas and areas of improvement:
-We completed our final sprint and realized that we could significantly improve our process model by adding some additional phases. For instance, in our documentation phase, we previously only 
-documented our meeting notes. This approach led to a significant workload before the deadline to complete the readme and other documentation. We also noticed that we tended to update our
-docstrings after writing the code, which is not a very good practice. We need to ensure that docstrings are integrated with every piece of code from the start. Another critical aspect we need 
-to focus on is our database structure. In this project, we had to change our database structure twice, which resulted in the need to modify our code and unit tests, creating unnecessary work. 
-Therefore, in future projects, we should include a step in our process model to always check the database structure and integrity right from the initial phase.
+We completed our final sprint and realized that we could significantly improve our process model by adding some additional phases. For instance, 
+in our documentation phase, we previously only documented our meeting notes. This approach led to a significant workload before the deadline to 
+complete the readme and other documentation. Integrating docstrings with the development process rather than post-coding is a practice we will 
+adopt to improve code clarity and reduce end-cycle documentation efforts. By formalizing this step, we will not only enhance our documentation 
+quality but also distribute the workload more evenly throughout the project timeline.
+
+Another critical aspect we need to focus on is our database structure. In this project, we had to change our database structure twice, which 
+resulted in the need to modify our code and unit tests, creating unnecessary work. To prevent such inefficiencies in the future, our process model
+will include a dedicated phase for database design and integrity checks at the start of the project. This formalization offers a clear benefit: it
+provides a structured approach to validate the database early on, thereby minimizing the risk of disruptive changes later in the development cycle.
+
+However, we must be cautious. While formalization brings organization and predictability, it can also introduce a level of rigidity. To navigate 
+this, we will introduce flexibility within our formal structures. For instance, we will allow for periodic 'adaptation windows' where the process
+model can be re-evaluated and adjusted in response to project realities. This will ensure that our process model remains a facilitator, not a 
+barrier, to innovation and agility.
+
+By embracing a formal yet flexible process model, we aim to improve our efficiency and output quality while maintaining the nimbleness needed to 
+adapt to changing requirements and challenges
