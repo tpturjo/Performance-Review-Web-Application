@@ -8,7 +8,10 @@ The document explains the microservice architecture for the software process
 3) Discussion of impact on team software process
 
 # Microservice Architecture Document:
-![Microservice architecture (Team M)1 ](https://github.com/CS2005F23/term-project-teamm/assets/144711080/9856f016-d0e2-4de8-89fa-b7e4a8a92a09)
+
+![image](https://github.com/CS2005F23/term-project-teamm/assets/144711080/42279cdb-0b79-4458-bda7-643f765c7572)
+
+
 
 
 This architecture represents a web application built using the Bottle microframework. It provides several microservices that work together to provide a solution for a web-based review system.
