@@ -4,7 +4,7 @@ I am pleased working with my teammates and how the project turned out in the end
 
 Turjo has been a great teammate and good communicator, when we started getting slow, 
 he would get us back on track be being outspoken about what we had to do.
-Can't really think of anything to criticize. 
+Criticism: please update meetingnotes earlier.
 
 Caleb has shown a deep passion and interest in learning. He is greatly motivated and responsible.
 He replies back to messages immediately. He is readily available, and a great teammate!
