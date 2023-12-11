@@ -1,5 +1,20 @@
 # Sprint 3
 
+## Performance review by Daniel Cho
+I am pleased working with my teammates and how the project turned out in the end.
+
+Turjo has been a great teammate and good communicator, when we started getting slow, 
+he would get us back on track be being outspoken about what we had to do.
+Criticism: please update meeting notes earlier. 
+
+Caleb has shown a deep passion and interest in learning. He is greatly motivated and responsible.
+He replies back to messages immediately. He is readily available, and a great teammate!
+Extremely nitpicky Criticism: Please learn how to use cloud drives like Google Drive.  
+
+Tanjet has shown imrpovements this sprint in participation. He wrote more code and actively asked out what he can help around with.
+He showed a great deal of cooperation. Not in sprint3, but overall, it would be great if he could attend more meetings. He was not very present during sprint1 and to a lesser degree during sprint2.  
+
+
 ## Final Sprint Performance Review by Tridib Paul Turjo
 
 
@@ -13,3 +28,4 @@ Tanjeet demonstrated remarkable growth during the final sprint. His increased pa
 Challenges in the final sprint included managing the last-minute feedback and making substantial changes to our documentation, such as component structure and process analysis according to feedback. Given that each team member had other courses and final exams to manage simultaneously, it was challenging to find convenient meeting times. To mitigate this, we leveraged Discord for most of our meetings, which proved to be an efficient solution. I'd like to commend everyone for their dedication and effort in completing the project amid these challenges.
 
 In conclusion, our team has shown remarkable growth and adaptability throughout the entire project. While we faced some challenges in the final sprint, our collective efforts and determination allowed us to overcome them. I appreciate each team member's contributions, and I believe we can consider this project a success, thanks to our teamwork and commitment. I look forward to seeing everyone continue to excel in their future careers.
+
