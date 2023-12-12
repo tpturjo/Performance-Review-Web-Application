@@ -21,11 +21,16 @@
 ## Attributions
 ## Caleb
 
-| Source     | Contribution                                       | Location                                     |
-|------------|----------------------------------------------------|----------------------------------------------|
-| w3 Schools | Information on SQL syntax and writing code for SQL | https://www.w3schools.com/sql/default.asp    |
-| Udemy      | Watched through most of a course on SQL.           | https://www.udemy.com                        |
-| w3 Schools | For some python syntax information                 | https://www.w3schools.com/python/default.asp |
+| Source       | Contribution                                              | Location                                     |
+|--------------|-----------------------------------------------------------|----------------------------------------------|
+| w3 Schools   | Information on SQL syntax and writing code for SQL        | https://www.w3schools.com/sql/default.asp    |
+| Udemy        | Watched through most of a course on SQL.                  | https://www.udemy.com                        |
+| w3 Schools   | For some python syntax information                        | https://www.w3schools.com/python/default.asp |
+| Edward Brown | For routing functionality                                 | http://www.cs.mun.ca/~brown/cs2005/ |
+| Edward Brown | For information on process architecture documentation     | http://www.cs.mun.ca/~brown/cs2005/ |
+| Edward Brown | For information on implementing the requirements.txt file | http://www.cs.mun.ca/~brown/cs2005/ |
+
+
 
 ## Attributions
 ## Turjo

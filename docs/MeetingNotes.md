@@ -146,6 +146,7 @@ edits, and implementations during the next meeting.
 **Progress Report:**  
 - Caleb completed the anonymous route.py stub.
 - Caleb has implemented the profiles and comments tables to the database.
+- Caleb has implemented a getter method for the profiles table and a set method stub
 - Tanjet finished working on the comment on the review route.py stub.
 
 **Difficulties:**  

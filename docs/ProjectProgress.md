@@ -1,10 +1,5 @@
-
-**Recorded by:** Turjo
-
-**Date:** 11.12.2023
-
 # Project Progress and Approach:
-During our final sprint for the COMP2005 course project, we, Turjo, Caleb, Daniel, and Tanjet, not only fine-tuned our web application but also expanded our architectural documentation to reflect the advanced stages of our development 
+During our final sprint for the COMP2005 course project, we not only fine-tuned our web application but also expanded our architectural documentation to reflect the advanced stages of our development 
 process. We introduced a new component architecture document enriched with an updated UML diagram that provides a detailed depiction of our application's structure. We also revisited our development process, creating a new process analysis
 diagram that captures the essence of our workflow and the methodologies employed throughout the project lifecycle.
 
@@ -16,6 +11,7 @@ Our progress was marked by several milestones:
 
 
 The approach we've taken reflects the sophisticated practices explored in our coursework, with a strong emphasis on scalability, maintainability, and adherence to industry-standard architectural patterns.
+
 # Future Plans:
 As this sprint concludes our active development phase, we have equipped our project with extensive documentation that showcases our growth as a team and our application’s robust architecture. The inclusion of the microservice architecture 
 design in our final documentation serves as a testament to our ability to adapt and plan for scalable solutions.
