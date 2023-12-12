@@ -4,9 +4,29 @@ The component architecture of this web application delineates a clear separation
 well-defined interfaces. At its core, the architecture consists of a client-server model, with a relational database for persistent storage. The server handles HTTP requests, session management, 
 and communicates with the database, which is structured to store users, profiles, reviews, drafts, and comments. This modular design not only promotes maintainability and scalability but also 
 simplifies the process of testing and development by isolating individual components.
-
+## Contents:
+### UML Diagram
+- Visual Representation Overview
+### Components
+- Client-Side: HTML & CSS
+- Server-Side: HTTP Handlers & Logic
+- Data Structures & Object Mapping
+- Database & Session Management
+- Utility Functions
+### Testing Components
+- API & Unit Testing Specifications
+### Component Interaction
+- Communication, Session, & Database Dynamics
+### Module Interface
+- Authentication, Profile, Review, Draft, & Comment Modules
+### API Endpoints
+- Description of Application Endpoints
+### Assessment
+- Usability, Maintainability, Testability, Scalability, Risk
+### Conclusion
+- Architectural Summary & Outlook
 # UML Diagram:
-![UML Diagram (Team M)1 ](https://raw.githubusercontent.com/CS2005F23/term-project-teamm/4364c595cbbd324bd0b2fc809c83590f998ffdb8/docs/Asset/Final%20UML%20diagram.jpeg?token=BCQB53J6MIE6OC5DHG2KQCTFOWXY2)
+![UML Diagram (Team M)1 ](https://github.com/CS2005F23/term-project-teamm/blob/master/docs/Asset/Final%20UML%20diagram.jpeg?raw=true)
 
 ## Components:
 
@@ -111,7 +131,7 @@ Defined in a Postman collection, these tests validate the API endpoints for corr
 - POST Log Out: Ensures users can log out and end their session.
 - POST Log in with new pass and Draft: Verifies login with new credentials and draft access.
 - GET Profile page: Retrieves the profile page for the logged-in user.
--POST Edit Profile page: Confirms profile edits are applied and stored.
+- POST Edit Profile page: Confirms profile edits are applied and stored.
 - GET Updated profile page: Retrieves the profile page to confirm updates.
 - GET My Posts page: Validates that a user can retrieve a list of their posts.
 - POST Edit existing post: Checks the ability to edit an existing post.
@@ -303,3 +323,31 @@ When users create content (reviews or drafts), the server processes these creati
 - Purpose: Edits an existing review or draft.
 - Input: Post ID, updated content.
 - Output: Success or failure message.
+## Assessment of Qualities
+### Usability:
+The application's client-side components, such as HTML templates and CSS, provide a clear and consistent user interface. The separation into distinct pages like login, profile editing, and review 
+submission supports a user-friendly experience. The use of AJAX for API interactions will likely improve the responsiveness and provide a seamless user experience by minimizing page reloads.
+
+### Maintainability:
+The modularity of the server-side components and clear separation of concerns enhance maintainability. Each module, such as session management and object mapping, is responsible for distinct 
+functionality, allowing developers to update individual parts without affecting the whole. Docstrings and consistent coding practices across modules contribute to easier understanding and
+maintenance of the codebase.
+
+### Testability:
+With a comprehensive suite of API and unit tests, the application demonstrates strong testability. The Postman collection allows for end-to-end testing of API endpoints, while the unit tests in
+unit_test.py ensure that individual functions behave as expected. The modular design allows for isolated testing of components, which is a best practice for ensuring reliable software.
+
+### Scalability:
+The application's server-side components are designed to handle HTTP requests efficiently, which is a positive indicator for scalability. However, the scalability of the application would depend on 
+the underlying database's ability to handle increased loads and the server framework's capability to manage concurrent sessions. The ability to scale up individual components or services would also 
+be crucial as user demand grows.
+
+### Risk:
+There are a few risks to consider. First, the reliance on a relational database requires careful management of schema migrations and data integrity. Second, session management must be secure to 
+prevent unauthorized access. Third, as the system scales, the server's ability to handle an increasing number of requests without performance degradation will be essential. Lastly, the current structure suggests a monolithic application, which may not be as resilient or easy to scale as a microservices architecture.
+
+## Conclusion:
+The web application's component architecture is well-structured, with a focus on separation of concerns and modularity, which bodes well for maintainability and testability. Usability is supported
+by a straightforward client-side design, though actual user experience would need to be validated with user testing. Scalability is indicated but not fully detailed, suggesting a potential area for
+future enhancement. Risks are present but manageable with proper attention to security and performance. Overall, the architecture provides a solid foundation, with room for improvements as the 
+application evolves and scales.

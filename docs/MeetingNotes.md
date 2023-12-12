@@ -494,11 +494,13 @@ so maybe the 'view-my-post' button could reside in all three pages. Most ideally
 to access this (added to backlog).
 - Caleb: The code is functional but could be more optimized. Good to merge
 - Tanjet: The code and methods look and work fine. Good to merge.
+* Note - We all agreed with Daniel suggestion and Turjo implemented My Post re-direct button in all three pages on spot.
 
 **Decisions:**
 - Several deadlines have been moved due to the change in sprint 3's deadline.
 - Turjo and Caleb will now be working together on the UML architecture document/process document.
 - Tanjet and Daniel will now be working together on the microservice document.
+
 
 **Deadlines:**
 - Due to the change in the due date of sprint 3 and preparation of exams, the following deadlines will be adjusted:
@@ -555,7 +557,7 @@ for Turjo to format them together and push to our remote repo.
 - Re-discuss deadlines due to change in
 
 **Difficulties:**  
-- Nothing to report.
+- Unit test got directory error. Turjo will look on it.
 
 **Progress Report:**
 - Turjo: Has pushed our unit tests. Unit tests have now been implemented.
@@ -593,7 +595,7 @@ December 14.
 - Based on the 
 
 **Progress Report:**
-- Turjo: Has pushed the UML diagram and architecture document that he and Caleb were working on.
+- Turjo: Has pushed the UML diagram and architecture document that he and Caleb were working on. Also he corrected the unit test directory problem and unit test is running fine.
 - Caleb: Has pushed our meeting notes that we had recorded in an ongoing document.
 
 **Code Review:**
