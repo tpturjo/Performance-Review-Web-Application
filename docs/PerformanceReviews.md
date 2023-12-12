@@ -1,5 +1,4 @@
 # Sprint 3
-
 ## Performance review by Daniel Cho
 I am pleased working with my teammates and how the project turned out in the end.
 
@@ -13,6 +12,10 @@ Extremely nitpicky Criticism: Please learn how to use cloud drives like Google D
 
 Tanjet has shown imrpovements this sprint in participation. He wrote more code and actively asked out what he can help around with.
 He showed a great deal of cooperation. Not in sprint3, but overall, it would be great if he could attend more meetings. He was not very present during sprint1 and to a lesser degree during sprint2.  
+
+Difficulties faced as a team: During the previous cycles our meetings were way too long because there were just too many things to cover in our meeting agenda because we had to cover all the points in the grading scheme.
+This issue was alleviated, but not completely resolved, as sprint 1 and sprint 2 made it a routine. Also, speaking to the professor as a team helped us understand some of the grading scheme.
+As a team, we were pretty good. 
 
 
 ## Final Sprint Performance Review by Tridib Paul Turjo
