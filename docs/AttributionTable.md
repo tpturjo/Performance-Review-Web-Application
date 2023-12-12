@@ -11,11 +11,12 @@
 ## Attributions
 ## Daniel
 
-| Source                  | Contribution                              | Location                         |
-|-------------------------|-------------------------------------------|----------------------------------|
-| Bottle.org              | bottle manipulation                       | 'https://bottlepy.org/docs/dev/' |
-| Uncle Bob's Clean Code  | helped me tidy up the code                | video source                     |
-| w3 school               | helped me write code for SQL manipulation | 'https://www.w3schools.com/sql/' |
+| Source                | Contribution                             | Location                            |
+|-----------------------|------------------------------------------|-------------------------------------|
+| Bottle.org            | bottle manipulation                      | 'https://bottlepy.org/docs/dev/'    |
+| Uncle Bob's Clean Code| helped me tidy up the code               | video source                        |
+| w3 school             | helped me write code for SQL manipulation | 'https://www.w3schools.com/sql/'    |
+| Mark Hatcher          | helped me understand SQL manipulation    | Memorial University of Newfoundland |
 
 ## Attributions
 ## Caleb
