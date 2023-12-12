@@ -53,7 +53,10 @@ In conclusion, our team has shown remarkable growth and adaptability throughout 
 ## Performance review by Tanjet
  Our team has indeed made significant progress, and it's evident in our impressive code and design!
 
-Despite the challenges we faced during Sprint 3 due to conflicting schedules, including finals and other classes, we unfortunately couldn't meet as regularly as we had hoped. It was a valuable learning experience that highlighted an area where we can improve our coordination and communication. Nevertheless, I must say that working with my team has been an absolutely fantastic experience! 
+Difficulties faced as a team:Despite the challenges we faced during Sprint 3 due to conflicting schedules, including finals and other classes, we unfortunately couldn't meet as regularly as we had hoped. It was a valuable learning experience that highlighted an area where we can improve our coordination and communication. Nevertheless, I must say that working with my team has been an absolutely fantastic experience! 
+Area of improvement for team members:
+Turjo could have benefited from using a better headset and being on time for meetings! 
+Caleb could have improved the situation by pushing the meeting notes earlier and keeping our project consistently updated
 
 I want to give a big shoutout and kudos to Daniel for his outstanding work in formatting our website.  He has truly been an invaluable team player, always available whenever we needed him. Daniel went above and beyond in assisting us with formatting HTML pages, CSS, and various coding tasks. What's even more admirable is that he consistently provided valuable feedback and suggestions that greatly contributed to our project's success. We owe a large part of our achievements to his dedication and collaborative spirit. 
 
