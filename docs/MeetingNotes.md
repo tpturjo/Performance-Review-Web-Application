@@ -10,21 +10,16 @@
 **Time:** 12:00 PM - 1:16 PM  
 **Attendance:** Caleb, Daniel, Turjo, Tanjett
 
-  1) **Point of discussion**
-- Discussion for Sprint 3 direction.
-
-  2) **Point of discussion**
-- a document analyzing the alternative of a microservices architecture for the project. Include in this document:
-- a comparison of a microservices approach to the project to the existing (components-based) approach
-- a discussion on how the architecture and code would be different under a microservices architecture
-- a discussion of how the software process would be different under a microservices architecture
-- a project requirements specification effective with setuptools and/or another build tool.
+**Professor's Suggestions & Topics To Discuss:**
+- Discussion for Sprint 3 direction and features to implement.
+- Discuss potential changes to process and architecture documents.
 
 **New features/plans**
 - Profile Page (requires Caleb to implement profile: email, date/birth, address, education) Turjo will do the routing part, Daniel could to the HTML part. (3 task) (HTML / SQL/ ROUTE)
 - Comment on reviews. (3 task)  (HTML / SQL/ ROUTE)
 - Implement “Home” page where you are given the option to directly go to reviews, or choose to log in. New HTML page (HTML/Route)
 - Anonymous reviews. Users can leave reviews anonymously. (HTML / ROUTE) 
+- Architecture document will be enhanced based on the implementation of our code and feedback from our document in sprint 2.
  
 **Decoupling/Solid:** 
 - We looked at route.py together, and found some bloat and naming inconsistencies. We will fix that throughout the sprint. 
@@ -36,10 +31,15 @@
 - Tanjett: Comment on review route.py stub
 - Turjo: route.py Stub for profile
 
-**Decision:** 
+**Decisions:** 
 - Drop “Change Username” feature idea. 
 - Still considering other features to implement
 - Next Meeting Monday @ class time.
+- Caleb will work on an anonymous stub for future use to allow for anonymous reviews.
+- Daniel will work on HTML stubs for buttons that will be implemented at a later time.
+- Tanjet will work on a stub for commenting on reviews to be implemented at a later time.
+- Turjo will work on a stub for user profiles that will be implemented at a later time.
+
 
 
 
@@ -52,14 +52,17 @@
 **Time:** 1:00 PM - 2:00 PM  
 **Attendance:** Caleb, Daniel, Turjo
 
-**Point of discussion**
+**Professor's Suggestions & Topics To Discuss:**
 - discuss changes to process and architecture documents for sprint 3.
 - discuss our current progress.
 
-**New features**
+**Progress Report**
 - Profile Edit Page (HTML and functionality).
 - Safeguard 'login' page. Won't be able to access login page unless signed out.
  
+**Difficulties:**  
+- Several members are showing up late to meetings.
+
 **Decoupling/Solid:** 
 - Plans to decouple route.py we will come up with how to decouple route.py by next time and present. 
 
@@ -93,7 +96,6 @@ edits, and implementations during the next meeting.
 **Attendance:** Caleb, Daniel, Turjo, Tanjet
 
 **Professor's Suggestions & Topics To Discuss:**
-
 - Discuss incomplete tasks left over from sprint 2.  
 - Discuss the progress of the stub and the approach for its implementation.
 
@@ -104,7 +106,7 @@ edits, and implementations during the next meeting.
 - Tanjeet is working on the comment on the review route.py stub. The deadline has been extended to tomorrow, November 22, by 2:00 PM.  
 
 **Difficulties:**  
-- None
+- Nothing to report.
 
 **Code Review:**
 
@@ -147,7 +149,7 @@ edits, and implementations during the next meeting.
 - Tanjet finished working on the comment on the review route.py stub.
 
 **Difficulties:**  
-- None
+- Several members are still showing up late to meetings.
 
 **Decoupling/Solid:**  
 - Still working on decoupling for route.py file for further optimization and simplification.
@@ -168,7 +170,7 @@ edits, and implementations during the next meeting.
 **Decisions:**
 - Caleb's and Tanjet's pull request merged.
 - The deadline for decoupling route.py will be November 29.
-- Turjo: Will continue to work on route.py Stub for profile.
+- Turjo: Will continue to work on route.py Stub for profile and will be working on functionality for an edit_profile function.
 - Tanjett: Will continue  to work on Comment on review route.py stub
 - Next meeting is on November 23 at 1:00PM.
 
@@ -234,11 +236,13 @@ first name, last name, email, and address, ensuring a clear and organized struct
 **Attendance:** Caleb, Daniel, Turjo, Tanjet 
 
 **Professor's Suggestions & Topics To Discuss:**
-- Discuss changes to architecture document/alternative architecture document
-- Code review and discussing progress
+- Discuss changes to architecture document/alternative architecture document.
+- Discuss how to shorten meetings.
+- Code review and discussing progress.
 
 **Difficulties:**  
-- Meetings have been taking too long.
+- Meetings have been taking too long, partly due to members not being on time and due to not always staying focused
+on the core meeting discussion points. We need to fix these two issues going forward.
 
 **Progress Report:**
 - Daniel: Update public html and JavaScript to accommodate comment function.
@@ -267,6 +271,10 @@ first name, last name, email, and address, ensuring a clear and organized struct
 we have currently implemented and will implement as we go forward. Most changes will reflect changes to the database,
 routing, and interface enhancements.
 - Meetings seem to be taking quite a while. We will work on being more efficient to waste less time to shorten them.
+- We will all actively make sure were on time to meetings and that we will stay focused and keep discussions unrelated 
+to the meeting to a minimum.
+- A new feature brought up in the meeting to organize reviews by topic will be added to backlog features to be worked on
+if we feel it's necessary.
 
 
 
@@ -371,7 +379,6 @@ Other than that it works well with no errors.
 **Decisions:**
 - Caleb will make sure external package installs are correctly represented in the repository. His deadline is for
 December 3.
-- Tanjet will update code to meet pep standards by the end of sprint 3. His deadline is for December 3
 - Turjo will update and implement the edit post stub, and fill in any missing doc strings. Deadline is for December 3.
 - Our application is nearly finished for the sprint. Some small edits and tweaks will be made going forward.
 
@@ -441,8 +448,11 @@ pieces of code in the .py files.
 - Nothing to report.
 
 **Progress Report:**
-- Daniel and Turjo worked on and fixed the bug in profileEdit.
+- Daniel and Turjo worked on and fixed the bug in profileEdit. Added to backlog.
 - Daniel accidentally made a change to the database and then re-uploaded a copy of the database before the change.
+
+Backlog
+    Refer to Progress Report
 
 **Code Review:**
 - Nothing to report
@@ -479,9 +489,9 @@ pieces of code in the .py files.
 
 *Turjo's code*
 - Daniel: view My Post re-direct button could be better on a different page like 'profile' or 'write-review' page. 
-That's where most people I would argue to go find their own information. 
-Having that button in public is not terrible, so maybe the 'view-my-post' button could reside in all three pages. 
-Most ideally, we need a side bar or a drop down menu to access this.
+That's where most people I would argue to go find their own information. Having that button in public is not terrible, 
+so maybe the 'view-my-post' button could reside in all three pages. Most ideally, we need a side bar or a drop down menu 
+to access this (added to backlog).
 - Caleb: The code is functional but could be more optimized. Good to merge
 - Tanjet: The code and methods look and work fine. Good to merge.
 * Note - We all agreed with Daniel suggestion and Turjo implemented My Post re-direct button in all three pages on spot.
@@ -498,7 +508,6 @@ Most ideally, we need a side bar or a drop down menu to access this.
 - Caleb and Turjo's deadline for UML and architecture document will be moved to December 9.
 - Caleb's deadline for requirements.txt list and instructions will be moved to December 9.
 - Tanjet and Daniel's deadline for our microservices architecture document will be moved to December 9.
-- Tanjet's Pep standardized code deadline will be moved to December 9.
 - The performance reviews deadline will be moved to December 10.
 - The README file deadline will be moved to December 10.
 
@@ -523,7 +532,10 @@ Most ideally, we need a side bar or a drop down menu to access this.
 - We've completed almost all unit tests for our code.
 
 **Code Review:**
-- Nothing to report.
+- Daniel: unittest name should be changed as unittest.py is the same as the library name. This can cause errors. 
+Will create backlog and Kanban for this issue.
+- Caleb: After the update fixing the directory error, Tests work well.
+- Tanjet: Although there was a directory error, unit test working fine.
 
 **Decisions:**
 - We've completed almost all unit tests for our code. We will each make final tweaks before submitting into a document 
@@ -559,7 +571,6 @@ for Turjo to format them together and push to our remote repo.
 
 - Caleb's deadline for requirements.txt list and instructions will be moved to December 11.
 - Caleb and Turjo's deadline for UML and architecture document will be moved to December 11.
-- Tanjet will update code to meet pep standards by the end of sprint 3. His deadline is for December 11.
 - The performance reviews deadline will be moved to December 12.
 - The README file deadline will be moved to December 12.
 
@@ -581,11 +592,39 @@ December 14.
 - Discuss current progress and merge pull requests.
 
 **Difficulties:**  
-- Nothing to report.
+- Based on the 
 
 **Progress Report:**
 - Turjo: Has pushed the UML diagram and architecture document that he and Caleb were working on. Also he corrected the unit test directory problem and unit test is running fine.
 - Caleb: Has pushed our meeting notes that we had recorded in an ongoing document.
+
+**Code Review:**
+- Nothing to report.
+
+**Decisions:**
+- Nothing to report.
+
+
+
+
+
+## Dec 12, 2023
+**Recorded by:** Turjo
+**Scrum master:** Caleb 
+**Venue:** Discord  
+**Time:** 6:20 PM - 6:40 PM  
+**Attendance:** Caleb, Daniel, Turjo, Tanjet 
+
+**Professor's Suggestions & Topics To Discuss:**
+- Discuss current progress.
+
+**Difficulties:**  
+- Nothing to report.
+
+**Progress Report:**
+- Turjo has pushed tweaks and fixes to the microservice file, process model document, project progress file, 
+and component architecture document.
+- Caleb has pushed the requirements.txt file.
 
 **Code Review:**
 - Nothing to report.
