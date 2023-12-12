@@ -5,7 +5,8 @@
 |------------|-----------------------------------------------|----------------------------------|
 | w3s school | Helped me learning the data structure         | `https://www.w3schools.com/python/python_ref_set.asp`                       |
 | W3S school | HTML tutorial helped me learn html components |https://www.w3schools.com/html/|
-
+| Cloud bees | Information on microservice architecture      |https://www.cloudbees.com/blog/documenting-microservices|
+| w3s school | SQL Database                                  |https://www.w3schools.com/SQL/sql_ref_database.asp|
 
 ## Attributions
 ## Daniel
