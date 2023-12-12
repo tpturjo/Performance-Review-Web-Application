@@ -16,8 +16,9 @@ in the beginning.
 
 Tanjet was more present in our meetings this sprint which was a nice improvement. Tanjet could improve his communication skills as he 
 was less vocal than the other group members. He also struggled to attend our early meetings on time. Tanjet did provide great support in a 
-timely manner when asked and when it was required. 
-=======
+timely manner when asked and when it was required.
+
+
 ## Performance review by Daniel Cho
 I am pleased working with my teammates and how the project turned out in the end.
 
@@ -50,6 +51,8 @@ Tanjeet demonstrated remarkable growth during the final sprint. His increased pa
 Challenges in the final sprint included managing the last-minute feedback and making substantial changes to our documentation, such as component structure and process analysis according to feedback. Given that each team member had other courses and final exams to manage simultaneously, it was challenging to find convenient meeting times. To mitigate this, we leveraged Discord for most of our meetings, which proved to be an efficient solution. I'd like to commend everyone for their dedication and effort in completing the project amid these challenges.
 
 In conclusion, our team has shown remarkable growth and adaptability throughout the entire project. While we faced some challenges in the final sprint, our collective efforts and determination allowed us to overcome them. I appreciate each team member's contributions, and I believe we can consider this project a success, thanks to our teamwork and commitment. I look forward to seeing everyone continue to excel in their future careers.
+
+
 ## Performance review by Tanjet
  Our team has indeed made significant progress, and it's evident in our impressive code and design!
 
