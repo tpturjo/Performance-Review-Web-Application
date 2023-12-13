@@ -57,6 +57,9 @@ understand the program better as a whole, while still being able to specialize i
 - Unit tests (As well as other documents (microservice, Architecture, etc) were uploaded by one member of the group, but they were 
 developed by all members of the group during our last several meetings.
 
+- Code was reviewed by members of the group before it was merged into the project. Some members added comments later, 
+but we never merged code that wasn't first reviewed and approved.
+
 
 # Unit Tests
 
