@@ -62,3 +62,33 @@ Our team's response to the feedback for Sprint 2 was marked by a strong commitme
 While we were unable to implement all the desired changes due to the overlap with final exams and the completed state of certain project 
 components, our efforts during this period demonstrate our dedication and willingness to learn and improve. This experience has been valuable 
 in understanding the practical challenges of project management and teamwork under pressure.
+
+
+## Hypothetical concerning individual grades
+
+## Tridib Paul Turjo
+
+### Architectural Integration:
+
+- Invested significant effort into integrating my work with the overall project architecture, especially under the stress of final exams.
+- Faced time constraints and pressure, which limited the full realization of possible improvements.
+### Unit Testing and Docstrings:
+
+- Made considerable improvements in unit testing and documentation.
+- Had there been more time, would have further refined these aspects for enhanced quality and clarity.
+### Adherence to Coding Standards:
+
+- While the coding phase was completed, limiting the scope for direct improvements, I engaged in discussions with the team about the importance of adhering to coding standards.
+- These discussions were aimed at reinforcing the understanding and application of standards like SOLID principles in future projects.
+### Engagement in Code Reviews:
+
+- Although the coding part of the project was already finished, preventing active participation in code reviews, I took part in team conversations regarding our review processes.
+- These discussions focused on how we could have improved our code review practices, emphasizing the value of thorough feedback and collaborative improvement.
+
+### Dedication Despite Constraints:
+
+- Demonstrated a strong commitment to the project during the intense period of final exams.
+- Actively participated in team discussions, showing dedication to the project under significant academic pressure.
+
+### Conclusion
+- In the final days before submission, I proactively addressed identified shortcomings following the feedback. Even amidst the pressures of exams and other coursework, this swift action serves as tangible evidence of my dedication. The effort invested during this critical time reflects my commitment to continuous improvement, demonstrating a focused resolve to enhance project aspects despite external pressures.
