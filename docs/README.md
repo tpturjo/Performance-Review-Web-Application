@@ -170,50 +170,6 @@ to demand. Enhanced monitoring and independent service management will lead to a
 
 - The requirements document can be found in Path term-project-teamm/requirements.txt
 
-
-# Final Sprint Implementations
-
-- Turjo
-  - In our project's final sprint, I implemented key features and ensured seamless integration with our web application's architecture. Here's a breakdown of my contributions:
-  - Profile Data Retrieval: In database.py, I added the get_profile_data_by_username function to retrieve a user's profile data from the database.
-  - Profile Data Update: Added the edit_profile function to update user information in the database, providing a dynamic user experience and personalization.
-  - Post Editing Capability: Developed get_post_by_id and update_post functions, empowering users to edit their published content, thus enhancing the application's content management system
-  - Routing and Templates: In route.py, I created the routes /profileEdit and /profile, which serve the profile editing and viewing pages using the Bottle framework. These routes integrate with the front-end templates, profile_edit.html and profile.html, to display and update user information dynamically.
-  - Form Handling: Enhanced the form submission handling in route.py to include profile editing (EDIT_PROFILE) and post-editing actions, which are crucial for a complete user interaction cycle within our application.
-  - HTML Page for Post Editing (templates/my_posts.html):  I created a dedicated HTML page, my_posts.html, to provide users with a user-friendly interface for editing their posts. This page features a list of the user's posts, edit forms for each post, and an update button for saving changes.
-  - Unit Testing and API Integration: Each implemented feature is covered by unit tests in unit_test.py[test_edit_profile(self):,test_update_post(self): ,test_edit_nonexistent_review(self):] and Postman API tests (term-project-teamm.postman_collection.json)[GET Profile page , POST Edit Profile page,GET Updated profile page, GET My Posts page,POST Edit existing post], ensuring that all new code is thoroughly tested for functionality and integration with existing components.
-  - Documentation: Each piece of code I've introduced includes comprehensive docstrings, following PEP standards, which articulate the purpose and usage of functions and routes, making the codebase maintainable and understandable. These docstrings are integral to our project's documentation strategy, ensuring clarity for all modules and public interfaces.
-
-- Caleb
-  - During sprint 3 I implemented features that primarily had to due with construction and manipulation of the database, as well as some other useful functions and features. Here's a breakdown of my contributions:
-  - Updates to the userDatase.db file for further efficiency in the sprint (Changes to relational model)
-  - Added the comments table and profiles table, as well as the attributes needed in each.
-  - Anonymous routing function to allow for users to submit anonymous reviews.
-  - Getter and setter methods for profiles table to save and retrieve user profile information.
-  - Save_comment and get_comment functions to save and retrieve comment data saved in the comments table.
-  - Tidied up several sections of code.
-  - Unit Testing and API Integration: All coding features have associated unit tests to test code to ensure the functions do in fact work properly.
-  - Documentation: Each section of code has comprehensive docstrings that briefly explain the function they are a part of, as well as the arguments and return values.
-
-- Daniel
-  - During sprint 3 I implemented several web based and routing functions and features as well as a few others. Here's a breakdown of my contributions:
-  - CSS in styles.css for buttons and overall styling  
-  - Helper methods in methods.py for list manipulation  
-  - Require_logout method in route.py  
-  - Implementation of a new “home” page (html and route.py)  
-  - Javascript for “comment” functionality (pop up / retract feature) on “public.html”  
-  - New database.py method “get_published_reviews_and_comments()” to retrieve   comment data from SQL.  
-  - Created logos and images for the webpage. 
-  - Implemented Unit tests and documentation throughout code.
-
-- Tanjet
-  - Routing part for Comment feature. Routing and post request functionality
-  - Making profile.py(Data structure)
-  - Sweeping the code and worked on the proofreading to see if PEP standard was met
-  - Added docstring and tidied up.
-  - Worked on the Microservice Architecture Document and Diagram
-  - Implemented Unit tests and documentation throughout code.
-
   
 # Performance Reviews
 
