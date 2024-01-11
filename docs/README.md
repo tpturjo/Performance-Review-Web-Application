@@ -181,7 +181,9 @@ we've collectively adapted and succeeded, ensuring any difficulties were address
 our Kanban/agenda items. This regular introspection has been key to our team's overall success and professional development.
 
 
-- Performance reviews can be found in the PerformanceReviews.md file. Path: docs/PerformanceReviews.md 
+- Performance reviews can be found in the PerformanceReviews.md file. Path: docs/PerformanceReviews.md
+# User Stories
+All user stories can be found in the UserStories.md file. Path docs/UserStories.md
 
 
 # Attribution Table
